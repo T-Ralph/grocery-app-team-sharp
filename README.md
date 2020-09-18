@@ -18,6 +18,9 @@
 ## Trello:
 https://trello.com/b/rnxAM8Nx/milestone2
 
+## Citations:
+
+
 ## Introduction: 
 - The Milestone 2 - React/Redux project is a React/Redux/Router application of your design. Convene with your group and plan a project that will challenge you and act as a future portfolio piece. Working through this project will demonstrate your knowledge and competency in: project planning, teamwork, HTML5, CSS3, ES6 JavaScript, git within a team context, React, React-Redux, and React-Router. There is a sample project description at the end of this document to give you ideas of what sort of application will meet the requirements
 
