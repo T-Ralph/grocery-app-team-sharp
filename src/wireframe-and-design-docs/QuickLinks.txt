@@ -1,0 +1,8 @@
+PROJECT SPEC:
+https://docs.google.com/document/d/1TkQkSrqbAsLseSicMVCrTzICGsslFF_G/edit
+
+TRELLO:
+https://trello.com/b/rnxAM8Nx/milestone2
+
+REPO:
+https://github.com/TECHCareers-by-Manpower/milestone-2-react-redux-router-project-team-sharp
