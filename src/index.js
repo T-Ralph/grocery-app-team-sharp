@@ -32,8 +32,8 @@ ReactDOM.render(
     <Router>
       <Nav />
       <Route path='/' component={Home} exact />
-      <Route path='/recipelist' component={RecipeList} />
-      <Route path='/shoppinglist' component={ShoppingList} />
+      <Route path='/recipe-list' component={RecipeList} />
+      <Route path='/shopping-list' component={ShoppingList} />
       <Route path='/about-us' component={AboutUs} />
       <Footer />
     </Router>
