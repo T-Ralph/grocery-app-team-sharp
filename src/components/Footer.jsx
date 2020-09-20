@@ -1,11 +1,18 @@
+//Import React
 import React from 'react';
 
-function Footer(){
+//Declare Function
+function Footer() {
     return(
         <>
-        <h1>Footer</h1>
+            <footer>
+                <p className="footer-p-team">
+                    Team Sharp
+                </p>
+            </footer>
         </>
     );
 }
 
+//Export Function
 export default Footer;
