@@ -1,9 +1,8 @@
-//Import React, Link from React-Router
+//Import React
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 //Declare Function
-function RecipeList() {
+function RecipePage() {
     return(
         <>
             <section className="main-section">
@@ -11,20 +10,20 @@ function RecipeList() {
                     <i className="fas fa-utensils"></i>
                     Recipes
                 </h2>
-                <form className="form" id="form-filters">
-                    <label htmlFor="filters"><i className="fas fa-filter"></i> Filters</label>
-                    <select id="filters">
-                        <option value="">Select a Filter</option>
-                        <option>Filter 1</option>
-                        <option>Filter 2</option>
-                        <option>Filter 3</option>
-                    </select>
-                </form>
+                <h3>
+                    Instructions
+                </h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus vel facilisis volutpat est velit egestas dui id. Tristique senectus et netus et malesuada fames ac. Tortor condimentum lacinia quis vel. Non curabitur gravida arcu ac tortor dignissim. Donec et odio pellentesque diam volutpat. Vitae congue eu consequat ac. Purus faucibus ornare suspendisse sed nisi lacus. Platea dictumst quisque sagittis purus sit amet volutpat consequat mauris. Tellus at urna condimentum mattis pellentesque id nibh. Orci nulla pellentesque dignissim enim. Vitae justo eget magna fermentum. Proin sagittis nisl rhoncus mattis.
+                </p>
+                <h3>
+                    Ingredients
+                </h3>
                 <table className="table">
                     <thead>
                         <tr>
                             <th>
-                                Recipe
+                                Ingredients
                             </th>
                             <th>
                             </th>
@@ -33,56 +32,51 @@ function RecipeList() {
                     <tbody>
                         <tr>
                             <td>
-                                Recipe 1
+                                Ingredient 1
                             </td>
                             <td>
-                                <button className="table-button">View</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Recipe 2
-                            </td>
-                            <td>
-                                <button className="table-button">View</button>
+                                <button className="table-button">Add to Shopping List</button>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Recipe 3
+                                Ingredient 2
                             </td>
                             <td>
-                                <button className="table-button">View</button>
+                                <button className="table-button">Add to Shopping List</button>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Recipe 4
+                                Ingredient 3
                             </td>
                             <td>
-                                <button className="table-button">View</button>
+                                <button className="table-button">Add to Shopping List</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Ingredient 4
+                            </td>
+                            <td>
+                                <button className="table-button">Add to Shopping List</button>
                             </td>
                         </tr>
                     </tbody>
                     <tfoot>
                         <tr>
                             <th>
-                                Recipe
+                                Ingredients
                             </th>
                             <th>
                             </th>
                         </tr>
                     </tfoot>
                 </table>
-                <p>
-                    <Link to="/recipe-page">
-                        Sample/Preview the Individual Recipe Page
-                    </Link>
-                </p>
             </section>
         </>
     );
 }
 
 //Export Function
-export default RecipeList;
+export default RecipePage;

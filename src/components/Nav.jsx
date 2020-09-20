@@ -1,27 +1,50 @@
+//Import React, Link from React-Router
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Nav(){
+//Declare Function
+function Nav() {
     return(
-        <nav>
-            <h1>Nav</h1>
-            <ul>
-                <li>Logo</li>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/recipe-list">Recipe List</Link>
-                </li>
-                <li>
-                    <Link to="/shopping-list">Shopping List</Link>
-                </li>
-                <li>
-                    <Link to="/about-us">About</Link>
-                </li>
-            </ul>
-        </nav>
+        <>
+            <header>
+                <nav>
+                    <ul className="header-nav-ul">
+                        <li>
+                            <Link to="/">
+                                <i className="fas fa-home"></i>
+                                <span className="desktop-screen-only">Home</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/recipe-list">
+                                <i className="fas fa-utensils"></i>
+                                <span className="desktop-screen-only">Recipe List</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/shopping-list">
+                                <i className="fas fa-shopping-cart"></i>
+                                <span className="desktop-screen-only">Shopping List</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/about-us">
+                                <i className="fas fa-scroll"></i>
+                                <span className="desktop-screen-only">About Us</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/sign-in">
+                                <i className="fas fa-user"></i>
+                                <span className="desktop-screen-only">Guest</span>
+                            </Link>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        </>
     );
 }
 
+//Export Function
 export default Nav;
