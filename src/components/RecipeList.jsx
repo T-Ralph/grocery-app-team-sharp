@@ -1,5 +1,5 @@
 //Import React, Link from React-Router
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 
@@ -8,16 +8,20 @@ function RecipeList() {
 
     useEffect(() => {
         fetchRecipes();
-    }, []); 
+    }, []);
+
+    const [meals, setMeals] = useState([]);
 
     const fetchRecipes = async () => {
-        const data = await fetch('https://www.themealdb.com/api/json/v1/1/random.php')
-        .then(response => {return response.json();});
-        console.log(data)
-    }
+        // Using cors-anywhere.herokuapp.com to bypass CORS errors in browser. API doesnt like us without it.
+        const data = await fetch('https://cors-anywhere.herokuapp.com/https://www.themealdb.com/api/json/v1/1/random.php');
+        const meals = await data.json();
+        console.log(meals);
+        setMeals(meals.meals);
+    };
 
 
-    return(
+    return (
         <>
             <section className="main-section">
                 <h2>
@@ -28,9 +32,12 @@ function RecipeList() {
                     <label htmlFor="filters"><i className="fas fa-filter"></i> Filters</label>
                     <select id="filters">
                         <option value="">Select a Filter</option>
-                        <option>Filter 1</option>
-                        <option>Filter 2</option>
-                        <option>Filter 3</option>
+                        <option>Chicken</option>
+                        <option>Beef</option>
+                        <option>Seafood</option>
+                        <option>Vegetarian</option>
+                        <option>Vegan</option>
+                        <option>Desert</option>
                     </select>
                 </form>
                 <table className="table">
@@ -46,7 +53,9 @@ function RecipeList() {
                     <tbody>
                         <tr>
                             <td>
-                                Recipe 1
+                                {meals.map(meals => (
+                                    <h1 key={meals.idMeal}>{meals.strMeal}</h1>
+                                ))}
                             </td>
                             <td>
                                 <button className="table-button">View</button>
