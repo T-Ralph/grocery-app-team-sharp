@@ -14,7 +14,8 @@ function SignIn( event ) {
     
     const newUser = (event) => {
         event.preventDefault();
-        dispatch(loginAction({ type: 'LOG_IN', payload: { username: newUsername, password: newPassword, isLoggedIn: true } }));
+        // loginReducer global state gets updated with new user
+        dispatch(loginAction({  username: newUsername, password: newPassword, isLoggedIn: true } ));
         loginForm.reset();
     }
     

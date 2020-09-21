@@ -6,8 +6,7 @@ import { useState, useSelector } from 'react-redux';
 //Declare Function
 function Nav() {
 
-    // const username = useSelector(state => state.loginReducer);
-    // console.log(username);
+    const userInfo = useSelector(state => state.loginReducer);
 
     return(
         <>
@@ -41,7 +40,7 @@ function Nav() {
                         <li>
                             <Link to="/sign-in">
                                 <i className="fas fa-user"></i>
-                                <span className="desktop-screen-only"></span>
+                                <span className="desktop-screen-only">{userInfo.username}</span>
                             </Link>
                         </li>
                     </ul>
