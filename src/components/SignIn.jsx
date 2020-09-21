@@ -8,11 +8,13 @@ function SignIn( event ) {
 
     const [ newUsername, setUsername ] = useState( "Guest" );
     const dispatch = useDispatch();
+    const loginForm = document.getElementById("form-sign-in");
 
     const newUser = (event) => {
         event.preventDefault();
         setUsername(newUsername);
         dispatch(loginAction(newUsername));
+        loginForm.reset();
     }
    
     
