@@ -1,8 +1,8 @@
-import loginReducer from './loginReducer' // THIS IS A REDUCER THAT MAY NOT BE USED AND WAS ADDED SO A DEFAULT STORE COULD BE ADDED
+import loginReducer from './loginReducer' 
 import {combineReducers} from 'redux';
 
 const allReducers = combineReducers({
-    loginReducer: loginReducer()
+    loginReducer: loginReducer
 })
 
 export default allReducers;

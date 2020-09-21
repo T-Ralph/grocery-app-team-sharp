@@ -1,8 +1,8 @@
-// This is a temporary action added to allow store creation. This may never be used.
-const loginAction = action =>{
-    return{
-        type: 'LOGGED_IN'        
-    }
+const loginAction = loginContent => {
+    return {
+        type: 'LOG_IN',
+        payload: loginContent
+    };
 }
 
 export default loginAction;
