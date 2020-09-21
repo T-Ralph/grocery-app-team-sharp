@@ -1,7 +1,9 @@
-const loginReducer = ( state=false, action ) => {
-    if ( action.type === 'LOGGED_IN' ) {
-        const isLoggedIn = action.payload;
-        return isLoggedIn;
+const loginReducer = ( state="Guest", action ) => {
+    if ( action.type === 'LOG_IN' ) {
+        const newLogIn = {
+            username: action.payload
+        }
+        return newLogIn;
     } else {
         return state;
     }

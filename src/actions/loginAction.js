@@ -1,7 +1,7 @@
-const loginAction = boolean => {
+const loginAction = loginContent => {
     return {
-        type: 'LOGGED_IN',
-        payload: boolean
+        type: 'LOG_IN',
+        payload: loginContent
     };
 }
 
