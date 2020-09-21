@@ -1,21 +1,28 @@
 //Import React
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import loginAction from '../actions/loginAction';
+import { loginAction, logoutAction}  from '../actions/loginAction';
 
 //Declare Function
 function SignIn( event ) {
 
     const [ newUsername, setUsername ] = useState( "Guest" );
+    const [ newPassword, setPassword ] = useState( "" );
     const dispatch = useDispatch();
     const loginForm = document.getElementById("form-sign-in");
 
+    
     const newUser = (event) => {
         event.preventDefault();
-        setUsername(newUsername);
-        dispatch(loginAction(newUsername));
+        dispatch(loginAction({ type: 'LOG_IN', payload: { username: newUsername, password: newPassword, isLoggedIn: true } }));
         loginForm.reset();
     }
+    
+    // Logout function ready to be connected to logout button
+    // const guestUser = () => {
+    //     event.preventDefault();
+    //     dispatch(logoutAction({ type: 'LOG_OUT', payload: { username: "Guest", password: "", isLoggedIn: false } }));
+    // }
    
     
 
@@ -31,7 +38,7 @@ function SignIn( event ) {
                         <label htmlFor="username"><i className="fas fa-user"></i> Username</label>
                         <input type="text" id="username" placeholder="Username" onChange={e => { setUsername( e.target.value )}} />
                         <label htmlFor="password"><i className="fas fa-lock"></i> Password</label>
-                        <input type="password" id="password" placeholder="Password" />
+                        <input type="password" id="password" placeholder="Password" onChange={e => { setPassword( e.target.value )}}/>
                         <input type="button" id="signin" value="Sign In" onClick={newUser}/>
                         <input type="button" id="signup" value="Sign Up" onClick={newUser}/>
                     </form>

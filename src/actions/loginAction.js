@@ -5,4 +5,11 @@ const loginAction = loginContent => {
     };
 }
 
-export default loginAction;
+const logoutAction = logoutContent => {
+    return {
+        type: 'LOG_OUT',
+        payload: logoutContent
+    };
+}
+
+export { loginAction, logoutAction };
