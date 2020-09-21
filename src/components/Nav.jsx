@@ -1,9 +1,14 @@
 //Import React, Link from React-Router
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useState, useSelector } from 'react-redux';
 
 //Declare Function
 function Nav() {
+
+    const username = useSelector(state => state.loginReducer);
+    console.log(username);
+
     return(
         <>
             <header>
@@ -36,7 +41,7 @@ function Nav() {
                         <li>
                             <Link to="/sign-in">
                                 <i className="fas fa-user"></i>
-                                <span className="desktop-screen-only">Guest</span>
+                                <span className="desktop-screen-only">{username}</span>
                             </Link>
                         </li>
                     </ul>

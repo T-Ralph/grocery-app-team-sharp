@@ -20,9 +20,8 @@ import Footer from './components/Footer';
 
 // Importing Reducer, Defining Store, & Adding Redux DEVTOOLs Browser Compatability
 import allReducers from './reducers/index';
-import loginReducer from'./reducers/loginReducer';
 const store = createStore(
-  loginReducer,
+  allReducers,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 

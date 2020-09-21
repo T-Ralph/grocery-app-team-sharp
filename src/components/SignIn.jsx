@@ -22,7 +22,6 @@ function SignIn( event ) {
     return(
         <>
             <main>
-                {newUsername}
                 <section className="main-section">
                     <h2>
                         <i className="fas fa-user"></i>

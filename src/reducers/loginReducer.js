@@ -1,9 +1,7 @@
 const loginReducer = ( state="Guest", action ) => {
     if ( action.type === 'LOG_IN' ) {
-        const newLogIn = {
-            username: action.payload
-        }
-        return newLogIn;
+        const username = action.payload
+        return username;
     } else {
         return state;
     }
