@@ -1,0 +1,23 @@
+﻿Team Sharp Meeting
+18 SEPTEMBER 2020 / 9:40 PM / SLACK
+Attendees 
+Lindsey Graham, Narahari Tarun Mulle, Tosin Raphael Olaniyi, Krisztina Pap
+Agenda
+Last Meeting Follow-up
+1. Team members brought their suggestions as per agreed upon.
+New Business
+1. Ideas for team name, team leader, and projects were shared and discussed.
+Notes
+* Team members had several viable project ideas including but not limited to: a flipboard app, a blog post website, and a student time tracker.
+* Decisions were made:
+   * Team name: Team Sharp
+   * Team leader: Krisztina
+   * Project: Recipe app (with shopping list feature)
+* A basic Trello board was built with the project items due that afternoon. 
+Action Items
+1. Lindsey: to spin up new React project and build folder structure
+2. Tarun: to flesh out Trello project board with all project requirements and bonus features
+3. Tosin: to create basic wireframes for each page of the app
+4. Krisztina: to draft a project summary with breakdown of pages and features
+Next Meeting
+Next meeting is scheduled for the same day, immediately after the guest speaker presentation, on our group Slack channel @ 10am.

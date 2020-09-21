@@ -1,0 +1,21 @@
+﻿Team Sharp Meeting
+17 SEPTEMBER 2020 / 3:40 PM / SLACK
+Attendees 
+Lindsey Graham, Narahari Tarun Mulle, Tosin Raphael Olaniyi, Krisztina Pap
+Agenda
+Last Meeting Follow-up
+1. This was our first team meeting, nothing to follow up on.
+New Business
+1. Slack group for team discussions 
+2. Brief discussion of project requirements and timeline
+3. Set date and time for next group meeting
+Notes
+* Lindsey created a new Slack group for our team
+* A quick list of items necessary for the next day was created:
+   * Team name
+   * Team leader
+   * Project to build
+Action Items
+1. Team members agreed to bring their suggestions for team name, team leader, and project ideas to the next meeting.
+Next Meeting
+Next meeting is scheduled for September 18, 2020, on our group Slack channel, immediately following the class standup.
