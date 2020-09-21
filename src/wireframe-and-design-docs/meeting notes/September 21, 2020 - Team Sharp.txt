@@ -1,0 +1,28 @@
+﻿Team Sharp Meeting
+21 SEPTEMBER 2020 / 10:00 AM / SLACK
+Attendees 
+Lindsey Graham, Narahari Tarun Mulle, Tosin Raphael Olaniyi, Krisztina Pap
+Agenda
+Last Meeting Follow-up
+1. Quick follow-up regarding the one-off meetings that happened over the weekend:
+   * Lindsey added basic router and store setup
+   * Tosin built higher-fidelity wireframes and completed a lot of the HTML skeleton of the project
+   * At Tosin’s suggestion, the team split into two sub-teams, one to handle HTML/CSS (Tosin and Tarun) and another to code functionality (Lindsey and Krisztina)
+   * Krisztina added basic login feature
+New Business
+1. Progress reports
+2. Next steps for each sub-team
+3. Decide on meeting schedule
+Notes
+* Additional discussion: Quick reminder of git pull/pull request processes
+* Group decided to meet on Sept 23 and 25 (Wednesday and Friday) for a lunch meeting to check in, in addition to our ongoing Slack chat and impromptu team member meetings. 
+Action Items
+1. Lindsey: continue working on API, if done before next meeting, move onto recipe list page
+2. Tarun: meet with Tosin regarding their sub-team plans, plus start working on Home and About pages
+3. Tosin: meet with Tarun regarding their sub-team plans, continue working on CSS (starting to look at color and fonts)
+4. Krisztina: continue working on login feature, if done before next meeting, move onto shopping list global state (array); add meeting log to project; add comments to actions and reducers
+5. All team members: 
+   * Create a cartoon avatar for the about us section
+   * Write a few sentences about yourself
+Next Meeting
+Next meeting is scheduled for September 23, 2020, on our group Slack channel @ 12pm (lunch meeting).

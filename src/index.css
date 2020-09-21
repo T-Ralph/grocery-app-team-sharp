@@ -15,6 +15,9 @@ body * {
 
 :root {
   --body-bg-color: #FFFFFF;
+  --header-nav-ul-li-color: #228B22;
+  --header-nav-ul-li-color-hover: #FF8C00;
+  --header-nav-ul-li-color-a: #FFFFFF;
 }
 
 
@@ -32,8 +35,8 @@ body {
 */
 
 header {
-  width: 100%;
   display: block;
+  width: 100%;
 }
 
 nav {
@@ -49,6 +52,40 @@ ul.header-nav-ul {
 ul.header-nav-ul > li {
   display: inline;
   padding: 10px 20px;
+  margin: 0px 10px;
+  cursor: pointer;
+  background-color: var(--header-nav-ul-li-color);
+}
+
+ul.header-nav-ul > li:hover {
+  background-color: var(--header-nav-ul-li-color-hover);
+}
+
+ul.header-nav-ul > li a {
+  color: var(--header-nav-ul-li-color-a);
+}
+
+.nav-ul-li-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-ul-li-dropdown-links {
+  position: absolute;
+  left: 0%;
+  display: none;
+  width: 100%;
+  padding: 10px 19px;
+  margin: 10px 0px;
+  background-color: var(--header-nav-ul-li-color);
+}
+
+.nav-ul-li-dropdown-links:hover {
+  background-color: var(--header-nav-ul-li-color-hover);
+}
+
+.nav-ul-li-dropdown:hover .nav-ul-li-dropdown-links {
+  display: block;
 }
 
 
@@ -195,6 +232,14 @@ p.footer-p-team {
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  /*
+    Styles - Header Navigation
+  */
+
+  ul.header-nav-ul > li svg {
+    margin: 0px 10px 0px 0px;
   }
 
 

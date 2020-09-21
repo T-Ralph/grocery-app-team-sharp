@@ -1,13 +1,13 @@
 //Import React, Link from React-Router
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useState, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 //Declare Function
 function Nav() {
 
-    const username = useSelector(state => state.loginReducer);
-    console.log(username);
+    // Brings in loginReducer global state for use
+    const userInfo = useSelector(state => state.loginReducer);
 
     return(
         <>
@@ -38,11 +38,17 @@ function Nav() {
                                 <span className="desktop-screen-only">About Us</span>
                             </Link>
                         </li>
-                        <li>
+                        <li className="nav-ul-li-dropdown">
                             <Link to="/sign-in">
                                 <i className="fas fa-user"></i>
-                                <span className="desktop-screen-only">{username}</span>
+                                <span className="desktop-screen-only">{userInfo.username}</span>
                             </Link>
+                            <div className="nav-ul-li-dropdown-links">
+                                <a href="#">
+                                    <i className="fas fa-sign-out-alt"></i>
+                                    <span className="desktop-screen-only">Out</span>
+                                </a>
+                            </div>
                         </li>
                     </ul>
                 </nav>
