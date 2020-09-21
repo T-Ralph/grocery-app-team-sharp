@@ -14,7 +14,7 @@ function RecipeList() {
 
     const fetchRecipes = async () => {
         // Using cors-anywhere.herokuapp.com to bypass CORS errors in browser. API doesnt like us without it.
-        const data = await fetch('https://cors-anywhere.herokuapp.com/https://www.themealdb.com/api/json/v2/9973533/randomselection.php');
+        const data = await fetch('https://www.themealdb.com/api/json/v2/9973533/randomselection.php');
         const meals = await data.json();
         console.log(meals);
         setMeals(meals.meals);
@@ -33,12 +33,12 @@ function RecipeList() {
                         <label htmlFor="filters"><i className="fas fa-filter"></i> Filters</label>
                         <select id="filters">
                             <option value="">Select a Filter</option>
-                        <option>Chicken</option>
-                        <option>Beef</option>
-                        <option>Seafood</option>
-                        <option>Vegetarian</option>
-                        <option>Vegan</option>
-                        <option>Desert</option>
+                            <option>Chicken</option>
+                            <option>Beef</option>
+                            <option>Seafood</option>
+                            <option>Vegetarian</option>
+                            <option>Vegan</option>
+                            <option>Desert</option>
                         </select>
                     </form>
                     <table className="table">
@@ -53,49 +53,21 @@ function RecipeList() {
                         </thead>
                         <tbody>
                             <tr>
-                            <td>
-                        {meals.map(meals => (
-                            <h1 key={meals.idMeal}>{meals.strMeal}</h1>
-                        ))}
-                    </td>
                                 <td>
-                                    <button className="table-button">View</button>
+                                    {meals.map(meals => (
+                                        <h3 key={meals.idMeal}>
+                                            <Link to={`recipe-list/${meals.idMeal}`} target='_blank'>
+                                                <p><img src={meals.strMealThumb}></img></p>
+                                                {meals.strMeal}
+                                                <button className="table-button">View</button>                                            
+                                            </Link>
+                                        </h3>
+                                        
+                                    ))}
                                 </td>
                             </tr>
-                            <tr>
-                                <td>
-                                    Recipe 2
-                                </td>
-                                <td>
-                                    <button className="table-button">View</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Recipe 3
-                                </td>
-                                <td>
-                                    <button className="table-button">View</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Recipe 4
-                                </td>
-                                <td>
-                                    <button className="table-button">View</button>
-                                </td>
-                            </tr>
+
                         </tbody>
-                        <tfoot>
-                            <tr>
-                                <th>
-                                    Recipe
-                                </th>
-                                <th>
-                                </th>
-                            </tr>
-                        </tfoot>
                     </table>
                     <p>
                         <Link to="/recipe-page">

@@ -11,6 +11,9 @@ function ShoppingList() {
                         <i className="fas fa-shopping-cart"></i>
                         Cart
                     </h2>
+                    <ul>
+                        THIS IS A TEST
+                    </ul>
                     <table className="table">
                         <thead>
                             <tr>
