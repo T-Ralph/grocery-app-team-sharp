@@ -23,85 +23,87 @@ function RecipeList() {
 
     return (
         <>
-            <section className="main-section">
-                <h2>
-                    <i className="fas fa-utensils"></i>
-                    Recipes
-                </h2>
-                <form className="form" id="form-filters">
-                    <label htmlFor="filters"><i className="fas fa-filter"></i> Filters</label>
-                    <select id="filters">
-                        <option value="">Select a Filter</option>
+            <main>
+                <section className="main-section">
+                    <h2>
+                        <i className="fas fa-utensils"></i>
+                        Recipes
+                    </h2>
+                    <form className="form" id="form-filters">
+                        <label htmlFor="filters"><i className="fas fa-filter"></i> Filters</label>
+                        <select id="filters">
+                            <option value="">Select a Filter</option>
                         <option>Chicken</option>
                         <option>Beef</option>
                         <option>Seafood</option>
                         <option>Vegetarian</option>
                         <option>Vegan</option>
                         <option>Desert</option>
-                    </select>
-                </form>
-                <table className="table">
-                    <thead>
-                        <tr>
-                            <th>
-                                Recipe
-                            </th>
-                            <th>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
+                        </select>
+                    </form>
+                    <table className="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Recipe
+                                </th>
+                                <th>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
                             <td>
-                                {meals.map(meals => (
-                                    <h1 key={meals.idMeal}>{meals.strMeal}</h1>
-                                ))}
-                            </td>
-                            <td>
-                                <button className="table-button">View</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Recipe 2
-                            </td>
-                            <td>
-                                <button className="table-button">View</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Recipe 3
-                            </td>
-                            <td>
-                                <button className="table-button">View</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Recipe 4
-                            </td>
-                            <td>
-                                <button className="table-button">View</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>
-                                Recipe
-                            </th>
-                            <th>
-                            </th>
-                        </tr>
-                    </tfoot>
-                </table>
-                <p>
-                    <Link to="/recipe-page">
-                        Sample/Preview the Individual Recipe Page
-                    </Link>
-                </p>
-            </section>
+                        {meals.map(meals => (
+                            <h1 key={meals.idMeal}>{meals.strMeal}</h1>
+                        ))}
+                    </td>
+                                <td>
+                                    <button className="table-button">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Recipe 2
+                                </td>
+                                <td>
+                                    <button className="table-button">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Recipe 3
+                                </td>
+                                <td>
+                                    <button className="table-button">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Recipe 4
+                                </td>
+                                <td>
+                                    <button className="table-button">View</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>
+                                    Recipe
+                                </th>
+                                <th>
+                                </th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <p>
+                        <Link to="/recipe-page">
+                            Sample/Preview the Individual Recipe Page
+                        </Link>
+                    </p>
+                </section>
+            </main>
         </>
     );
 }
