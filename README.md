@@ -19,6 +19,7 @@
 https://trello.com/b/rnxAM8Nx/milestone2
 
 ## Citations:
+- Warren Uhrich - class notes (React/Redux to-do list) - How to remove a to-do by id
 
 
 ## Introduction: 
