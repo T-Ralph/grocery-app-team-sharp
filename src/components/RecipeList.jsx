@@ -14,7 +14,7 @@ function RecipeList() {
 
     const fetchRecipes = async () => {
         // Using cors-anywhere.herokuapp.com to bypass CORS errors in browser. API doesnt like us without it.
-        const data = await fetch('https://cors-anywhere.herokuapp.com/https://www.themealdb.com/api/json/v1/1/random.php');
+        const data = await fetch('https://cors-anywhere.herokuapp.com/https://www.themealdb.com/api/json/v2/9973533/randomselection.php');
         const meals = await data.json();
         console.log(meals);
         setMeals(meals.meals);
