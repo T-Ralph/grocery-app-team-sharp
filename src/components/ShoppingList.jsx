@@ -1,8 +1,16 @@
 //Import React
 import React from 'react';
+// Import useSelector so we can display global state 
+import { useSelector } from 'react-redux';
 
 //Declare Function
 function ShoppingList() {
+
+    // shoppingList is declared as the shoppingReducer global state
+    const shoppingList = useSelector( state => state.shoppingReducer );
+    // We loop through our shoppingList and make each ingredient a list item to be displayed in an unordered list in the cart section
+    const currentShoppingList = shoppingList.map( ingredient => <li>{ingredient.ingredient}</li> );
+
     return(
         <>
             <main>
@@ -12,7 +20,7 @@ function ShoppingList() {
                         Cart
                     </h2>
                     <ul>
-                        THIS IS A TEST
+                        { currentShoppingList }
                     </ul>
                     <table className="table">
                         <thead>
