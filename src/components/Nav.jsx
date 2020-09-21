@@ -1,11 +1,12 @@
 //Import React, Link from React-Router
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useState, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 //Declare Function
 function Nav() {
 
+    // Brings in loginReducer global state for use
     const userInfo = useSelector(state => state.loginReducer);
 
     return(

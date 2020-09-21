@@ -8,11 +8,11 @@ const loginReducer = ( state = initialState , action ) => {
     
     switch ( action.type ) {
         case 'LOG_IN':
-            const newUser = 
-                action.payload;
-                console.log(newUser.username);
-                console.log(newUser.password);
+            const newUser = action.payload;
             return newUser;
+        case 'LOG_OUT':
+            const guestUser = action.payload;
+            return guestUser;
         default:
             return state;
     }

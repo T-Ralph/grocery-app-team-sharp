@@ -8,6 +8,7 @@ function SignIn( event ) {
 
     const [ newUsername, setUsername ] = useState( "Guest" );
     const [ newPassword, setPassword ] = useState( "" );
+    // useDispatch hook is used to update global state
     const dispatch = useDispatch();
     const loginForm = document.getElementById("form-sign-in");
 
@@ -15,15 +16,15 @@ function SignIn( event ) {
     const newUser = (event) => {
         event.preventDefault();
         // loginReducer global state gets updated with new user
-        dispatch(loginAction({  username: newUsername, password: newPassword, isLoggedIn: true } ));
+        dispatch(loginAction({ username: newUsername, password: newPassword, isLoggedIn: true }));
         loginForm.reset();
     }
     
     // Logout function ready to be connected to logout button
-    // const guestUser = () => {
-    //     event.preventDefault();
-    //     dispatch(logoutAction({ type: 'LOG_OUT', payload: { username: "Guest", password: "", isLoggedIn: false } }));
-    // }
+    const guestUser = (event) => {
+        event.preventDefault();
+        dispatch(logoutAction({ username: "Guest", password: "", isLoggedIn: false }));
+    }
    
     
 
@@ -41,7 +42,9 @@ function SignIn( event ) {
                         <label htmlFor="password"><i className="fas fa-lock"></i> Password</label>
                         <input type="password" id="password" placeholder="Password" onChange={e => { setPassword( e.target.value )}}/>
                         <input type="button" id="signin" value="Sign In" onClick={newUser}/>
-                        <input type="button" id="signup" value="Sign Up" onClick={newUser}/>
+
+                        {/* Temporarily changed Sign Up button to log out to test functionality */}
+                        <input type="button" id="signup" value="Sign Up" onClick={guestUser}/>
                     </form>
                 </section>
             </main>
