@@ -1,9 +1,22 @@
 //Import React, Link from React-Router
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
+
 
 //Declare Function
 function RecipeList() {
+
+    useEffect(() => {
+        fetchRecipes();
+    }, []); 
+
+    const fetchRecipes = async () => {
+        const data = await fetch('https://www.themealdb.com/api/json/v1/1/random.php')
+        .then(response => {return response.json();});
+        console.log(data)
+    }
+
+
     return(
         <>
             <section className="main-section">
