@@ -153,10 +153,21 @@ section.main-section p {
 /*
   Styles - Main > Section > About Team
 */
+.team-member-name {
+  display: block ;
+font-style: italic;
+font-weight: bold;
+
+}
 
 .team-member {
   width: 100%;
   min-height: 150px;
+  background-color: #fafafa;
+  max-width: 800px;
+  margin: 0px auto;
+  padding: 50px 100px 50px 50px;
+  border-right: 1px solid #efefef;
 }
 
 .team-member-img {
@@ -169,6 +180,9 @@ section.main-section p {
 
 .team-member-text {
   width: 100%;
+  font-family: "C540", serif;
+  color: #000000;
+  font-size: larger;
 }
 
 
