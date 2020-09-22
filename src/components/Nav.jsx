@@ -55,10 +55,10 @@ function Nav() {
                                 <i className="fas fa-user"></i>
                                 <span className="desktop-screen-only">{userInfo.username}</span>
                             </Link>
-                            <a href="#" className="nav-ul-li-dropdown-link" onClick={guestUser}>
+                            <button className="nav-ul-li-dropdown-link" onClick={guestUser}>
                                 <i className="fas fa-sign-out-alt"></i>
                                 <span className="desktop-screen-only">Out</span>
-                            </a>
+                            </button>
                         </li>
                     </ul>
                 </nav>
