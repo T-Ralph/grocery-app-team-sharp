@@ -18,6 +18,16 @@ body * {
   --header-nav-ul-li-color: #228B22;
   --header-nav-ul-li-color-hover: #FF8C00;
   --header-nav-ul-li-color-a: #FFFFFF;
+  --text-color-black: #000000;
+  --form-input-border-color: var(--header-nav-ul-li-color);
+  --form-select-option-color: var(--text-color-black);
+  --form-focus-border-color: var(--header-nav-ul-li-color-hover);
+  --form-button-bg-color: var(--header-nav-ul-li-color);
+  --form-button-color: var(--header-nav-ul-li-color-a);
+  --form-button-color-hover: var(--header-nav-ul-li-color-hover);
+  --form-status-color: var(--header-nav-ul-li-color-a);
+  --form-status-success-bg-color: var(--header-nav-ul-li-color);
+  --form-status-fail-bg-color: var(--header-nav-ul-li-color-hover);
 }
 
 
@@ -50,19 +60,24 @@ ul.header-nav-ul {
 }
 
 ul.header-nav-ul > li {
-  display: inline;
-  padding: 10px 20px;
-  margin: 0px 10px;
   cursor: pointer;
-  background-color: var(--header-nav-ul-li-color);
+  display: inline;
+  cursor: pointer;
+  margin: 0px 10px;
 }
 
 ul.header-nav-ul > li:hover {
   background-color: var(--header-nav-ul-li-color-hover);
 }
 
-ul.header-nav-ul > li a {
+ul.header-nav-ul > li a, ul.header-nav-ul > li a:link {
+  background-color: var(--header-nav-ul-li-color);
   color: var(--header-nav-ul-li-color-a);
+  padding: 10px 20px;
+}
+
+ul.header-nav-ul > li a:hover, ul.header-nav-ul > li a:active {
+  background-color: var(--header-nav-ul-li-color-hover);
 }
 
 .nav-ul-li-dropdown {
@@ -70,21 +85,21 @@ ul.header-nav-ul > li a {
   display: inline-block;
 }
 
-.nav-ul-li-dropdown-links {
+.nav-ul-li-dropdown-link {
+  background-color: var(--header-nav-ul-li-color);
   position: absolute;
   left: 0%;
   display: none;
   width: 100%;
-  padding: 10px 19px;
   margin: 10px 0px;
-  background-color: var(--header-nav-ul-li-color);
+  text-align: left;
 }
 
 .nav-ul-li-dropdown-links:hover {
   background-color: var(--header-nav-ul-li-color-hover);
 }
 
-.nav-ul-li-dropdown:hover .nav-ul-li-dropdown-links {
+.nav-ul-li-dropdown:hover .nav-ul-li-dropdown-link {
   display: block;
 }
 
@@ -111,6 +126,10 @@ section.main-section {
 section.main-section > h2 {
   margin: 20px 0px;
   text-align: center;
+}
+
+section.main-section > h2 > svg {
+  margin: 0px 10px 0px 0px;
 }
 
 section.main-section > h3 {
@@ -179,17 +198,50 @@ label {
 input, select {
   display: block;
   margin: 10px 0px;
+  padding: 15px;
   height: 25px;
   width: 300px;
+  border: 2px solid var(--form-input-border-color);
+}
+
+select {
+  height: auto;
+}
+
+input:focus, select:focus {
+  border: 2px solid var(--form-focus-border-color);
 }
 
 input[type=button] {
+  background-color: var(--form-button-bg-color);
+  color: var(--form-button-color);
+  cursor: pointer;
   display: inline-block;
+  padding: 10px 0px 28px 0px;
   width: 150px;
+}
+input[type=button]:hover {
+  background-color: var(--form-button-color-hover);
 }
 
 #form-filters {
   min-height: 100px;
+}
+
+.signin-signup-status-success {
+  background-color: var(--form-status-success-bg-color);
+}
+.signin-signup-status-fail {
+  background-color: var(--form-status-fail-bg-color);
+}
+.signin-signup-status-success, .signin-signup-status-fail {
+  color: var(--form-status-color);
+  width: 300px;
+  margin: 20px 0px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 0px;
+  text-align: center;
 }
 
 
