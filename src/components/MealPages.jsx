@@ -8,7 +8,7 @@ function MealPages({ match }) {
     useEffect(() => {
         fetchMeal();
         console.log(match);
-    }, []);
+    }, []); // [] on the end of this useEffect signifies "Once component has mounted"
 
     // Local State
     const [myMeal, setMeal] = useState([
