@@ -1,14 +1,13 @@
 //Import React
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { logoutAction }  from '../../actions/loginAction';
 import { useSelector, useDispatch } from 'react-redux';
-import RecipeList from '../RecipeList';
+
 
 //Declare Function
 function SignedIn() {
 
-    const [ newUsername, setUsername ] = useState( "Guest" );
     // useDispatch hook is used to update global state
     const dispatch = useDispatch();
     // Brings in loginReducer global state for use
@@ -35,10 +34,7 @@ function SignedIn() {
                     <i className="fas fa-utensils"></i>
                     <span className="desktop-screen-only">Recipe List</span>
                 </Link>
-                <Link to="/recipe-list">
-                    <i className="fas fa-utensils"></i>
-                    <span className="desktop-screen-only">Recipe List</span>
-                </Link>
+       
                 <Link to="/shopping-list">
                     <i className="fas fa-shopping-cart"></i>
                     <span className="desktop-screen-only">Shopping List</span>
