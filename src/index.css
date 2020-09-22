@@ -250,11 +250,37 @@ p.footer-p-team {
     display: inline-block;
   }
 
+  .recipe {
+    text-align: center;
+  }
+
   .recipe:hover {
     color: var(--header-nav-ul-li-color-hover);
     cursor: pointer;
-    font-size: 25px;
     transition: all ease 0.1s;
+  }
+
+  .recipe-header {
+    background-color: orangered;
+padding: 15px;
+border: 1px solid black;
+border-radius: 5px;
+  }
+
+  .recipe-btn {
+
+  }
+
+  .recipe-btn:hover {
+    background-color: var(--header-nav-ul-li-color);
+    color: var(--body-bg-color);
+    -webkit-box-shadow: 35px 28px 24px -23px rgba(115,107,115,0.69);
+-moz-box-shadow: 35px 28px 24px -23px rgba(115,107,115,0.69);
+box-shadow: 35px 28px 24px -23px rgba(37, 36, 37, 0.69);
+  }
+
+  .recipe-table tbody tr{
+      height: 50px;
   }
 
 }
