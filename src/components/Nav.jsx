@@ -1,8 +1,7 @@
 //Import React, Link from React-Router
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { logoutAction}  from '../actions/loginAction';
 
 //Declare Function
@@ -14,7 +13,6 @@ function Nav() {
     // Brings in loginReducer global state for use
     const userInfo = useSelector(state => state.loginReducer);
     const loginForm = document.getElementById("form-sign-in");
-
     // Logout function ready to be connected to logout button
     const guestUser = (event) => {
         event.preventDefault();
@@ -53,7 +51,7 @@ function Nav() {
                             </Link>
                         </li>
                         <li className="nav-ul-li-dropdown">
-                            <Link to="/sign-in">
+                            <Link to="/authentication">
                                 <i className="fas fa-user"></i>
                                 <span className="desktop-screen-only">{userInfo.username}</span>
                             </Link>
