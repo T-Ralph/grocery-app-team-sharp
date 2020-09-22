@@ -23,6 +23,8 @@ https://trello.com/b/rnxAM8Nx/milestone2
 - Dev Ed React Series
     - Tips & Tricks on React
         - https://www.youtube.com/watch?v=dGcsHMXbSOA&list=PLDyQo7g0_nsVHmyZZpVJyFn5ojlboVEhE
+- Bitmoji App
+    - Avatars for 'About-Us' page
 
 
 ## Introduction: 
