@@ -37,7 +37,7 @@ function MealPages({ match }) {
             <br />
             <br />
             <h3>About the Dish:</h3>
-            <p>A {myMeal.strArea} {myMeal.strCategory} based dish.</p>
+            <p>A {myMeal.strArea} {myMeal.strCategory} dish.</p>
             <br />
             <br />
             <h3>Dietary Restrictions:</h3>
