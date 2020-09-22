@@ -5,8 +5,8 @@
 
 ## Team Members & Roles:
 - Krisztina (Team Lead & Code)
-- Tarun (Wireframes/Design & Code)
-- Tosin (Trello Manager & Code)
+- Tarun (Trello Manager & Code)
+- Tosin (Wireframes/Design & Code)
 - Lindsey (Github Manager & Code)
 
 ## Our App:
