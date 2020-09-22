@@ -52,7 +52,6 @@ function RecipeList() {
                             <option>Vegan</option>
                             <option>Desert</option>
                         </select>
-<<<<<<< HEAD
                      </form>*/}
                     <table className="table">
                         <tbody>
