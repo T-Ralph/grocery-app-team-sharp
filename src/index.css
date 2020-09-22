@@ -275,6 +275,8 @@ p.footer-p-team {
     cursor: pointer;
     transition: all ease 0.4s;
     border-radius: 12px;
+    font-style: italic;
+    
 
   }
 
