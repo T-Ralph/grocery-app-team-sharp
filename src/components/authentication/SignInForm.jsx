@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { loginAction }  from '../../actions/loginAction';
 
 //Declare Function
-function SignInForm( event ) {
+function SignInForm( ) {
 
     const [ newUsername, setUsername ] = useState( "Guest" );
     const [ newPassword, setPassword ] = useState( "" );
@@ -12,7 +12,6 @@ function SignInForm( event ) {
     const dispatch = useDispatch();
     let usernameFieldValue = document.getElementById("username");
 
-    
     const newUser = (event) => {
         event.preventDefault();
         if ((newUsername === "Guest") && (!usernameFieldValue)) {
