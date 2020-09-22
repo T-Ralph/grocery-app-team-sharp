@@ -28,9 +28,8 @@ function RecipeList() {
             <main>
                 <section className="main-section">
                     <h2>
-                        <span className="recipe-header">
                         <i className="fas fa-utensils"></i>
-                        Recipes</span>
+                        Recipes
                     </h2>
                     {/* Commenting out Filters for now. We can add these once the 'base functionality' is completed.
                         Each filter will require an entire API call dedicated to it
@@ -54,27 +53,46 @@ function RecipeList() {
                         </select>
                      </form>*/}
                     <table className="table">
-                        <tbody>
+                        <thead>
                             <tr>
-                                <td>
-                                    {meals.map(meals => (
-                                        <h3 key={meals.idMeal}>
-                                            <Link to={`recipe-list/${meals.idMeal}`} target='_blank'>
-                                                <p><img src={meals.strMealThumb}></img></p>
-                                                {meals.strMeal}
-                                                <button className="table-button recipe-btn">View</button>                                            
-                                            </Link>
-                                        </h3>                                        
-                                    ))}
-                                </td>
+                                <th>
+                                    Recipes
+                                </th>
+                                <th>
+                                </th>
                             </tr>
+                        </thead>
+                        <tbody>
+                            {meals.map(meals => (
+                                <tr key={meals.idMeal}>
+                                    <td>
+                                        <Link to={`recipe-list/${meals.idMeal}`} target='_blank'>
+                                            <img src={meals.strMealThumb} alt={meals.strMeal} />
+                                            <div>
+                                                {meals.strMeal}
+                                            </div>
+                                        </Link>
+                                    </td>
+                                    <td>
+                                        <Link to={`recipe-list/${meals.idMeal}`} target='_blank'>
+                                            <button className="table-button">
+                                                <i className="fas fa-book-reader"></i>
+                                            </button>
+                                        </Link>
+                                    </td>
+                                </tr>
+                            ))}
                         </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>
+                                    Recipes
+                                </th>
+                                <th>
+                                </th>
+                            </tr>
+                        </tfoot>
                     </table>
-                    <p>
-                        <Link to="/recipe-page">
-                            Sample/Preview the Individual Recipe Page
-                        </Link>
-                    </p>
                 </section>
             </main>
         </>
