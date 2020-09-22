@@ -1,21 +1,48 @@
-//Import React
-import React from 'react';
+//Import React, useState & useEffect from React
+import React, { useState, useEffect } from 'react';
 
 //Declare Function
-function RecipePage() {
+function RecipePage({ match }) {
+
+    // Calls 'fetchMeal' once component has mounted successfully.
+    useEffect(() => {
+        fetchMeal();
+        console.log(match);
+    }, []); // [] on the end of this useEffect signifies "Once component has mounted"
+
+    // Local State
+    const [myMeal, setMeal] = useState([
+    ]);
+
+    // Pull specific meal information in based on the meal you chose on the RecipeList page using {match} prop given to us through <Link>
+    const fetchMeal = async () => {
+        const fetchMeals = await fetch(`https://www.themealdb.com/api/json/v2/9973533/lookup.php?i=${match.params.meal}`);
+        const meal = await fetchMeals.json();
+        console.log(meal.meals[0].strMeal);
+        setMeal(meal.meals[0]);
+        console.log(meal.meals[0]);
+    }
+
     return(
         <>
             <main>
                 <section className="main-section">
                     <h2>
                         <i className="fas fa-utensils"></i>
-                        Recipes
+                        {myMeal.strMeal}
                     </h2>
+                    <img src={myMeal.strMealThumb} alt={`${myMeal.strMeal}`} className="recipe-page-image" />
                     <h3>
-                        Instructions
+                        About
                     </h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus vel facilisis volutpat est velit egestas dui id. Tristique senectus et netus et malesuada fames ac. Tortor condimentum lacinia quis vel. Non curabitur gravida arcu ac tortor dignissim. Donec et odio pellentesque diam volutpat. Vitae congue eu consequat ac. Purus faucibus ornare suspendisse sed nisi lacus. Platea dictumst quisque sagittis purus sit amet volutpat consequat mauris. Tellus at urna condimentum mattis pellentesque id nibh. Orci nulla pellentesque dignissim enim. Vitae justo eget magna fermentum. Proin sagittis nisl rhoncus mattis.
+                        {myMeal.strArea} {myMeal.strCategory}
+                    </p>
+                    <h3>
+                        Dietary Restrictions
+                    </h3>
+                    <p>
+                        {myMeal.strTags}
                     </p>
                     <h3>
                         Ingredients
@@ -33,34 +60,202 @@ function RecipePage() {
                         <tbody>
                             <tr>
                                 <td>
-                                    Ingredient 1
+                                    {`${myMeal.strIngredient1} - ${myMeal.strMeasure1}`}
                                 </td>
                                 <td>
-                                    <button className="table-button">Add to Shopping List</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Ingredient 2
-                                </td>
-                                <td>
-                                    <button className="table-button">Add to Shopping List</button>
+                                    <button className="table-button" title="Add to Shopping List">
+                                        <i className="fas fa-cart-plus"></i>
+                                    </button>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    Ingredient 3
+                                    {`${myMeal.strIngredient2} - ${myMeal.strMeasure2}`}
                                 </td>
                                 <td>
-                                    <button className="table-button">Add to Shopping List</button>
+                                    <button className="table-button" title="Add to Shopping List">
+                                        <i className="fas fa-cart-plus"></i>
+                                    </button>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    Ingredient 4
+                                    {`${myMeal.strIngredient3} - ${myMeal.strMeasure3}`}
                                 </td>
                                 <td>
-                                    <button className="table-button">Add to Shopping List</button>
+                                    <button className="table-button" title="Add to Shopping List">
+                                        <i className="fas fa-cart-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {`${myMeal.strIngredient4} - ${myMeal.strMeasure4}`}
+                                </td>
+                                <td>
+                                    <button className="table-button" title="Add to Shopping List">
+                                        <i className="fas fa-cart-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {`${myMeal.strIngredient5} - ${myMeal.strMeasure5}`}
+                                </td>
+                                <td>
+                                    <button className="table-button" title="Add to Shopping List">
+                                        <i className="fas fa-cart-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {`${myMeal.strIngredient6} - ${myMeal.strMeasure6}`}
+                                </td>
+                                <td>
+                                    <button className="table-button" title="Add to Shopping List">
+                                        <i className="fas fa-cart-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {`${myMeal.strIngredient7} - ${myMeal.strMeasure7}`}
+                                </td>
+                                <td>
+                                    <button className="table-button" title="Add to Shopping List">
+                                        <i className="fas fa-cart-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {`${myMeal.strIngredient8} - ${myMeal.strMeasure8}`}
+                                </td>
+                                <td>
+                                    <button className="table-button" title="Add to Shopping List">
+                                        <i className="fas fa-cart-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {`${myMeal.strIngredient9} - ${myMeal.strMeasure9}`}
+                                </td>
+                                <td>
+                                    <button className="table-button" title="Add to Shopping List">
+                                        <i className="fas fa-cart-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {`${myMeal.strIngredient10} - ${myMeal.strMeasure10}`}
+                                </td>
+                                <td>
+                                    <button className="table-button" title="Add to Shopping List">
+                                        <i className="fas fa-cart-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {`${myMeal.strIngredient11} - ${myMeal.strMeasure11}`}
+                                </td>
+                                <td>
+                                    <button className="table-button" title="Add to Shopping List">
+                                        <i className="fas fa-cart-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {`${myMeal.strIngredient12} - ${myMeal.strMeasure12}`}
+                                </td>
+                                <td>
+                                    <button className="table-button" title="Add to Shopping List">
+                                        <i className="fas fa-cart-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {`${myMeal.strIngredient13} - ${myMeal.strMeasure13}`}
+                                </td>
+                                <td>
+                                    <button className="table-button" title="Add to Shopping List">
+                                        <i className="fas fa-cart-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {`${myMeal.strIngredient14} - ${myMeal.strMeasure14}`}
+                                </td>
+                                <td>
+                                    <button className="table-button" title="Add to Shopping List">
+                                        <i className="fas fa-cart-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {`${myMeal.strIngredient15} - ${myMeal.strMeasure15}`}
+                                </td>
+                                <td>
+                                    <button className="table-button" title="Add to Shopping List">
+                                        <i className="fas fa-cart-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {`${myMeal.strIngredient16} - ${myMeal.strMeasure16}`}
+                                </td>
+                                <td>
+                                    <button className="table-button" title="Add to Shopping List">
+                                        <i className="fas fa-cart-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {`${myMeal.strIngredient17} - ${myMeal.strMeasure17}`}
+                                </td>
+                                <td>
+                                    <button className="table-button" title="Add to Shopping List">
+                                        <i className="fas fa-cart-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {`${myMeal.strIngredient18} - ${myMeal.strMeasure18}`}
+                                </td>
+                                <td>
+                                    <button className="table-button" title="Add to Shopping List">
+                                        <i className="fas fa-cart-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {`${myMeal.strIngredient19} - ${myMeal.strMeasure19}`}
+                                </td>
+                                <td>
+                                    <button className="table-button" title="Add to Shopping List">
+                                        <i className="fas fa-cart-plus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {`${myMeal.strIngredient20} - ${myMeal.strMeasure20}`}
+                                </td>
+                                <td>
+                                    <button className="table-button" title="Add to Shopping List">
+                                        <i className="fas fa-cart-plus"></i>
+                                    </button>
                                 </td>
                             </tr>
                         </tbody>
@@ -74,6 +269,25 @@ function RecipePage() {
                             </tr>
                         </tfoot>
                     </table>
+                    <h3>
+                        Instructions
+                    </h3>
+                    <p>
+                        {myMeal.strInstructions}
+                    </p>
+                    <h3>
+                        <i className="fab fa-youtube"></i>
+                        YouTube
+                    </h3>
+                    <p>
+                        <button className="table-button center">
+                            <a href={`${myMeal.strYoutube}`} target='_blank' rel='noopener noreferrer'>
+                                <i className="fab fa-youtube"></i>
+                                Watch on YouTube
+                            </a>
+                        </button>
+                        <iframe src={myMeal.strYoutube} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen className="recipe-page-youtube"></iframe>
+                    </p>
                 </section>
             </main>
         </>

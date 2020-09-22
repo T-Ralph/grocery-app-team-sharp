@@ -1,8 +1,6 @@
 //CSS Import
 import './index.css';
 
-
-
 //Library Imports
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -10,7 +8,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-// Component Imports
+//Component Imports
 import Nav from './components/Nav';
 import Home from './components/Home';
 import RecipeList from './components/RecipeList';
@@ -19,10 +17,8 @@ import ShoppingList from './components/ShoppingList';
 import AboutUs from './components/AboutUs';
 import Authentication from './components/authentication/Authentication';
 import Footer from './components/Footer';
-import MealPages from './components/MealPages';
 
-
-// Importing Reducer, Defining Store, & Adding Redux DEVTOOLs Browser Compatability
+//Importing Reducer, Defining Store, & Adding Redux DEVTOOLs Browser Compatability
 import allReducers from './reducers/index';
 const store = createStore(
   allReducers,
@@ -32,18 +28,17 @@ const store = createStore(
 //Ensuring Store Works
 store.subscribe(() => console.log(store.getState()));
 
+//Render DOM
 ReactDOM.render(
   <Provider store={store}>
     <Router>
       <Nav />
       <Route path='/' component={Home} exact />
       <Route path='/recipe-list' component={RecipeList} exact />
-      <Route path='/recipe-page' component={RecipePage} exact />
+      <Route path='/recipe-list/:meal' component={RecipePage} />
       <Route path='/shopping-list' component={ShoppingList} />
       <Route path='/about-us' component={AboutUs} />
       <Route path='/authentication' component={Authentication} />
-      <Route path='/recipe-list/:meal' component={MealPages} />
-
       <Footer />
     </Router>
   </Provider>,
