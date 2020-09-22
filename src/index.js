@@ -15,9 +15,10 @@ import RecipeList from './components/RecipeList';
 import RecipePage from './components/RecipePage';
 import ShoppingList from './components/ShoppingList';
 import AboutUs from './components/AboutUs';
-import SignIn from './components/SignIn';
+import Authentication from './components/authentication/Authentication';
 import Footer from './components/Footer';
 import MealPages from './components/MealPages';
+
 
 // Importing Reducer, Defining Store, & Adding Redux DEVTOOLs Browser Compatability
 import allReducers from './reducers/index';
@@ -38,8 +39,9 @@ ReactDOM.render(
       <Route path='/recipe-page' component={RecipePage} exact />
       <Route path='/shopping-list' component={ShoppingList} />
       <Route path='/about-us' component={AboutUs} />
-      <Route path='/sign-in' component={SignIn} />
+      <Route path='/authentication' component={Authentication} />
       <Route path='/recipe-list/:meal' component={MealPages} />
+
       <Footer />
     </Router>
   </Provider>,
