@@ -21,7 +21,51 @@ function MealPages({ match }) {
         console.log(meal.meals[0].strMeal);
         setMeal(meal.meals[0]);
         console.log(meal.meals[0]);
+        // Put the current meal into a variable
+        let currentMeal = meal.meals[0];
+        
+   
+        renderIngredientList( currentMeal );
     }
+
+    const renderIngredientList = ( currentMeal ) => {
+        // Put number of object keys into a variable so we can loop over them with ease
+        let numberOfKeys = Object.keys( currentMeal ).length;
+        const ingredients = document.getElementById("mealIngredients");
+
+        for ( let i = 0; i < numberOfKeys; i++ ) {
+            
+            const keyWord = "strIngredient";
+            let key = Object.keys (currentMeal);
+            let value = Object.values (currentMeal);
+            const numbers = /[0-9]/;
+
+            if ( key[i].includes(keyWord) && ( value[i].length > 0 )) {
+        
+                const listItem = document.createElement("LI");
+                listItem.textContent = value[i];
+                // Found the digits in the key
+                let ingredientNumber = key[i].match(numbers); 
+     
+      
+                //Find the right quantity number for the ingredient
+                for ( let j = 0; j < numberOfKeys; j++ ) {
+                    if ( (key[j].includes("strMeasure")) && ( key[j].includes(ingredientNumber) ) && (key[j] !== "")) {
+                        const listQuantity = document.createElement("SPAN");
+                        listQuantity.textContent = value[j];
+                        listItem.prepend ( listQuantity );
+                    };
+                }
+                // Add a button to each list item so user can add to shopping list
+                const listButton = document.createElement("BUTTON");
+                listButton.textContent = "Add to Shopping List";
+                listItem.appendChild(listButton);
+
+                ingredients.appendChild(listItem);
+            }
+        }        
+    }
+  
 
     return (
         <div>
@@ -45,27 +89,8 @@ function MealPages({ match }) {
             <br />
             <h3>Ingredients:</h3>
 
-            {/* TO DO: Render this using a for loop to only display ingredients where result != "" */}            
-            <p>{myMeal.strMeasure1} - {myMeal.strIngredient1}<button>Add to Shopping List</button></p>
-            <p>{myMeal.strMeasure2} - {myMeal.strIngredient2}<button>Add to Shopping List</button></p>
-            <p>{myMeal.strMeasure3} - {myMeal.strIngredient3}<button>Add to Shopping List</button></p>
-            <p>{myMeal.strMeasure4} - {myMeal.strIngredient4}<button>Add to Shopping List</button></p>
-            <p>{myMeal.strMeasure5} - {myMeal.strIngredient5}<button>Add to Shopping List</button></p>
-            <p>{myMeal.strMeasure6} - {myMeal.strIngredient6}<button>Add to Shopping List</button></p>
-            <p>{myMeal.strMeasure7} - {myMeal.strIngredient7}<button>Add to Shopping List</button></p>
-            <p>{myMeal.strMeasure8} - {myMeal.strIngredient8}<button>Add to Shopping List</button></p>
-            <p>{myMeal.strMeasure9} - {myMeal.strIngredient9}<button>Add to Shopping List</button></p>
-            <p>{myMeal.strMeasure10} - {myMeal.strIngredient10}<button>Add to Shopping List</button></p>
-            <p>{myMeal.strMeasure11} - {myMeal.strIngredient11}<button>Add to Shopping List</button></p>
-            <p>{myMeal.strMeasure12} - {myMeal.strIngredient12}<button>Add to Shopping List</button></p>
-            <p>{myMeal.strMeasure13} - {myMeal.strIngredient13}<button>Add to Shopping List</button></p>
-            <p>{myMeal.strMeasure14} - {myMeal.strIngredient14}<button>Add to Shopping List</button></p>
-            <p>{myMeal.strMeasure15} - {myMeal.strIngredient15}<button>Add to Shopping List</button></p>
-            <p>{myMeal.strMeasure16} - {myMeal.strIngredient16}<button>Add to Shopping List</button></p>
-            <p>{myMeal.strMeasure17} - {myMeal.strIngredient17}<button>Add to Shopping List</button></p>
-            <p>{myMeal.strMeasure18} - {myMeal.strIngredient18}<button>Add to Shopping List</button></p>
-            <p>{myMeal.strMeasure19} - {myMeal.strIngredient19}<button>Add to Shopping List</button></p>
-            <p>{myMeal.strMeasure20} - {myMeal.strIngredient20}<button>Add to Shopping List</button></p>
+            <p id="mealIngredients"></p>
+       
             <br />
             <br />
             <h3>Instructions:</h3>
