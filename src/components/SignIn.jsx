@@ -38,14 +38,20 @@ function SignIn( event ) {
                     </h2>
                     <form className="form" id="form-sign-in">
                         <label htmlFor="username"><i className="fas fa-user"></i> Username</label>
-                        <input type="text" id="username" placeholder="Username" onChange={e => { setUsername( e.target.value )}} />
+                        <input type="text" id="username" placeholder="Username" onChange={e => { setUsername( e.target.value )}} required />
                         <label htmlFor="password"><i className="fas fa-lock"></i> Password</label>
-                        <input type="password" id="password" placeholder="Password" onChange={e => { setPassword( e.target.value )}}/>
+                        <input type="password" id="password" placeholder="Password" onChange={e => { setPassword( e.target.value )}} required />
                         <input type="button" id="signin" value="Sign In" onClick={newUser}/>
 
                         {/* Temporarily changed Sign Up button to log out to test functionality */}
                         <input type="button" id="signup" value="Sign Up" onClick={guestUser}/>
                     </form>
+                    <div className="signin-signup-status-fail">
+                        Sign In Failed
+                    </div>
+                    <div className="signin-signup-status-success">
+                        Sign Up Successful
+                    </div>
                 </section>
             </main>
         </>
