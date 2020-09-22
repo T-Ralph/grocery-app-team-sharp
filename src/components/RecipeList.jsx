@@ -57,7 +57,7 @@ function RecipeList() {
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="recipe">
                                     Recipe 4
                                 </td>
                                 <td>

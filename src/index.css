@@ -250,4 +250,11 @@ p.footer-p-team {
     display: inline-block;
   }
 
+  .recipe:hover {
+    color: var(--header-nav-ul-li-color-hover);
+    cursor: pointer;
+    font-size: 25px;
+    transition: all ease 0.1s;
+  }
+
 }
