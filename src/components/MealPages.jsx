@@ -23,9 +23,6 @@ function MealPages({ match }) {
         console.log(meal.meals[0]);
     }
 
-
-    // 
-
     return (
         <div>
             {/* Note to Tosin/Tarun:
@@ -48,7 +45,7 @@ function MealPages({ match }) {
             <br />
             <h3>Ingredients:</h3>
 
-            {/* TO DO: Render this using a for loop to only display ingredients where result != "" */}
+            {/* TO DO: Render this using a for loop to only display ingredients where result != "" */}            
             <p>{myMeal.strMeasure1} - {myMeal.strIngredient1}<button>Add to Shopping List</button></p>
             <p>{myMeal.strMeasure2} - {myMeal.strIngredient2}<button>Add to Shopping List</button></p>
             <p>{myMeal.strMeasure3} - {myMeal.strIngredient3}<button>Add to Shopping List</button></p>
