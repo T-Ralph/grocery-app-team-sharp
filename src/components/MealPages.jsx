@@ -1,6 +1,6 @@
 //Import React, Link from React-Router
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+
 
 //Declare Function
 function MealPages({ match }) {
@@ -33,7 +33,7 @@ function MealPages({ match }) {
             working on the code portion of it. Thanks :)!!! -LG */}
 
             <h1>{myMeal.strMeal}</h1>
-            <img src={myMeal.strMealThumb} />
+            <img src={myMeal.strMealThumb} alt={`Picture of the dish - ${myMeal.strMeal}`}/>
             <br />
             <br />
             <h3>About the Dish:</h3>
@@ -47,6 +47,8 @@ function MealPages({ match }) {
             <br />
             <br />
             <h3>Ingredients:</h3>
+
+            {/* TO DO: Render this using a for loop to only display ingredients where result != "" */}
             <p>{myMeal.strMeasure1} - {myMeal.strIngredient1}<button>Add to Shopping List</button></p>
             <p>{myMeal.strMeasure2} - {myMeal.strIngredient2}<button>Add to Shopping List</button></p>
             <p>{myMeal.strMeasure3} - {myMeal.strIngredient3}<button>Add to Shopping List</button></p>
@@ -74,7 +76,7 @@ function MealPages({ match }) {
             <br />
             <br />
             <h3>Youtube Tutorial:</h3>
-            <p><a href={`${myMeal.strYoutube}`} target='_blank'>
+            <p><a href={`${myMeal.strYoutube}`} target='_blank' rel='noopener noreferrer'>
                 <img src={require('../images/youtube-light.png')} alt='Youtube Logo' />
                 </a>
             </p>
