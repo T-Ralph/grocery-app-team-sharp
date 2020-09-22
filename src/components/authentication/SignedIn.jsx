@@ -12,12 +12,9 @@ function SignedIn() {
     const dispatch = useDispatch();
     // Brings in loginReducer global state for use
     const userInfo = useSelector(state => state.loginReducer);
-    const loginForm = document.getElementById("form-sign-in");
-
     const guestUser = (event) => {
         event.preventDefault();
         dispatch(logoutAction({ username: "Guest", password: "", isLoggedIn: false }));
-        loginForm.reset();
     }
 
     return(
