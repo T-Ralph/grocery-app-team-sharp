@@ -53,15 +53,6 @@ function RecipeList() {
                         </select>
                      </form>*/}
                     <table className="table">
-                        <thead>
-                            <tr>
-                                <th>
-                                    Recipe
-                                </th>
-                                <th>
-                                </th>
-                            </tr>
-                        </thead>
                         <tbody>
                             <tr>
                                 <td>

@@ -21,11 +21,16 @@ function MealPages({ match }) {
 
     return (
         <div>
+            {/* Note to Tosin/Tarun:
+            When Styling this page make sure you remove all <br />'s and apply the spacing in CSS instead. I've used them here just to give my eyes some white space while
+            working on the code portion of it. Thanks :)!!! -LG */}
+
             <h1>{myMeal.strMeal}</h1>
             <img src={myMeal.strMealThumb} />
             <br />
             <br />
-            <h3>TODO: ADD REMAINING CONTENT TO THIS PAGE</h3>
+            <h3>Instructions:</h3>
+            <p>This is a test just for sizing</p>
             <br />
             <br />
             <h3>{myMeal.strMeasure1} - {myMeal.strIngredient1}<button>Add to Shopping List</button> - PLACEHOLDER, FIX LATER</h3>
