@@ -10,8 +10,7 @@ function SignInForm( event ) {
     const [ newPassword, setPassword ] = useState( "" );
     // useDispatch hook is used to update global state
     const dispatch = useDispatch();
-    const loginForm = document.getElementById("form-sign-in");
-    const usernameFieldValue = document.getElementById("username");
+    let usernameFieldValue = document.getElementById("username");
 
     
     const newUser = (event) => {
@@ -20,11 +19,7 @@ function SignInForm( event ) {
             console.log("You need to enter your username!");
         } else {
              // loginReducer global state gets updated with new user
-            dispatch(loginAction({ username: newUsername, password: newPassword, isLoggedIn: true }));
-            if (loginForm === null ){
-                loginForm.reset();
-            }
-            
+            dispatch(loginAction({ username: newUsername, password: newPassword, isLoggedIn: true })); 
         }
     }
 

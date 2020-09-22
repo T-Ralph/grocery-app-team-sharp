@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { logoutAction}  from '../actions/loginAction';
+import SignInForm from '../components/authentication/SignInForm';
 
 //Declare Function
 function Nav() {
@@ -12,12 +13,11 @@ function Nav() {
     const dispatch = useDispatch();
     // Brings in loginReducer global state for use
     const userInfo = useSelector(state => state.loginReducer);
-    const loginForm = document.getElementById("form-sign-in");
+
     // Logout function ready to be connected to logout button
     const guestUser = (event) => {
         event.preventDefault();
         dispatch(logoutAction({ username: "Guest", password: "", isLoggedIn: false }));
-        loginForm.reset();
     }
 
 

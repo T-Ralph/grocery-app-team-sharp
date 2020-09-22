@@ -1,7 +1,9 @@
 //Import React
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { logoutAction }  from '../../actions/loginAction';
 import { useSelector, useDispatch } from 'react-redux';
+import RecipeList from '../RecipeList';
 
 //Declare Function
 function SignedIn() {
@@ -25,10 +27,22 @@ function SignedIn() {
             <section className="main-section">
                 <h2>
                     <i className="fas fa-user"></i>
-                    You are currently signed in as {userInfo.username}
+                    Welcome {userInfo.username}!
                 </h2>
                
-                <p>If that is not you or you are ready to sign out, click the button below.</p>
+                <h3>What would you like to do?</h3>
+                <Link to="/recipe-list">
+                    <i className="fas fa-utensils"></i>
+                    <span className="desktop-screen-only">Recipe List</span>
+                </Link>
+                <Link to="/recipe-list">
+                    <i className="fas fa-utensils"></i>
+                    <span className="desktop-screen-only">Recipe List</span>
+                </Link>
+                <Link to="/shopping-list">
+                    <i className="fas fa-shopping-cart"></i>
+                    <span className="desktop-screen-only">Shopping List</span>
+                </Link>
                 <button onClick={guestUser}>Sign out</button>
             </section>
         </main>
