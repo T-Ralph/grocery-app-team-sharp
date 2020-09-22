@@ -145,6 +145,12 @@ section.main-section p {
 /*
   Styles - Main > Section > About Team
 */
+.team-member-name {
+  display: block ;
+font-style: italic;
+font-weight: bold;
+
+}
 
 .team-member {
   width: 100%;
