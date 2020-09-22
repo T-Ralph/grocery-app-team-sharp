@@ -9,8 +9,9 @@ function RecipeList() {
             <main>
                 <section className="main-section">
                     <h2>
+                        <span className="recipe-header">
                         <i className="fas fa-utensils"></i>
-                        Recipes
+                        Recipes</span>
                     </h2>
                     <form className="form" id="form-filters">
                         <label htmlFor="filters"><i className="fas fa-filter"></i> Filters</label>
@@ -21,7 +22,7 @@ function RecipeList() {
                             <option>Filter 3</option>
                         </select>
                     </form>
-                    <table className="table">
+                    <table className="table recipe-table">
                         <thead>
                             <tr>
                                 <th>
@@ -33,35 +34,35 @@ function RecipeList() {
                         </thead>
                         <tbody>
                             <tr>
-                                <td>
+                                <td className="recipe">
                                     Recipe 1
                                 </td>
                                 <td>
-                                    <button className="table-button">View</button>
+                                    <button className="table-button recipe-btn">View</button>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td className="recipe">
                                     Recipe 2
                                 </td>
                                 <td>
-                                    <button className="table-button">View</button>
+                                    <button className="table-button recipe-btn">View</button>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td className="recipe">
                                     Recipe 3
                                 </td>
                                 <td>
-                                    <button className="table-button">View</button>
+                                    <button className="table-button recipe-btn">View</button>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td className="recipe">
                                     Recipe 4
                                 </td>
                                 <td>
-                                    <button className="table-button">View</button>
+                                    <button className="table-button recipe-btn">View</button>
                                 </td>
                             </tr>
                         </tbody>
