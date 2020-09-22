@@ -28,8 +28,9 @@ function RecipeList() {
             <main>
                 <section className="main-section">
                     <h2>
+                        <span className="recipe-header">
                         <i className="fas fa-utensils"></i>
-                        Recipes
+                        Recipes</span>
                     </h2>
                     {/* Commenting out Filters for now. We can add these once the 'base functionality' is completed.
                         Each filter will require an entire API call dedicated to it
@@ -51,6 +52,7 @@ function RecipeList() {
                             <option>Vegan</option>
                             <option>Desert</option>
                         </select>
+<<<<<<< HEAD
                      </form>*/}
                     <table className="table">
                         <tbody>
@@ -61,7 +63,7 @@ function RecipeList() {
                                             <Link to={`recipe-list/${meals.idMeal}`} target='_blank'>
                                                 <p><img src={meals.strMealThumb}></img></p>
                                                 {meals.strMeal}
-                                                <button className="table-button">View</button>                                            
+                                                <button className="table-button recipe-btn">View</button>                                            
                                             </Link>
                                         </h3>                                        
                                     ))}
