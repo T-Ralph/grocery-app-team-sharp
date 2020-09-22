@@ -2,12 +2,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { logoutAction}  from '../actions/loginAction';
 
 //Declare Function
 function Nav() {
 
+
+    // useDispatch hook is used to update global state
+    const dispatch = useDispatch();
     // Brings in loginReducer global state for use
     const userInfo = useSelector(state => state.loginReducer);
+    const loginForm = document.getElementById("form-sign-in");
+
+    // Logout function ready to be connected to logout button
+    const guestUser = (event) => {
+        event.preventDefault();
+        dispatch(logoutAction({ username: "Guest", password: "", isLoggedIn: false }));
+        loginForm.reset();
+    }
+
 
     return(
         <>
@@ -43,7 +57,7 @@ function Nav() {
                                 <i className="fas fa-user"></i>
                                 <span className="desktop-screen-only">{userInfo.username}</span>
                             </Link>
-                            <a href="#" className="nav-ul-li-dropdown-link">
+                            <a href="#" className="nav-ul-li-dropdown-link" onClick={guestUser}>
                                 <i className="fas fa-sign-out-alt"></i>
                                 <span className="desktop-screen-only">Out</span>
                             </a>

@@ -1,7 +1,7 @@
 //Import React
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { loginAction, logoutAction}  from '../actions/loginAction';
+import { loginAction }  from '../actions/loginAction';
 
 //Declare Function
 function SignIn( event ) {
@@ -19,14 +19,6 @@ function SignIn( event ) {
         dispatch(loginAction({ username: newUsername, password: newPassword, isLoggedIn: true }));
         loginForm.reset();
     }
-    
-    // Logout function ready to be connected to logout button
-    const guestUser = (event) => {
-        event.preventDefault();
-        dispatch(logoutAction({ username: "Guest", password: "", isLoggedIn: false }));
-    }
-   
-    
 
     return(
         <>
@@ -44,7 +36,7 @@ function SignIn( event ) {
                         <input type="button" id="signin" value="Sign In" onClick={newUser}/>
 
                         {/* Temporarily changed Sign Up button to log out to test functionality */}
-                        <input type="button" id="signup" value="Sign Up" onClick={guestUser}/>
+                        <input type="button" id="signup" value="Sign Up" onClick={newUser}/>
                     </form>
                     <div className="signin-signup-status-fail">
                         Sign In Failed
