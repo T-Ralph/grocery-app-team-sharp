@@ -16,7 +16,6 @@ function SignInForm( event ) {
     const newUser = (event) => {
         event.preventDefault();
         if ((newUsername === "Guest") && (!usernameFieldValue)) {
-            console.log("You need to enter your username!");
         } else {
              // loginReducer global state gets updated with new user
             dispatch(loginAction({ username: newUsername, password: newPassword, isLoggedIn: true })); 

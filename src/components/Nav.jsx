@@ -3,7 +3,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { logoutAction}  from '../actions/loginAction';
-import SignInForm from '../components/authentication/SignInForm';
 
 //Declare Function
 function Nav() {
