@@ -21,7 +21,10 @@ function SignInForm( event ) {
         } else {
              // loginReducer global state gets updated with new user
             dispatch(loginAction({ username: newUsername, password: newPassword, isLoggedIn: true }));
-            loginForm.reset();
+            if (loginForm === null ){
+                loginForm.reset();
+            }
+            
         }
     }
 
