@@ -17,7 +17,7 @@ function ShoppingList() {
                 <section className="main-section">
                     <h2>
                         <i className="fas fa-shopping-cart"></i>
-                        Cart
+                        Shopping List
                     </h2>
                     <ul>
                         { currentShoppingList }
@@ -38,7 +38,9 @@ function ShoppingList() {
                                     Item 1
                                 </td>
                                 <td>
-                                    <button className="table-button">Remove</button>
+                                    <button className="table-button">
+                                        <i className="fas fa-trash-alt"></i>
+                                    </button>
                                 </td>
                             </tr>
                             <tr>
@@ -46,7 +48,9 @@ function ShoppingList() {
                                     Item 2
                                 </td>
                                 <td>
-                                    <button className="table-button">Remove</button>
+                                    <button className="table-button">
+                                        <i className="fas fa-trash-alt"></i>
+                                    </button>
                                 </td>
                             </tr>
                             <tr>
@@ -54,7 +58,9 @@ function ShoppingList() {
                                     Item 3
                                 </td>
                                 <td>
-                                    <button className="table-button">Remove</button>
+                                    <button className="table-button">
+                                        <i className="fas fa-trash-alt"></i>
+                                    </button>
                                 </td>
                             </tr>
                             <tr>
@@ -62,7 +68,9 @@ function ShoppingList() {
                                     Item 4
                                 </td>
                                 <td>
-                                    <button className="table-button">Remove</button>
+                                    <button className="table-button">
+                                        <i className="fas fa-trash-alt"></i>
+                                    </button>
                                 </td>
                             </tr>
                         </tbody>
