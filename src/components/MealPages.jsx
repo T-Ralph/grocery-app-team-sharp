@@ -3,14 +3,17 @@ import React, { useState, useEffect } from 'react';
 
 //Declare Function
 function MealPages({ match }) {
+    // Calls 'fetchMeal' once component has mounted successfully.
     useEffect(() => {
         fetchMeal();
         console.log(match);
     }, []);
 
+    // Local State
     const [myMeal, setMeal] = useState([
     ]);
 
+    // Pull specific meal information in based on the meal you chose on the RecipeList page using {match} prop given to us through <Link>
     const fetchMeal = async () => {
         const fetchMeals = await fetch(`https://www.themealdb.com/api/json/v2/9973533/lookup.php?i=${match.params.meal}`);
         const meal = await fetchMeals.json();
@@ -18,6 +21,9 @@ function MealPages({ match }) {
         setMeal(meal.meals[0]);
         console.log(meal.meals[0]);
     }
+
+
+    // 
 
     return (
         <div>
@@ -27,6 +33,9 @@ function MealPages({ match }) {
 
             <h1>{myMeal.strMeal}</h1>
             <img src={myMeal.strMealThumb} />
+            <br />
+            <br />
+            <h3>Ingredients:</h3>
             <br />
             <br />
             <h3>Instructions:</h3>
