@@ -173,7 +173,7 @@ section.main-section p {
 
 
 /*
-  Styles - Main > Section > Table Cart
+  Styles - Main > Section > Table
 */
 
 .table {
@@ -181,8 +181,6 @@ section.main-section p {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
-  color:#ffa500;
 }
 
 .table thead, .table tfoot {
@@ -205,6 +203,21 @@ section.main-section p {
 
 .table th:last-child{
   width: 10%;
+}
+
+.table tr td img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 0px 20px 0px 0px;
+}
+
+.table tr td a {
+  color: var(--header-nav-ul-li-color);
+}
+
+.table tr td div {
+  padding: 15px 0px 0px 0px;
 }
 
 .table-button {
@@ -331,6 +344,15 @@ p.footer-p-team {
 
   ul.header-nav-ul > li svg {
     margin: 0px 10px 0px 0px;
+  }
+
+  
+  /*
+    Styles - Main > Section > Table
+  */
+
+  .table tr td div {
+    padding: 35px 0px 0px 0px;
   }
 
 
