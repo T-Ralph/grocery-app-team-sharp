@@ -1,5 +1,6 @@
 //Import React, Link from React-Router
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 //Declare Function
 function MealPages({ match }) {
@@ -35,14 +36,48 @@ function MealPages({ match }) {
             <img src={myMeal.strMealThumb} />
             <br />
             <br />
+            <h3>About the Dish:</h3>
+            <p>A {myMeal.strArea} {myMeal.strCategory} based dish.</p>
+            <br />
+            <br />
+            <h3>Dietary Restrictions:</h3>
+            <p>This meal contains the following ingredients that common dietary restrictions contain:</p>
+            <br />
+            <p>{myMeal.strTags}</p>
+            <br />
+            <br />
             <h3>Ingredients:</h3>
+            <p>{myMeal.strMeasure1} - {myMeal.strIngredient1}<button>Add to Shopping List</button></p>
+            <p>{myMeal.strMeasure2} - {myMeal.strIngredient2}<button>Add to Shopping List</button></p>
+            <p>{myMeal.strMeasure3} - {myMeal.strIngredient3}<button>Add to Shopping List</button></p>
+            <p>{myMeal.strMeasure4} - {myMeal.strIngredient4}<button>Add to Shopping List</button></p>
+            <p>{myMeal.strMeasure5} - {myMeal.strIngredient5}<button>Add to Shopping List</button></p>
+            <p>{myMeal.strMeasure6} - {myMeal.strIngredient6}<button>Add to Shopping List</button></p>
+            <p>{myMeal.strMeasure7} - {myMeal.strIngredient7}<button>Add to Shopping List</button></p>
+            <p>{myMeal.strMeasure8} - {myMeal.strIngredient8}<button>Add to Shopping List</button></p>
+            <p>{myMeal.strMeasure9} - {myMeal.strIngredient9}<button>Add to Shopping List</button></p>
+            <p>{myMeal.strMeasure10} - {myMeal.strIngredient10}<button>Add to Shopping List</button></p>
+            <p>{myMeal.strMeasure11} - {myMeal.strIngredient11}<button>Add to Shopping List</button></p>
+            <p>{myMeal.strMeasure12} - {myMeal.strIngredient12}<button>Add to Shopping List</button></p>
+            <p>{myMeal.strMeasure13} - {myMeal.strIngredient13}<button>Add to Shopping List</button></p>
+            <p>{myMeal.strMeasure14} - {myMeal.strIngredient14}<button>Add to Shopping List</button></p>
+            <p>{myMeal.strMeasure15} - {myMeal.strIngredient15}<button>Add to Shopping List</button></p>
+            <p>{myMeal.strMeasure16} - {myMeal.strIngredient16}<button>Add to Shopping List</button></p>
+            <p>{myMeal.strMeasure17} - {myMeal.strIngredient17}<button>Add to Shopping List</button></p>
+            <p>{myMeal.strMeasure18} - {myMeal.strIngredient18}<button>Add to Shopping List</button></p>
+            <p>{myMeal.strMeasure19} - {myMeal.strIngredient19}<button>Add to Shopping List</button></p>
+            <p>{myMeal.strMeasure20} - {myMeal.strIngredient20}<button>Add to Shopping List</button></p>
             <br />
             <br />
             <h3>Instructions:</h3>
-            <p>This is a test just for sizing</p>
+            <p>{myMeal.strInstructions}</p>
             <br />
             <br />
-            <h3>{myMeal.strMeasure1} - {myMeal.strIngredient1}<button>Add to Shopping List</button> - PLACEHOLDER, FIX LATER</h3>
+            <h3>Youtube Tutorial:</h3>
+            <p><a href={`${myMeal.strYoutube}`} target='_blank'>
+                <img src={require('../images/youtube-light.png')} alt='Youtube Logo' />
+                </a>
+            </p>
         </div>
     );
 }
