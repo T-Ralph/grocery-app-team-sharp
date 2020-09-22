@@ -63,12 +63,10 @@ function RecipeList() {
                                                 {meals.strMeal}
                                                 <button className="table-button">View</button>                                            
                                             </Link>
-                                        </h3>
-                                        
+                                        </h3>                                        
                                     ))}
                                 </td>
                             </tr>
-
                         </tbody>
                     </table>
                     <p>

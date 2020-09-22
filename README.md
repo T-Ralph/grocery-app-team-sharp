@@ -5,8 +5,8 @@
 
 ## Team Members & Roles:
 - Krisztina (Team Lead & Code)
-- Tarun (Wireframes/Design & Code)
-- Tosin (Trello Manager & Code)
+- Tosin (Wireframes/Design & Code)
+- Tarun (Trello Manager & Design)
 - Lindsey (Github Manager & Code)
 
 ## Our App:
@@ -20,6 +20,9 @@ https://trello.com/b/rnxAM8Nx/milestone2
 
 ## Citations:
 - Warren Uhrich - class notes (React/Redux to-do list) - How to remove a to-do by id
+- Dev Ed React Series
+    - Tips & Tricks on React
+        - https://www.youtube.com/watch?v=dGcsHMXbSOA&list=PLDyQo7g0_nsVHmyZZpVJyFn5ojlboVEhE
 
 
 ## Introduction: 
