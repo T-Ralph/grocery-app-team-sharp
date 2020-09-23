@@ -1,7 +1,7 @@
 //Import React
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addAction } from '../actions/shoppingAction';
+import { addAction, removeAllAction } from '../actions/shoppingAction';
 
 //Declare Function
 function AddNewIngredient( ) {
@@ -16,6 +16,10 @@ function AddNewIngredient( ) {
     const newShoppingListItem = (ingredients) => {
         // shoppingReducer global state gets updated with new listitem
          dispatch(addAction({ ingredient: newIngredient, measure: newMeasure, meal: newMeal })); 
+    }
+
+    const clearShoppingList = () => {
+        dispatch(removeAllAction());
     }
 
     return(
@@ -37,6 +41,7 @@ function AddNewIngredient( ) {
                         <input type="text" id="meal" placeholder="meal" onChange={e => { setNewMeal( e.target.value )}} />
 
                         <input type="button" id="addNewIngredientButton" value="Add" onClick={newShoppingListItem}/>
+                        <input type="button" id="clearListButton" value="Clear List" onClick={clearShoppingList}/>
 
                     </form>
                 </section>
