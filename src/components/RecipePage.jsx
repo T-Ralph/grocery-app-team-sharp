@@ -1,18 +1,10 @@
 //Import React, useState & useEffect from React
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { shoppingAction }  from '../actions/shoppingAction';
+import { addAction } from '../actions/shoppingAction';
 
 
-const newShoppingListItem = (ingredients) => {
 
-    console.log("Adding new items to list!");
- 
-    
-    console.log("ingredients", ingredients);
-    //shoppingReducer global state gets updated with new listitem
-    //dispatch(shoppingAction({ key: {ingredients.key}, ingredient: newUsername, measure: newPassword })); 
-}
 
 //Declare Function
 function RecipePage({ match }) {
@@ -27,6 +19,9 @@ function RecipePage({ match }) {
     const [ingredientsArray, setIngredientsArray] = useState([]);
     const [dietaryRestrictionsArray, setDietaryRestrictionsArray] = useState([]);
 
+    
+    // useDispatch hook is used to update global state
+    const dispatch = useDispatch();
 
     // Pull specific meal information in based on the meal you chose on the RecipeList page using {match} prop given to us through <Link>
     const fetchMeal = async () => {
@@ -87,12 +82,18 @@ function RecipePage({ match }) {
         //Update the State of dietaryRestrictionsArray
         setDietaryRestrictionsArray(dietaryRestrictionsArray);
     }
-
-    // useDispatch hook is used to update global state
-    const dispatch = useDispatch();
-
-      
     
+
+    const newShoppingListItem = (ingredients) => {
+
+    
+        console.log("Adding new items to list!");
+        
+        
+        console.log("ingredients", ingredients);
+        // shoppingReducer global state gets updated with new listitem
+         dispatch(addAction({ ingredient: ingredients.ingredient, measure: ingredients.measure })); 
+    }
 
     return(
         <>
@@ -173,7 +174,7 @@ function RecipePage({ match }) {
                                 Watch on YouTube
                             </a>
                         </button>
-                        <iframe src={myMeal.strYoutube} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen className="recipe-page-youtube"></iframe>
+                        {/* <iframe src={myMeal.strYoutube} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen className="recipe-page-youtube"></iframe> */}
                     </p>
                 </section>
             </main>
