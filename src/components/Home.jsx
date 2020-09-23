@@ -1,5 +1,6 @@
 //Import React
 import React from 'react';
+import Landing from '../img/landing-page.jpg'
 
 //Declare Function
 function Home() {
@@ -7,6 +8,11 @@ function Home() {
         <>
             <main>
                 <section className="main-section">
+
+               
+                        <img  className ="landing-page" src={ Landing } alt="Recipe picture" />
+                
+
                     <h2>
                         <i className="fas fa-home"></i>
                         Home
