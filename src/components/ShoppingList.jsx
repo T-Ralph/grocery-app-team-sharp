@@ -17,6 +17,7 @@ function ShoppingList() {
          dispatch(removeAction( id )); 
     }
 
+
     // shoppingList is declared as the shoppingReducer global state
     const shoppingList = useSelector( state => state.shoppingReducer );
     // We loop through our shoppingList and make each ingredient a list item to be displayed in an unordered list in the cart section

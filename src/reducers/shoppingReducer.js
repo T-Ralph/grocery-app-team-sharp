@@ -18,6 +18,10 @@ const shoppingReducer = ( state = [] , action ) => {
             // Below line of code is the same as what we used in class to remove an item with a specific id from a to-do list
             const updatedShoppingList = state.filter( ingredient => ingredient.id !== action.payload );
             return updatedShoppingList;
+
+        case 'REMOVE_ALL_ACTION':
+            const clearShoppingList = [];
+            return clearShoppingList;
             
         default:
             return state;
