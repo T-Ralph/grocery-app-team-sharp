@@ -24,12 +24,7 @@ function AboutUs() {
                         
                         <p className="team-member-text">In early 2019 due to being unemployed, he picked up a few programming courses on Udemy to learn Python and ended up loving it to the point that he knew he wanted to change careers and take up the path of Software Development.</p>
                         
-                        <p className="team-member-text">As a life long technology enthusiast, Lindsey enjoys spending his spare time doing many technology related activities ranging from video games to coding apps to make everyday life easier.
-                        In addition to technology related activities, he also partakes in a slowpitch team that has been together for 4 years 
-                        and won their leagues championship twice! 
-                        There's nothing quite like unwinding after a long day with a casual game of slowpitch with friends.</p>
-                        
-                        
+                                            
 
                             
                             
