@@ -19,6 +19,7 @@ body * {
   --header-nav-ul-li-color-hover: #FF8C00;
   --header-nav-ul-li-color-a: #FFFFFF;
   --text-color-black: #000000;
+  --text-color-white: #FFFFFF;
   --form-input-border-color: var(--header-nav-ul-li-color);
   --form-select-option-color: var(--text-color-black);
   --form-focus-border-color: var(--header-nav-ul-li-color-hover);
@@ -31,6 +32,7 @@ body * {
   --table-tab-bg-color: var(--header-nav-ul-li-color);
   --table-tab-color: var(--header-nav-ul-li-color-a);
   --table-alt-color: #EBFFEB;
+  --footer-bg-color: var(--header-nav-ul-li-color);
 }
 
 
@@ -296,6 +298,7 @@ input[type=button] {
   padding: 10px 0px 28px 0px;
   width: 150px;
 }
+
 input[type=button]:hover {
   background-color: var(--form-button-color-hover);
 }
@@ -307,9 +310,11 @@ input[type=button]:hover {
 .signin-signup-status-success {
   background-color: var(--form-status-success-bg-color);
 }
+
 .signin-signup-status-fail {
   background-color: var(--form-status-fail-bg-color);
 }
+
 .signin-signup-status-success, .signin-signup-status-fail {
   color: var(--form-status-color);
   width: 300px;
@@ -326,9 +331,13 @@ input[type=button]:hover {
 */
 
 footer {
+  background-color: var(--footer-bg-color);
+  color: var(--text-color-white);
   display: block;
   width: 100%;
+  min-height: 30px;
   margin: 30px 0px;
+  padding: 10px 0px;
 }
 
 p.footer-p-team {
