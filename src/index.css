@@ -14,12 +14,13 @@ body * {
 */
 
 :root {
-  --body-bg-color: #FFFFFF;
+  --body-bg-color: #EBFFEB;
   --header-nav-ul-li-color: #228B22;
   --header-nav-ul-li-color-hover: #FF8C00;
   --header-nav-ul-li-color-a: #FFFFFF;
   --text-color-black: #000000;
   --text-color-white: #FFFFFF;
+  --bg-color-white: #FFFFFF;
   --form-input-border-color: var(--header-nav-ul-li-color);
   --form-select-option-color: var(--text-color-black);
   --form-focus-border-color: var(--header-nav-ul-li-color-hover);
@@ -123,9 +124,10 @@ ul.header-nav-ul > li button {
 */
 
 main {
+  background-color: var(--bg-color-white);
   display: block;
   width: 100%;
-  margin: 30px 0px;
+  padding: 30px 0px 70px 0px;
 }
 
 .landing-page{
@@ -171,10 +173,9 @@ section.main-section p {
   Styles - Main > Section > About Team
 */
 .team-member-name {
-  display: block ;
-font-style: italic;
-font-weight: bold;
-
+  display: block;
+  font-style: italic;
+  font-weight: bold;
 }
 
 .team-member {
@@ -259,12 +260,20 @@ font-weight: bold;
   padding: 3px 7px;
 }
 
-.table-button a {
+.user-action-button {
+  background-color: var(--form-button-bg-color);
+  color: var(--form-button-color);
+  border: 2px solid var(--form-button-bg-color);
+  cursor: pointer;
+  padding: 10px 40px;
+}
+
+.table-button a, .user-action-button a {
   color: var(--form-button-color);
   text-decoration: none;
 }
 
-.table-button:hover {
+.table-button:hover, .user-action-button:hover {
   background-color: var(--form-button-color-hover);
 }
 
@@ -343,12 +352,10 @@ input[type=button]:hover {
 
 footer {
   background: url(./img/footer-bg.jpg);
-  background-color: var(--footer-bg-color);
   color: var(--text-color-white);
   display: block;
   width: 100%;
   height: 50px;
-  margin: 30px 0px;
   padding: 15px 0px;
 }
 
@@ -373,6 +380,7 @@ p.footer-p-team {
 
 .center {
   display: block;
+  width: 500px;
   margin-left: auto;
   margin-right: auto;
 }
