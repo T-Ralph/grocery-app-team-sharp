@@ -1,0 +1,33 @@
+﻿Team Sharp Meeting
+23 SEPTEMBER 2020 / 12:00 PM / SLACK
+Attendees 
+Lindsey Graham, Narahari Tarun Mulle, Tosin Raphael Olaniyi, Krisztina Pap
+Agenda
+Last Meeting Follow-up
+1. Quick follow-up regarding the one-off meetings and Slack discussions that took place since our last group meeting.
+New Business
+1. Team review of the project
+   * What is done so far
+   * What is still missing/not yet functional
+   * Any user-friendliness concerns
+   * Any styling concerns
+Notes
+* Team members agreed to focus on outstanding tasks and worry about extra features only if there is extra time. (Please let the others know when you start a task from the outstanding list)
+* There will be a team meeting on Friday to go over the entire project (including webpage, requirement documents, code, and presentation prep) so we can be ready for Monday
+Action Items
+1. Write copy (all text) for Home page - Tarun
+2. Fix footer positioning (maybe just add margin-top? Or make it fixed to the bottom?) and add copyright info
+3. Add errors to login form (username and password fields are required)
+4. Fix spacing of buttons and text on “logged in” page - Tosin
+5. Format individual recipe page - Tosin
+6. Investigate YouTube video embedding - Lindsey
+7. Do “something” when an ingredient gets added to the shopping list. (Message pops up or color changes?)
+8. Fonts/type/background colors - Tosin
+9. Delete button functionality on Shopping list - Krisztina
+10. Print shopping list to PDF - Lindsey
+11. Add recipe name to shopping list items (in brackets) - Krisztina
+12. Filters? - Lindsey
+13. Add an input field to the shopping list so user can add to their list - Krisztina
+14. Lindsey’s mini-bio needs to be shortened for consistency’s sake - Lindsey/Tarun
+Next Meeting
+Next meeting is scheduled for September 25, 2020, on our group Slack channel @ 2pm.
