@@ -29,22 +29,24 @@ function SignedIn() {
                     <h2>
                         What would you like to do?
                     </h2>
-                    <button className="table-button center">
-                        <Link to="/recipe-list">
-                            <i className="fas fa-utensils"></i>
-                            Recipe List
-                        </Link>
-                    </button>
-                    <button className="table-button center">
-                        <Link to="/shopping-list">
-                            <i className="fas fa-shopping-cart"></i>
-                            Shopping List
-                        </Link>
-                    </button>
-                    <button className="table-button center" onClick={guestUser}>
-                        <i className="fas fa-sign-out-alt"></i>
-                        Sign Out
-                    </button>
+                    <div className="center">
+                        <button className="user-action-button">
+                            <Link to="/recipe-list">
+                                <i className="fas fa-utensils"></i>
+                                <span className="desktop-screen-only">Recipe List</span>
+                            </Link>
+                        </button>
+                        <button className="user-action-button">
+                            <Link to="/shopping-list">
+                                <i className="fas fa-shopping-cart"></i>
+                                <span className="desktop-screen-only">Shopping List</span>
+                            </Link>
+                        </button>
+                        <button className="user-action-button" onClick={guestUser}>
+                            <i className="fas fa-sign-out-alt"></i>
+                            <span className="desktop-screen-only">Sign Out</span>
+                        </button>
+                    </div>
                 </section>
             </main>
         </>
