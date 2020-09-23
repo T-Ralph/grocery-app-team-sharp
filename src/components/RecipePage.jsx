@@ -85,12 +85,6 @@ function RecipePage({ match }) {
     
 
     const newShoppingListItem = (ingredients) => {
-
-    
-        console.log("Adding new items to list!");
-        
-        
-        console.log("ingredients", ingredients);
         // shoppingReducer global state gets updated with new listitem
          dispatch(addAction({ ingredient: ingredients.ingredient, measure: ingredients.measure })); 
     }
@@ -174,7 +168,7 @@ function RecipePage({ match }) {
                                 Watch on YouTube
                             </a>
                         </button>
-                        {/* <iframe src={myMeal.strYoutube} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen className="recipe-page-youtube"></iframe> */}
+                        <iframe src={myMeal.strYoutube} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen className="recipe-page-youtube"></iframe>
                     </p>
                 </section>
             </main>
