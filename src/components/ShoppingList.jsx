@@ -4,6 +4,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { removeAction } from '../actions/shoppingAction';
+import AddNewIngredient from './AddNewIngredient';
 
 //Declare Function
 function ShoppingList() {
@@ -34,6 +35,7 @@ function ShoppingList() {
         <>
             <main>
                 <section className="main-section">
+                    <AddNewIngredient />
                     <h2>
                         <i className="fas fa-shopping-cart"></i>
                         Shopping List
