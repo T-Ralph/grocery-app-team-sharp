@@ -380,7 +380,7 @@ p.footer-p-team {
 
 .center {
   display: block;
-  width: 500px;
+  width: 300px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -439,6 +439,10 @@ p.footer-p-team {
     height: 300px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .center {
+    width: 500px;
   }
 
 }
