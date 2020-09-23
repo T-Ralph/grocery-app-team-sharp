@@ -7,20 +7,71 @@ function RecipePage({ match }) {
     // Calls 'fetchMeal' once component has mounted successfully.
     useEffect(() => {
         fetchMeal();
-        console.log(match);
     }, []); // [] on the end of this useEffect signifies "Once component has mounted"
 
     // Local State
-    const [myMeal, setMeal] = useState([
-    ]);
+    const [myMeal, setMeal] = useState([]);
+    const [ingredientsArray, setIngredientsArray] = useState([]);
+    const [dietaryRestrictionsArray, setDietaryRestrictionsArray] = useState([]);
 
     // Pull specific meal information in based on the meal you chose on the RecipeList page using {match} prop given to us through <Link>
     const fetchMeal = async () => {
         const fetchMeals = await fetch(`https://www.themealdb.com/api/json/v2/9973533/lookup.php?i=${match.params.meal}`);
         const meal = await fetchMeals.json();
-        console.log(meal.meals[0].strMeal);
         setMeal(meal.meals[0]);
-        console.log(meal.meals[0]);
+
+        // Put the current meal into a variable
+        let currentMeal = meal.meals[0];
+        createIngredientsArray( currentMeal );
+        createDietaryRestrictionsArray( meal.meals[0].strTags );
+    }
+
+    const createIngredientsArray = ( currentMeal ) => {
+        //Create the ingredientsArray
+        const ingredientsArray = [];
+        
+        //Create ingredientKey
+        let ingredientKey = 1;
+
+        //Loop Through The JSON Data
+        for (let index = 1; index <= 20; index++) {
+            //Check For Empty Strings
+            if (currentMeal['strIngredient' + index] && currentMeal['strMeasure' + index]) {
+                //Create tempIngredientObject
+                const tempIngredientObject = {
+                    key: ingredientKey,
+                    ingredient: currentMeal['strIngredient' + index],
+                    measure: currentMeal['strMeasure' + index]
+                };
+
+                //Push tempIngredientObject to Main ingredientsArray
+                ingredientsArray.push(tempIngredientObject);
+                
+                //Increment for ingredientKey
+                ingredientKey++;
+            }
+        }
+
+        //Update the State of ingredientsArray
+        setIngredientsArray(ingredientsArray);
+    }
+
+    const createDietaryRestrictionsArray = ( stringDietaryRestrictions ) => {
+        //Create dietaryRestrictionsArray
+        let dietaryRestrictionsArray = [];
+
+        //Check for Empty stringDietaryRestrictions
+        if (stringDietaryRestrictions) {
+            //Convert Comma Separated Values to Array
+            dietaryRestrictionsArray = stringDietaryRestrictions.split(",");
+        }
+        else {
+            //Add Nil to 0 Index
+            dietaryRestrictionsArray[0] = "Nil";
+        }
+
+        //Update the State of dietaryRestrictionsArray
+        setDietaryRestrictionsArray(dietaryRestrictionsArray);
     }
 
     return(
@@ -41,9 +92,13 @@ function RecipePage({ match }) {
                     <h3>
                         Dietary Restrictions
                     </h3>
-                    <p>
-                        {myMeal.strTags}
-                    </p>
+                    <ul>
+                        {dietaryRestrictionsArray.map((dietaryRestrictions, index) => (
+                            <li key={index}>
+                                {dietaryRestrictions}
+                            </li>
+                        ))}
+                    </ul>
                     <h3>
                         Ingredients
                     </h3>
@@ -58,206 +113,18 @@ function RecipePage({ match }) {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>
-                                    {`${myMeal.strIngredient1} - ${myMeal.strMeasure1}`}
-                                </td>
-                                <td>
-                                    <button className="table-button" title="Add to Shopping List">
-                                        <i className="fas fa-cart-plus"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    {`${myMeal.strIngredient2} - ${myMeal.strMeasure2}`}
-                                </td>
-                                <td>
-                                    <button className="table-button" title="Add to Shopping List">
-                                        <i className="fas fa-cart-plus"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    {`${myMeal.strIngredient3} - ${myMeal.strMeasure3}`}
-                                </td>
-                                <td>
-                                    <button className="table-button" title="Add to Shopping List">
-                                        <i className="fas fa-cart-plus"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    {`${myMeal.strIngredient4} - ${myMeal.strMeasure4}`}
-                                </td>
-                                <td>
-                                    <button className="table-button" title="Add to Shopping List">
-                                        <i className="fas fa-cart-plus"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    {`${myMeal.strIngredient5} - ${myMeal.strMeasure5}`}
-                                </td>
-                                <td>
-                                    <button className="table-button" title="Add to Shopping List">
-                                        <i className="fas fa-cart-plus"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    {`${myMeal.strIngredient6} - ${myMeal.strMeasure6}`}
-                                </td>
-                                <td>
-                                    <button className="table-button" title="Add to Shopping List">
-                                        <i className="fas fa-cart-plus"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    {`${myMeal.strIngredient7} - ${myMeal.strMeasure7}`}
-                                </td>
-                                <td>
-                                    <button className="table-button" title="Add to Shopping List">
-                                        <i className="fas fa-cart-plus"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    {`${myMeal.strIngredient8} - ${myMeal.strMeasure8}`}
-                                </td>
-                                <td>
-                                    <button className="table-button" title="Add to Shopping List">
-                                        <i className="fas fa-cart-plus"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    {`${myMeal.strIngredient9} - ${myMeal.strMeasure9}`}
-                                </td>
-                                <td>
-                                    <button className="table-button" title="Add to Shopping List">
-                                        <i className="fas fa-cart-plus"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    {`${myMeal.strIngredient10} - ${myMeal.strMeasure10}`}
-                                </td>
-                                <td>
-                                    <button className="table-button" title="Add to Shopping List">
-                                        <i className="fas fa-cart-plus"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    {`${myMeal.strIngredient11} - ${myMeal.strMeasure11}`}
-                                </td>
-                                <td>
-                                    <button className="table-button" title="Add to Shopping List">
-                                        <i className="fas fa-cart-plus"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    {`${myMeal.strIngredient12} - ${myMeal.strMeasure12}`}
-                                </td>
-                                <td>
-                                    <button className="table-button" title="Add to Shopping List">
-                                        <i className="fas fa-cart-plus"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    {`${myMeal.strIngredient13} - ${myMeal.strMeasure13}`}
-                                </td>
-                                <td>
-                                    <button className="table-button" title="Add to Shopping List">
-                                        <i className="fas fa-cart-plus"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    {`${myMeal.strIngredient14} - ${myMeal.strMeasure14}`}
-                                </td>
-                                <td>
-                                    <button className="table-button" title="Add to Shopping List">
-                                        <i className="fas fa-cart-plus"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    {`${myMeal.strIngredient15} - ${myMeal.strMeasure15}`}
-                                </td>
-                                <td>
-                                    <button className="table-button" title="Add to Shopping List">
-                                        <i className="fas fa-cart-plus"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    {`${myMeal.strIngredient16} - ${myMeal.strMeasure16}`}
-                                </td>
-                                <td>
-                                    <button className="table-button" title="Add to Shopping List">
-                                        <i className="fas fa-cart-plus"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    {`${myMeal.strIngredient17} - ${myMeal.strMeasure17}`}
-                                </td>
-                                <td>
-                                    <button className="table-button" title="Add to Shopping List">
-                                        <i className="fas fa-cart-plus"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    {`${myMeal.strIngredient18} - ${myMeal.strMeasure18}`}
-                                </td>
-                                <td>
-                                    <button className="table-button" title="Add to Shopping List">
-                                        <i className="fas fa-cart-plus"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    {`${myMeal.strIngredient19} - ${myMeal.strMeasure19}`}
-                                </td>
-                                <td>
-                                    <button className="table-button" title="Add to Shopping List">
-                                        <i className="fas fa-cart-plus"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    {`${myMeal.strIngredient20} - ${myMeal.strMeasure20}`}
-                                </td>
-                                <td>
-                                    <button className="table-button" title="Add to Shopping List">
-                                        <i className="fas fa-cart-plus"></i>
-                                    </button>
-                                </td>
-                            </tr>
+                            {ingredientsArray.map(ingredients => (
+                                <tr key={ingredients.key}>
+                                    <td>
+                                        {`${ingredients.key}. ${ingredients.ingredient} - ${ingredients.measure}`}
+                                    </td>
+                                    <td>
+                                        <button className="table-button" title="Add to Shopping List">
+                                            <i className="fas fa-cart-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            ))}
                         </tbody>
                         <tfoot>
                             <tr>
@@ -286,7 +153,7 @@ function RecipePage({ match }) {
                                 Watch on YouTube
                             </a>
                         </button>
-                        <iframe src={myMeal.strYoutube} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen className="recipe-page-youtube"></iframe>
+                        <iframe src={myMeal.strYoutube} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen className="recipe-page-youtube"></iframe>
                     </p>
                 </section>
             </main>
