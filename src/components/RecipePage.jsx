@@ -50,7 +50,8 @@ function RecipePage({ match }) {
                 const tempIngredientObject = {
                     key: ingredientKey,
                     ingredient: currentMeal['strIngredient' + index],
-                    measure: currentMeal['strMeasure' + index]
+                    measure: currentMeal['strMeasure' + index],
+                    meal: currentMeal.strMeal
                 };
 
                 //Push tempIngredientObject to Main ingredientsArray
@@ -86,7 +87,7 @@ function RecipePage({ match }) {
 
     const newShoppingListItem = (ingredients) => {
         // shoppingReducer global state gets updated with new listitem
-         dispatch(addAction({ ingredient: ingredients.ingredient, measure: ingredients.measure })); 
+         dispatch(addAction({ ingredient: ingredients.ingredient, measure: ingredients.measure, meal: ingredients.meal })); 
     }
 
     return(
@@ -129,7 +130,7 @@ function RecipePage({ match }) {
                         </thead>
                         <tbody>
                             {ingredientsArray.map(ingredients => (
-                                <tr key={ingredients.key}>
+                                <tr key={ingredients.key} meal={ingredients.meal}>
                                     <td>
                                         {`${ingredients.key}. ${ingredients.ingredient} - ${ingredients.measure}`}
                                     </td>
