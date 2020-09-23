@@ -19,28 +19,36 @@ function SignedIn() {
 
     return(
         <>
-        <main>
-            <section className="main-section">
-                <h2>
-                    <i className="fas fa-user"></i>
-                    Welcome {userInfo.username}!
-                </h2>
-               
-                <h3>What would you like to do?</h3>
-                <Link to="/recipe-list">
-                    <i className="fas fa-utensils"></i>
-                    <span className="desktop-screen-only">Recipe List</span>
-                </Link>
-       
-                <Link to="/shopping-list">
-                    <i className="fas fa-shopping-cart"></i>
-                    <span className="desktop-screen-only">Shopping List</span>
-                </Link>
-                <button onClick={guestUser}>Sign out</button>
-            </section>
-        </main>
-    </>
-    )
+            <main>
+                <section className="main-section">
+                    <h2>
+                        <i className="fas fa-user"></i>
+                        Welcome {userInfo.username}!
+                    </h2>
+                
+                    <h2>
+                        What would you like to do?
+                    </h2>
+                    <button className="table-button center">
+                        <Link to="/recipe-list">
+                            <i className="fas fa-utensils"></i>
+                            Recipe List
+                        </Link>
+                    </button>
+                    <button className="table-button center">
+                        <Link to="/shopping-list">
+                            <i className="fas fa-shopping-cart"></i>
+                            Shopping List
+                        </Link>
+                    </button>
+                    <button className="table-button center" onClick={guestUser}>
+                        <i className="fas fa-sign-out-alt"></i>
+                        Sign Out
+                    </button>
+                </section>
+            </main>
+        </>
+    );
 }
 
 //Export Function

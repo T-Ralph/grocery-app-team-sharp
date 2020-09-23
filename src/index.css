@@ -140,6 +140,10 @@ section.main-section > h2 > svg, section.main-section > h3 > svg {
   margin: 0px 10px 0px 0px;
 }
 
+button svg {
+  margin: 0px 3px 0px 0px;
+}
+
 section.main-section > h3 {
   margin: 35px 0px 10px 0px;
 }
