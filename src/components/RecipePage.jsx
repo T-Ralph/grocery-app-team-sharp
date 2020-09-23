@@ -18,7 +18,7 @@ function RecipePage({ match }) {
     const [myMeal, setMeal] = useState([]);
     const [ingredientsArray, setIngredientsArray] = useState([]);
     const [dietaryRestrictionsArray, setDietaryRestrictionsArray] = useState([]);
-
+    const [youtubeEmbed, youtubeEmbedSwap] = useState("");
     
     // useDispatch hook is used to update global state
     const dispatch = useDispatch();
@@ -33,6 +33,10 @@ function RecipePage({ match }) {
         let currentMeal = meal.meals[0];
         createIngredientsArray( currentMeal );
         createDietaryRestrictionsArray( meal.meals[0].strTags );
+
+        // Put the Youtube Video in to a variable
+        let embedSwap = currentMeal.strYoutube.replace('watch?v=', 'embed/');
+        youtubeEmbedSwap(embedSwap);
     }
 
     const createIngredientsArray = ( currentMeal ) => {
@@ -89,7 +93,7 @@ function RecipePage({ match }) {
         // shoppingReducer global state gets updated with new listitem
          dispatch(addAction({ ingredient: ingredients.ingredient, measure: ingredients.measure, meal: ingredients.meal })); 
     }
-
+    console.log(youtubeEmbed);
     return(
         <>
             <main>
@@ -169,7 +173,7 @@ function RecipePage({ match }) {
                                 Watch on YouTube
                             </a>
                         </button>
-                        <iframe src={myMeal.strYoutube} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen className="recipe-page-youtube"></iframe>
+                        <iframe width="560" height="315" src={youtubeEmbed} title='embedded video' frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="recipe-page-youtube"></iframe>
                     </p>
                 </section>
             </main>
