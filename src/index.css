@@ -401,10 +401,11 @@ p.footer-p-team {
 
   .recipe-page-image, .recipe-page-youtube {
     display: block;
-    width: 700px;
+    width: 500px;
     height: 300px;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 10px;
   }
 
 }
