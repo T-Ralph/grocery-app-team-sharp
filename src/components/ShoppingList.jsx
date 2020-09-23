@@ -9,7 +9,7 @@ function ShoppingList() {
     // shoppingList is declared as the shoppingReducer global state
     const shoppingList = useSelector( state => state.shoppingReducer );
     // We loop through our shoppingList and make each ingredient a list item to be displayed in an unordered list in the cart section
-    const currentShoppingList = shoppingList.map( ingredient => <li>{ingredient.ingredient}</li> );
+    const currentShoppingList = shoppingList.map( ingredient => <tr key={ingredient.id}><td>{ingredient.ingredient.measure} {ingredient.ingredient.ingredient}</td><td><button className="table-button"><i className="fas fa-trash-alt"></i></button></td></tr> );
 
     return(
         <>
@@ -19,9 +19,7 @@ function ShoppingList() {
                         <i className="fas fa-shopping-cart"></i>
                         Shopping List
                     </h2>
-                    <ul>
-                        { currentShoppingList }
-                    </ul>
+                 
                     <table className="table">
                         <thead>
                             <tr>
@@ -33,7 +31,8 @@ function ShoppingList() {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            {currentShoppingList}
+                            {/* <tr>
                                 <td>
                                     Item 1
                                 </td>
@@ -72,7 +71,7 @@ function ShoppingList() {
                                         <i className="fas fa-trash-alt"></i>
                                     </button>
                                 </td>
-                            </tr>
+                            </tr> */}
                         </tbody>
                         <tfoot>
                             <tr>
