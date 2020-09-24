@@ -34,7 +34,7 @@ function Home() {
                         <p>
                             <ul>
                                 <li>step 1: Choose a recipe you like</li>
-                                <li>step 2: Do not have the ingredients at home? No problem - Cgit add --allreate your own ingredient/shopping list</li>
+                                <li>step 2: Do not have the ingredients at home? No problem - add your own ingredient/shopping list</li>
                                 <li>step 3: Have your shopping list ready and Enjoy your recipe prep.</li>
                             </ul>
 
@@ -58,28 +58,7 @@ function Home() {
                                 <li>CSS</li>
                                 <li>HTML</li>
                             </ul>
-                            <ul>
-                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                <li>Aliquam tincidunt mauris eu risus.</li>
-                                <li>Vestibulum auctor dapibus neque.</li>
-                            </ul>
-                            <ul>
-                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                <li>Aliquam tincidunt mauris eu risus.</li>
-                                <li>Vestibulum auctor dapibus neque.</li>
-                            </ul><ul>
-                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                <li>Aliquam tincidunt mauris eu risus.</li>
-                                <li>Vestibulum auctor dapibus neque.</li>
-                            </ul><ul>
-                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                <li>Aliquam tincidunt mauris eu risus.</li>
-                                <li>Vestibulum auctor dapibus neque.</li>
-                            </ul><ul>
-                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                <li>Aliquam tincidunt mauris eu risus.</li>
-                                <li>Vestibulum auctor dapibus neque.</li>
-                            </ul>
+                            
 
 
                         </p>
