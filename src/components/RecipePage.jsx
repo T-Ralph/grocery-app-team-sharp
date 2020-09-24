@@ -1,10 +1,8 @@
-//Import React, useState & useEffect from React
+//Import React, useState & useEffect from React, Link from React-Router-Dom
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { addAction } from '../actions/shoppingAction';
-
-
-
+import { Link } from 'react-router-dom';
 
 //Declare Function
 function RecipePage({ match }) {
@@ -162,6 +160,12 @@ function RecipePage({ match }) {
                             </tr>
                         </tfoot>
                     </table>
+                    <button className="table-button center">
+                        <Link to="/shopping-list">
+                            <i className="fas fa-shopping-cart"></i>
+                            <span className="desktop-screen-only">Shopping List</span>
+                        </Link>
+                    </button>
                     <h3>
                         Instructions
                     </h3>
