@@ -6,6 +6,8 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { removeAction, removeAllAction } from '../actions/shoppingAction';
 import AddNewIngredient from './AddNewIngredient';
+import printJS from 'print-js';
+
 
 //Declare Function
 function ShoppingList() {
@@ -23,6 +25,17 @@ function ShoppingList() {
         dispatch(removeAllAction());
     }
 
+    // Create a variable to print shopping list to PDF
+    // Documentation: https://printjs.crabbly.com/
+    const printPDF = () => {
+        printJS({
+            printable:'print-form', 
+            type:'html',
+            header: '<h2 class="user-action-button"> Your Shopping List - Powered by Team Sharp</h2>',
+            documentTitle: 'Grocery App - Team Sharp',
+            honorColor: true,
+            targetStyles: '*'});
+    }
 
     // shoppingList is declared as the shoppingReducer global state
     const shoppingList = useSelector( state => state.shoppingReducer );
@@ -57,7 +70,7 @@ function ShoppingList() {
                                 </th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="print-form">
                             {currentShoppingList}
                         </tbody>
                         <tfoot>
@@ -70,9 +83,13 @@ function ShoppingList() {
                             </tr>
                         </tfoot>
                     </table>
+                    <button className="table-button center" onClick={printPDF}>
+                        Print Shopping List
+                    </button>
+                    
                     <button className="table-button center" onClick={clearShoppingList}>
                         Clear Shopping List
-                    </button>
+                    </button>                    
                 </section>
             </main>
         </>
