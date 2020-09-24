@@ -1,6 +1,6 @@
 # Milestone 2 Project - Team Sharp
 
-![Team Logo](src\img\TeamSharp-TwitterBanner.png?raw=true "Team Sharp Grocery Project")
+![Team Logo](./src/img/TeamSharp-TwitterBanner.png?raw=true "Team Sharp Grocery Project")
 
 ## Our App:
 - Blurb about our app here
