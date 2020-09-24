@@ -366,7 +366,7 @@ input:focus, select:focus {
   border: 2px solid var(--form-focus-border-color);
 }
 
-input[type=button] {
+input[type=button], input[type=reset] {
   background-color: var(--form-button-bg-color);
   color: var(--form-button-color);
   cursor: pointer;
@@ -375,7 +375,7 @@ input[type=button] {
   width: 150px;
 }
 
-input[type=button]:hover {
+input[type=button]:hover, input[type=reset]:hover {
   background-color: var(--form-button-color-hover);
 }
 
