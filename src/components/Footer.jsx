@@ -7,7 +7,7 @@ function Footer() {
         <>
             <footer>
                 <p className="footer-p-team">
-                    Team Sharp
+                    Copyright &copy; 2020 by Team Sharp
                 </p>
             </footer>
         </>

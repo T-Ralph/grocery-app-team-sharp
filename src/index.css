@@ -1,13 +1,27 @@
 /*
+  Import Google Fonts
+*/
+
+/* Font - Lora */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+/* Font - Open Sans Condensed */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
+
+
+/*
   Set All Body Tags' Margin and Padding to 0
   Set All Body Tags to Border-Box
+  Set All Body Tags Font Family
 */
 
 body * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
+
 
 /*
   Set CSS Variables
@@ -20,6 +34,7 @@ body * {
   --header-nav-ul-li-color-a: #FFFFFF;
   --text-color-black: #000000;
   --text-color-white: #FFFFFF;
+  --h2-bg-color: #FAEBD7;
   --bg-color-white: #FFFFFF;
   --form-input-border-color: var(--header-nav-ul-li-color);
   --form-select-option-color: var(--text-color-black);
@@ -56,7 +71,7 @@ header {
   display: block;
   width: 100%;
   height: 200px;
-  padding: 120px 0px 0px 0px;
+  padding: 100px 0px 0px 0px;
 }
 
 nav {
@@ -74,6 +89,8 @@ ul.header-nav-ul > li {
   display: inline;
   cursor: pointer;
   margin: 0px 10px;
+  font-family: 'Lora', serif;
+  font-size: 20px;
 }
 
 ul.header-nav-ul > li:hover {
@@ -108,6 +125,8 @@ ul.header-nav-ul > li button {
   width: 100%;
   margin: 10px 0px;
   text-align: left;
+  font-family: 'Lora', serif;
+  font-size: 20px;
 }
 
 .nav-ul-li-dropdown-links:hover {
@@ -130,35 +149,20 @@ main {
   padding: 30px 0px 70px 0px;
 }
 
-
-
-
-.parallax {
-  /* The image used */
-  background-image: url(../src/img/landing-page.jpg);
-
-  /* Set a specific height */
-  min-height: 700px; 
-  
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.landing-page{
   width: 100%;
+  height: 300px;
   opacity: 30%;
-  
 }
 
 .my-content {
   font-family: cursive;
   font-weight: inherit;
   position: relative;
-bottom: 710px;
-margin: 0px 20px 0px 20px;
-box-sizing: inherit;
-height: 0px;
+  bottom: 710px;
+  margin: 0px 20px 0px 20px;
+  box-sizing: inherit;
+  height: 0px;
 }
 
 .text-center {
@@ -166,16 +170,15 @@ height: 0px;
 }
 
 
-/* .landing-page{
+/* 
+.landing-page{
   width: 100%;
   opacity: 50%;
-  /* margin-bottom: -400px; */
-  /* font-weight: bolder;
-  background: url(../src/img/landing-page.jpg); */
-  /* height: 300px; */
- */
-
-
+  margin-bottom: -400px;
+  font-weight: bolder;
+  background: url(../src/img/landing-page.jpg);
+  height: 300px;
+*/
 
 
 /*
@@ -184,12 +187,16 @@ height: 0px;
 
 section.main-section {
   padding: 0px 20px;
+  font-size: 20px;
 }
 
 section.main-section > h2 {
-  margin: 45px 0px 10px 0px;
+  background: var(--h2-bg-color);
+  margin: 40px 0px 25px 0px;
+  padding: 10px 0px;
   text-align: center;
-  background: antiquewhite;
+  font-family: 'Lora', serif;
+  font-size: 30px;
 }
 
 section.main-section > h2 > svg, section.main-section > h3 > svg {
@@ -202,6 +209,8 @@ button svg {
 
 section.main-section > h3 {
   margin: 35px 0px 10px 0px;
+  font-family: 'Lora', serif;
+  font-size: 25px;
 }
 
 section.main-section p {
@@ -209,10 +218,16 @@ section.main-section p {
   text-align: justify;
 }
 
+section.main-section ul {
+  padding: 0px 0px 0px 30px;
+  text-align: justify;
+}
+
 
 /*
   Styles - Main > Section > About Team
 */
+
 .team-member-name {
   display: block;
   font-style: italic;
@@ -402,6 +417,9 @@ footer {
 
 p.footer-p-team {
   text-align: center;
+  font-family: 'Lora', serif;
+  font-size: 15px;
+  font-weight: bolder;
 }
 
 
