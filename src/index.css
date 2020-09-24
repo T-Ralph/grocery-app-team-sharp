@@ -130,50 +130,10 @@ main {
   padding: 30px 0px 70px 0px;
 }
 
-
-
-
-.parallax {
-  /* The image used */
-  background-image: url(../src/img/landing-page.jpg);
-
-  /* Set a specific height */
-  min-height: 700px; 
-  
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.landing-page{
   width: 100%;
-  opacity: 30%;
-  
-}
-
-.my-content {
-  font-family: cursive;
-  font-weight: inherit;
-  position: relative;
-bottom: 710px;
-margin: 0px 20px 0px 20px;
-box-sizing: inherit;
-height: 0px;
-}
-
-.text-center {
-  text-align: center;
-}
-
-
-/* .landing-page{
-  width: 100%;
-  opacity: 50%;
-  /* margin-bottom: -400px; */
-  /* font-weight: bolder;
-  background: url(../src/img/landing-page.jpg); */
   /* height: 300px; */
- */
+}
 
 
 
@@ -189,7 +149,6 @@ section.main-section {
 section.main-section > h2 {
   margin: 45px 0px 10px 0px;
   text-align: center;
-  background: antiquewhite;
 }
 
 section.main-section > h2 > svg, section.main-section > h3 > svg {

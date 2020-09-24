@@ -1,99 +1,39 @@
 //Import React
 import React from 'react';
-// import Landing from '../img/landing-page.jpg'
+import Landing from '../img/landing-page.jpg'
 
 //Declare Function
 function Home() {
-    return (
+    return(
         <>
-
-
             <main>
                 <section className="main-section">
+
+               
+                        <img  className ="landing-page" src={ Landing } alt="Recipe picture" />
+                
+
                     <h2>
                         <i className="fas fa-home"></i>
-                        Welcome to the world of recipes!
+                        Home
                     </h2>
-
-                    {/* <div id= "landing-page"> */}
-
-
-                    <div class="parallax">
-
-                    </div>
-
-                    <div class="my-content">
-
-
-                        {/* <h2 class="text-center">Welcome to the world of recipes!</h2> */}
-
-
-                        <p>
-                            To use this application, follow these simple steps:
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus vel facilisis volutpat est velit egestas dui id. Tristique senectus et netus et malesuada fames ac. Tortor condimentum lacinia quis vel. Non curabitur gravida arcu ac tortor dignissim. Donec et odio pellentesque diam volutpat. Vitae congue eu consequat ac. Purus faucibus ornare suspendisse sed nisi lacus. Platea dictumst quisque sagittis purus sit amet volutpat consequat mauris. Tellus at urna condimentum mattis pellentesque id nibh. Orci nulla pellentesque dignissim enim. Vitae justo eget magna fermentum. Proin sagittis nisl rhoncus mattis.
                     </p>
-                        <p>
-                            <ul>
-                                <li>step 1: Choose a recipe you like</li>
-                                <li>step 2: Do not have the ingredients at home? No problem - Cgit add --allreate your own ingredient/shopping list</li>
-                                <li>step 3: Have your shopping list ready and Enjoy your recipe prep.</li>
-                            </ul>
-
-
-                        </p>
-                        <p>
-                            You can also login and save all your recipes and shopping list.
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus vel facilisis volutpat est velit egestas dui id. Tristique senectus et netus et malesuada fames ac. Tortor condimentum lacinia quis vel. Non curabitur gravida arcu ac tortor dignissim. Donec et odio pellentesque diam volutpat. Vitae congue eu consequat ac. Purus faucibus ornare suspendisse sed nisi lacus. Platea dictumst quisque sagittis purus sit amet volutpat consequat mauris. Tellus at urna condimentum mattis pellentesque id nibh. Orci nulla pellentesque dignissim enim. Vitae justo eget magna fermentum. Proin sagittis nisl rhoncus mattis.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus vel facilisis volutpat est velit egestas dui id. Tristique senectus et netus et malesuada fames ac. Tortor condimentum lacinia quis vel. Non curabitur gravida arcu ac tortor dignissim. Donec et odio pellentesque diam volutpat. Vitae congue eu consequat ac. Purus faucibus ornare suspendisse sed nisi lacus. Platea dictumst quisque sagittis purus sit amet volutpat consequat mauris. Tellus at urna condimentum mattis pellentesque id nibh. Orci nulla pellentesque dignissim enim. Vitae justo eget magna fermentum. Proin sagittis nisl rhoncus mattis.
                     </p>
 
-                        <h2 class="text-center">
-                            <i className="fas fa-scroll"></i>
+                    <h2>
+                        <i className="fas fa-scroll"></i>
                         About the Project
                     </h2>
-                        <p>
-                            This team project is part of TechCareers Milestone 2. As a team, we built this application within a span of 1 week. For this project we used the following programming languages:
-
-                            <ul>
-                                <li>React.js</li>
-                                <li>Redux</li>
-                                <li>React-Router</li>
-                                <li>CSS</li>
-                                <li>HTML</li>
-                            </ul>
-                            <ul>
-                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                <li>Aliquam tincidunt mauris eu risus.</li>
-                                <li>Vestibulum auctor dapibus neque.</li>
-                            </ul>
-                            <ul>
-                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                <li>Aliquam tincidunt mauris eu risus.</li>
-                                <li>Vestibulum auctor dapibus neque.</li>
-                            </ul><ul>
-                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                <li>Aliquam tincidunt mauris eu risus.</li>
-                                <li>Vestibulum auctor dapibus neque.</li>
-                            </ul><ul>
-                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                <li>Aliquam tincidunt mauris eu risus.</li>
-                                <li>Vestibulum auctor dapibus neque.</li>
-                            </ul><ul>
-                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                <li>Aliquam tincidunt mauris eu risus.</li>
-                                <li>Vestibulum auctor dapibus neque.</li>
-                            </ul>
-
-
-                        </p>
-                    </div>
-
-
-
-
-
-                    {/* </div> */}
-                    {/* <img className="landing-page" src={Landing} alt="Recipe picture" /> */}
-
-
-
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus vel facilisis volutpat est velit egestas dui id. Tristique senectus et netus et malesuada fames ac. Tortor condimentum lacinia quis vel. Non curabitur gravida arcu ac tortor dignissim. Donec et odio pellentesque diam volutpat. Vitae congue eu consequat ac. Purus faucibus ornare suspendisse sed nisi lacus. Platea dictumst quisque sagittis purus sit amet volutpat consequat mauris. Tellus at urna condimentum mattis pellentesque id nibh. Orci nulla pellentesque dignissim enim. Vitae justo eget magna fermentum. Proin sagittis nisl rhoncus mattis.
+                    </p>
                 </section>
             </main>
         </>
