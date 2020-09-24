@@ -16,16 +16,24 @@ function Home() {
 
                     <img className="landing-page" src={Landing} alt="Recipe picture" />
 
+                    <h2>Welcome to the world of recipes!</h2>
 
 
+
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus vel facilisis volutpat est velit egestas dui id. Tristique senectus et netus et malesuada fames ac. Tortor condimentum lacinia quis vel. Non curabitur gravida arcu ac tortor dignissim. Donec et odio pellentesque diam volutpat. Vitae congue eu consequat ac. Purus faucibus ornare suspendisse sed nisi lacus. Platea dictumst quisque sagittis purus sit amet volutpat consequat mauris. Tellus at urna condimentum mattis pellentesque id nibh. Orci nulla pellentesque dignissim enim. Vitae justo eget magna fermentum. Proin sagittis nisl rhoncus mattis.
+                        To use this application, follow these simple steps:
                     </p>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus vel facilisis volutpat est velit egestas dui id. Tristique senectus et netus et malesuada fames ac. Tortor condimentum lacinia quis vel. Non curabitur gravida arcu ac tortor dignissim. Donec et odio pellentesque diam volutpat. Vitae congue eu consequat ac. Purus faucibus ornare suspendisse sed nisi lacus. Platea dictumst quisque sagittis purus sit amet volutpat consequat mauris. Tellus at urna condimentum mattis pellentesque id nibh. Orci nulla pellentesque dignissim enim. Vitae justo eget magna fermentum. Proin sagittis nisl rhoncus mattis.
+                        <ul>
+                        <li>step 1: Choose a recipe you like</li>
+                        <li>step 2: Do not have the ingredients at home? No problem - Cgit add --allreate your own ingredient/shopping list</li>
+                        <li>step 3: Have your shopping list ready and Enjoy your recipe prep.</li>
+                        </ul>
+                        
+
                     </p>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus vel facilisis volutpat est velit egestas dui id. Tristique senectus et netus et malesuada fames ac. Tortor condimentum lacinia quis vel. Non curabitur gravida arcu ac tortor dignissim. Donec et odio pellentesque diam volutpat. Vitae congue eu consequat ac. Purus faucibus ornare suspendisse sed nisi lacus. Platea dictumst quisque sagittis purus sit amet volutpat consequat mauris. Tellus at urna condimentum mattis pellentesque id nibh. Orci nulla pellentesque dignissim enim. Vitae justo eget magna fermentum. Proin sagittis nisl rhoncus mattis.
+                    You can also login and save all your recipes and shopping list. 
                     </p>
 
                     <h2>
@@ -33,7 +41,17 @@ function Home() {
                         About the Project
                     </h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus vel facilisis volutpat est velit egestas dui id. Tristique senectus et netus et malesuada fames ac. Tortor condimentum lacinia quis vel. Non curabitur gravida arcu ac tortor dignissim. Donec et odio pellentesque diam volutpat. Vitae congue eu consequat ac. Purus faucibus ornare suspendisse sed nisi lacus. Platea dictumst quisque sagittis purus sit amet volutpat consequat mauris. Tellus at urna condimentum mattis pellentesque id nibh. Orci nulla pellentesque dignissim enim. Vitae justo eget magna fermentum. Proin sagittis nisl rhoncus mattis.
+                    This team project is part of TechCareers Milestone 2. As a team, we build this application within a span of 1 week. For this project we used the following programming languages:
+                        	
+                            <ul>
+                            <li>React.js</li>
+                        	<li>Redux</li>
+                        	<li>React-Router</li>
+                        	<li>CSS</li>
+                        	<li>HTML</li>
+                            </ul>
+
+                        
                     </p>
                 </section>
             </main>
