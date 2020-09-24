@@ -87,13 +87,19 @@ function RecipePage({ match }) {
         //Update the State of dietaryRestrictionsArray
         setDietaryRestrictionsArray(dietaryRestrictionsArray);
     }
-    
 
-    const newShoppingListItem = (ingredients) => {
+    const newShoppingListItem = (event, ingredients) => {
         // shoppingReducer global state gets updated with new listitem
          dispatch(addAction({ ingredient: ingredients.ingredient, measure: ingredients.measure, meal: ingredients.meal })); 
+
+        //Switch Icon to Indicate Button has been Clicked
+        event.currentTarget.firstChild.remove(); //Remove the Current Icon
+        const newIconCheck = document.createElement("I"); //Create New Icon
+        newIconCheck.classList.add("fas"); //Add Font Awesome Icon Class
+        newIconCheck.classList.add("fa-check"); //Add Font Awesome Icon Class
+        event.currentTarget.appendChild(newIconCheck); //Append New Icon to Button
     }
-    console.log(youtubeEmbed);
+
     return(
         <>
             <main>
@@ -139,7 +145,7 @@ function RecipePage({ match }) {
                                         {`${ingredients.key}. ${ingredients.ingredient} - ${ingredients.measure}`}
                                     </td>
                                     <td>
-                                        <button className="table-button" title="Add to Shopping List" onClick={() => newShoppingListItem(ingredients)}>
+                                        <button className="table-button" title="Add to Shopping List" onClick={(event) => newShoppingListItem(event, ingredients)}>
                                             <i className="fas fa-cart-plus"></i>
                                         </button>
                                     </td>
