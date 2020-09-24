@@ -1,12 +1,24 @@
-# Milestone 2 Project - Team Sharp
-
 ![Team Logo](./src/img/TeamSharp-TwitterBanner.png?raw=true "Team Sharp Grocery Project")
 
-## Our App:
-- Blurb about our app here
+## Team Sharp Grocery App Project
+This web application was part of the TECHCareers Milestone 2 Group Project. 
+   
+As a group we were tasked with coming up with our own ideas for a website that implemented React, React-Router, and Redux, with flexibility to use any additional libraries we needed.  
+Our group decided on a Grocery App that will pull random recipes from an API, and allow you to add individual items to a shopping list which can then be printed to PDF and taken to the grocery store with you to function as a checklist.
 
 ## Instructions:
-- How to use our app here
+- Users can choose to log in or use our app as a guest (For the purpose of this assignment, the 'login' isn't supported by a backend, and no true accounts exist, any combination of username/password will work. This was implemented to show our use of state)
+- Users can proceed to the Recipe List page in the Nav bar and have a list of 10 random recipes rendered to them via [TheMealDB API](https://www.themealdb.com/).
+- Once users select a recipe they will be directed in a new tab to the dynamic page for the recipe they selected. On this page users will find all the ingredients available to them, dish origins, allergy warnings, and a YouTube tutorial on how to make the recipe if they wish to follow along.
+- Clicking on the shopping cart on any ingredient will add this item to the Shopping List
+- Users can proceed back to the Recipe List page and continue adding items to the Shopping List, or proceed to the Shopping List page itself via Nav Bar or Shopping List button on the individual recipe page.
+- On the shopping list:
+    - Users have the option to add their own ingredient to their shopping list (Should they wish to use the printed PDF feature as a "Shopping List" to take with them to the store)
+    - All items that have been added are displayed in a table with their corresponding meals in brackets.
+    - Users have the ability to remove specific items by clicking the trash can or clear the entire list by clicking "Clear Shopping List"
+    - Users can print the list to a PDF to print off and take with them to the store as a checklist so they do not forget any items.
+- About Us:
+    - This page contains a small paragraph about each team member who worked on this project.
 
 ## Team Members & Roles:
 - Krisztina (Team Lead & Code)
@@ -25,6 +37,8 @@ https://trello.com/b/rnxAM8Nx/milestone2
         - https://www.youtube.com/watch?v=dGcsHMXbSOA&list=PLDyQo7g0_nsVHmyZZpVJyFn5ojlboVEhE
 - Bitmoji App
     - Avatars for 'About-Us' page
+- Github Markdown Guide
+    - https://guides.github.com/features/mastering-markdown/
 
 
 ## Introduction: 
