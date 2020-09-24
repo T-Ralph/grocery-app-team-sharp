@@ -1,0 +1,49 @@
+﻿TECHCareers: Milestone 2 - React/Redux 
+Team Sharp: 
+Lindsey Graham, Narahari Tarun Mulle, Tosin Raphael Olaniyi, Krisztina Pap
+________________
+
+
+Project Grocery
+Summary
+Our team decided to build a recipe and shopping list web application. There will be 3 pages (navigation links) visible to the user at all times: “home”, “shopping list”, and “about the team/project”. 
+Breakdown by page
+1. Home
+When arriving on the “home” page, the user will have the option of logging in as an existing user, creating a new account, or continuing as a guest. If the user logs in, their name/avatar will show in the upper right corner.
+
+
+Once logged in, the “home” page will be populated with recipes from an API. The user will be able to filter based on the food categories of the API. Clicking on an item will open the individual recipe view and the user will have the option to add the ingredients listed to their shopping list.
+2. Shopping List
+The shopping list page will display all the previously added ingredients in the order they were pushed. This feature will be limited to the current session due to the front-end-only nature of the application. The user will be able to remove any ingredients.
+3. About the team/project
+On the page, the user will be able to learn more about our team and the application itself. There will be instructions on how to use each page, citations/links for any resources we have utilized, etc.
+Page feature breakdown:
+Page 1: login
+* Login or create user
+
+
+Page 2: recipes to choose from
+* Display recipes from API
+* Filters (from categories)
+
+
+Page 3: individual recipe
+* Display individual recipe
+* Add ingredients (all/individual)
+
+
+Page 4: shopping list
+* Show current shopping list
+
+
+Page 5: “About the project”)
+* Citations
+* Project info
+
+
+Challenge/optional features: 
+* Direct user to nearby stores or websites 
+* Allergy alerts (pop-up warnings)
+* Shopping list: sorting (alphabetical, by category, etc.)
+* Shopping list: Ability to change amount of ingredient on list
+* Shopping list: Ability to print/save list in different formats
