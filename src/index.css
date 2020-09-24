@@ -128,11 +128,36 @@ main {
   margin: 30px 0px;
 }
 
-.landing-page{
+
+
+
+.parallax {
+  /* The image used */
+  background-image: url(../src/img/landing-page.jpg);
+
+  /* Set a specific height */
+  min-height: 500px; 
+  
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
-  /* opacity: 50%; */
-  /* height: 300px; */
+  opacity: 50%;
+  
 }
+
+
+/* .landing-page{
+  width: 100%;
+  opacity: 50%;
+  /* margin-bottom: -400px; */
+  /* font-weight: bolder;
+  background: url(../src/img/landing-page.jpg); */
+  /* height: 300px; */
+ */
 
 
 
