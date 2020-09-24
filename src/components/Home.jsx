@@ -33,24 +33,31 @@ function Home() {
                     </p>
                         <p>
                             <ul>
-                                <li>step 1: Choose a recipe you like</li>
-                                <li>step 2: Do not have the ingredients at home? No problem - add your own ingredient/shopping list</li>
-                                <li>step 3: Have your shopping list ready and Enjoy your recipe prep.</li>
+                                <li>Step 1: Choose a recipe you like</li>
+                                <li>Step 2: Do not have the ingredients at home? No problem – make your own ingredient/shopping list</li>
+                                <li>Step 3: Have your shopping list ready and organized for your meal preparation.</li>
                             </ul>
 
 
                         </p>
                         <p>
-                            You can also login and save all your recipes and shopping list.
+                            Also, you can login and save all your recipes and shopping list.
                     </p>
 
                         <h2 class="text-center">
                             <i className="fas fa-scroll"></i>
                         About the Project
-                    </h2>
+                        </h2>
                         <p>
-                            This team project is part of TechCareers Milestone 2. As a team, we built this application within a span of 1 week. For this project we used the following programming languages:
+                            This team project is part of <a href="http://www.techcareers.ca/">TECHCareers</a> Milestone 2. Our team decided to build a recipe and shopping
+                            list web application. As a team, we completed this project within a span of 1 week. This application
+                            fetches recipe data and displays dynamically from <a href="https://www.themealdb.com/api.php/">TheMealDB API</a>
+                            </p>
 
+                       
+
+                            <p>
+                                For this project we used the following programming languages:
                             <ul>
                                 <li>React.js</li>
                                 <li>Redux</li>
@@ -58,7 +65,7 @@ function Home() {
                                 <li>CSS</li>
                                 <li>HTML</li>
                             </ul>
-                            
+
 
 
                         </p>
