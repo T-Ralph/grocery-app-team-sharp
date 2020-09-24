@@ -1,19 +1,18 @@
 # Milestone 2 Project - Team Sharp
 
-## Banner/Logo
-- Replace this section with a banner/logo
-
-## Team Members & Roles:
-- Krisztina (Team Lead & Code)
-- Tarun (Trello Manager & Code)
-- Tosin (Wireframes/Design & Code)
-- Lindsey (Github Manager & Code)
+![Team Logo](src\img\TeamSharp-TwitterBanner.png?raw=true "Team Sharp Grocery Project")
 
 ## Our App:
 - Blurb about our app here
 
 ## Instructions:
 - How to use our app here
+
+## Team Members & Roles:
+- Krisztina (Team Lead & Code)
+- Tarun (Trello Startup & Code)
+- Tosin (Wireframes/Design & Code)
+- Lindsey (Github Manager & Code)
 
 ## Trello:
 https://trello.com/b/rnxAM8Nx/milestone2
