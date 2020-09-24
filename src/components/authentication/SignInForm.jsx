@@ -15,13 +15,12 @@ function SignInForm( ) {
     const newUser = (event) => {
         event.preventDefault();
 
-
         // creating error message area
         let errorArea = document.getElementById( "errorArea" );
         errorArea.innerHTML = "";
     
         // If username is guest or username or password are empty string, error messages get generated and displayed as a list, otherwise, global state gets updated with new user info
-        if ((newUsername === "Guest") || (!newUsername) || (!newPassword)) {
+        if ((newUsername === "Guest") || (!newUsername) || (!newPassword) ) {
 
             errorArea.innerHTML = "";
             // Error messages display if username or password fields are left blank upon sign-in/sign-up
@@ -30,7 +29,7 @@ function SignInForm( ) {
             newUL.classList.add( "errorMessages" );           
 
             // Adds a list item with error message if username is Guest or empty string
-            if (( newUsername = "Guest" ) || ( newUsername === "" )) {
+            if (( !newUsername )) {
                 const newLI = document.createElement( 'LI' );
                 newLI.textContent = "You need to enter a username.";
                 newUL.appendChild( newLI );
@@ -59,7 +58,7 @@ function SignInForm( ) {
                     </h2>
                     <form className="form" id="form-sign-in">
                         <label htmlFor="username"><i className="fas fa-user"></i> Username</label>
-                        <input type="text" id="username" placeholder="Username" onChange={e => { setUsername( e.target.value )}} required />
+                        <input type="text" id="username" placeholder="Username" onChange={e => { setUsername( e.target.value.trim() )}} required />
                         <label htmlFor="password"><i className="fas fa-lock"></i> Password</label>
                         <input type="password" id="password" placeholder="Password" onChange={e => { setPassword( e.target.value )}} required />
                         
