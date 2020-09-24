@@ -6,7 +6,7 @@ import { loginAction }  from '../../actions/loginAction';
 //Declare Function
 function SignInForm( ) {
 
-    let [ newUsername, setUsername ] = useState( "Guest" );
+    let [ newUsername, setUsername ] = useState( "" );
     let [ newPassword, setPassword ] = useState( "" );
 
     // useDispatch hook is used to update global state
@@ -20,7 +20,7 @@ function SignInForm( ) {
         errorArea.innerHTML = "";
     
         // If username is guest or username or password are empty string, error messages get generated and displayed as a list, otherwise, global state gets updated with new user info
-        if ((newUsername === "Guest") || (!newUsername) || (!newPassword) ) {
+        if ((newUsername === "Guest") || (newUsername.length <= 0) || (newPassword.length <= 0) ) {
 
             errorArea.innerHTML = "";
             // Error messages display if username or password fields are left blank upon sign-in/sign-up
@@ -29,16 +29,16 @@ function SignInForm( ) {
             newUL.classList.add( "errorMessages" );           
 
             // Adds a list item with error message if username is Guest or empty string
-            if (( !newUsername )) {
+            if ( newUsername == "" ) {
                 const newLI = document.createElement( 'LI' );
                 newLI.textContent = "You need to enter a username.";
-                newUL.appendChild( newLI );
+                newUL.appendChild( newLI );                
             }
             // Adds a list item with error message if password is an empty string
-            if ( newPassword === "" ) {
+            if ( newPassword.length <= 0 ) {
                 const newLI = document.createElement( 'LI' );
                 newLI.textContent = "You need to enter a password.";
-                newUL.appendChild( newLI );
+                newUL.appendChild( newLI );                
             }
             errorArea.innerHTML = "";
             errorArea.appendChild( newUL );
