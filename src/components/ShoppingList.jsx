@@ -1,9 +1,10 @@
 //Import React
 import React from 'react';
+
 // Import useSelector so we can display global state 
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { removeAction } from '../actions/shoppingAction';
+import { removeAction, removeAllAction } from '../actions/shoppingAction';
 import AddNewIngredient from './AddNewIngredient';
 
 //Declare Function
@@ -15,6 +16,11 @@ function ShoppingList() {
     const deleteShoppingListItem = (id) => {
         // shoppingReducer global state gets updated with new listitem
          dispatch(removeAction( id )); 
+    }
+
+    //Function to Handle DIspatch to Clear All Items on the Shopping List
+    const clearShoppingList = () => {
+        dispatch(removeAllAction());
     }
 
 
@@ -41,7 +47,6 @@ function ShoppingList() {
                         <i className="fas fa-shopping-cart"></i>
                         Shopping List
                     </h2>
-                 
                     <table className="table">
                         <thead>
                             <tr>
@@ -65,6 +70,9 @@ function ShoppingList() {
                             </tr>
                         </tfoot>
                     </table>
+                    <button className="table-button center" onClick={clearShoppingList}>
+                        Clear Shopping List
+                    </button>
                 </section>
             </main>
         </>

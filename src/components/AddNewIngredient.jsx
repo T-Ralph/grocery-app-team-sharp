@@ -1,7 +1,7 @@
 //Import React
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addAction, removeAllAction } from '../actions/shoppingAction';
+import { addAction } from '../actions/shoppingAction';
 
 //Declare Function
 function AddNewIngredient( ) {
@@ -18,34 +18,25 @@ function AddNewIngredient( ) {
          dispatch(addAction({ ingredient: newIngredient, measure: newMeasure, meal: newMeal })); 
     }
 
-    const clearShoppingList = () => {
-        dispatch(removeAllAction());
-    }
-
     return(
         <>
-            <main>
-                <section className="main-section">
-                    <h2>
-                        <i className="fas fa-utensils"></i>
-                        Add Your Own Ingredient
-                    </h2>
-                    <form className="form" id="add-ingredient-form">
-                        <label htmlFor="ingredient"><i className="fas fa-user"></i> Ingredient</label>
-                        <input type="text" id="ingredient" placeholder="ingredient" onChange={e => { setNewIngredient( e.target.value )}} required />
-                        
-                        <label htmlFor="measure"><i className="fas fa-lock"></i> How much?</label>
-                        <input type="text" id="measure" placeholder="measure" onChange={e => { setNewMeasure( e.target.value )}} required />
-                        
-                        <label htmlFor="meal"><i className="fas fa-lock"></i> For what meal? (optional)</label>
-                        <input type="text" id="meal" placeholder="meal" onChange={e => { setNewMeal( e.target.value )}} />
+            <h2>
+                <i className="fas fa-th-list"></i>
+                Add Your Own Ingredient
+            </h2>
+            <form className="form" id="add-ingredient-form">
+                <label htmlFor="ingredient"><i className="fas fa-list"></i> Ingredient</label>
+                <input type="text" id="ingredient" placeholder="Ingredient" onChange={e => { setNewIngredient( e.target.value )}} required />
+                
+                <label htmlFor="measure"><i className="fas fa-list"></i> How much?</label>
+                <input type="text" id="measure" placeholder="Measure" onChange={e => { setNewMeasure( e.target.value )}} required />
+                
+                <label htmlFor="meal"><i className="fas fa-hamburger"></i> For what meal? (optional)</label>
+                <input type="text" id="meal" placeholder="Meal" onChange={e => { setNewMeal( e.target.value )}} />
 
-                        <input type="button" id="addNewIngredientButton" value="Add" onClick={newShoppingListItem}/>
-                        <input type="button" id="clearListButton" value="Clear List" onClick={clearShoppingList}/>
-
-                    </form>
-                </section>
-            </main>
+                <input type="button" id="addNewIngredientButton" value="Add" onClick={newShoppingListItem}/>
+                <input type="reset" value="Reset" />
+            </form>
         </>
     );
 }
