@@ -1,5 +1,10 @@
 //Import React, useState & useEffect from React
 import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { addAction } from '../actions/shoppingAction';
+
+
+
 
 //Declare Function
 function RecipePage({ match }) {
@@ -13,6 +18,10 @@ function RecipePage({ match }) {
     const [myMeal, setMeal] = useState([]);
     const [ingredientsArray, setIngredientsArray] = useState([]);
     const [dietaryRestrictionsArray, setDietaryRestrictionsArray] = useState([]);
+    const [youtubeEmbed, youtubeEmbedSwap] = useState("");
+    
+    // useDispatch hook is used to update global state
+    const dispatch = useDispatch();
 
     // Pull specific meal information in based on the meal you chose on the RecipeList page using {match} prop given to us through <Link>
     const fetchMeal = async () => {
@@ -24,6 +33,10 @@ function RecipePage({ match }) {
         let currentMeal = meal.meals[0];
         createIngredientsArray( currentMeal );
         createDietaryRestrictionsArray( meal.meals[0].strTags );
+
+        // Put the Youtube Video in to a variable
+        let embedSwap = currentMeal.strYoutube.replace('watch?v=', 'embed/');
+        youtubeEmbedSwap(embedSwap);
     }
 
     const createIngredientsArray = ( currentMeal ) => {
@@ -41,7 +54,8 @@ function RecipePage({ match }) {
                 const tempIngredientObject = {
                     key: ingredientKey,
                     ingredient: currentMeal['strIngredient' + index],
-                    measure: currentMeal['strMeasure' + index]
+                    measure: currentMeal['strMeasure' + index],
+                    meal: currentMeal.strMeal
                 };
 
                 //Push tempIngredientObject to Main ingredientsArray
@@ -73,7 +87,13 @@ function RecipePage({ match }) {
         //Update the State of dietaryRestrictionsArray
         setDietaryRestrictionsArray(dietaryRestrictionsArray);
     }
+    
 
+    const newShoppingListItem = (ingredients) => {
+        // shoppingReducer global state gets updated with new listitem
+         dispatch(addAction({ ingredient: ingredients.ingredient, measure: ingredients.measure, meal: ingredients.meal })); 
+    }
+    console.log(youtubeEmbed);
     return(
         <>
             <main>
@@ -114,12 +134,12 @@ function RecipePage({ match }) {
                         </thead>
                         <tbody>
                             {ingredientsArray.map(ingredients => (
-                                <tr key={ingredients.key}>
+                                <tr key={ingredients.key} meal={ingredients.meal}>
                                     <td>
                                         {`${ingredients.key}. ${ingredients.ingredient} - ${ingredients.measure}`}
                                     </td>
                                     <td>
-                                        <button className="table-button" title="Add to Shopping List">
+                                        <button className="table-button" title="Add to Shopping List" onClick={() => newShoppingListItem(ingredients)}>
                                             <i className="fas fa-cart-plus"></i>
                                         </button>
                                     </td>
@@ -153,7 +173,7 @@ function RecipePage({ match }) {
                                 Watch on YouTube
                             </a>
                         </button>
-                        <iframe src={myMeal.strYoutube} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen className="recipe-page-youtube"></iframe>
+                        <iframe width="560" height="315" src={youtubeEmbed} title='embedded video' frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="recipe-page-youtube"></iframe>
                     </p>
                 </section>
             </main>

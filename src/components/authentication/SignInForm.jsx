@@ -6,15 +6,43 @@ import { loginAction }  from '../../actions/loginAction';
 //Declare Function
 function SignInForm( ) {
 
-    const [ newUsername, setUsername ] = useState( "Guest" );
-    const [ newPassword, setPassword ] = useState( "" );
+    let [ newUsername, setUsername ] = useState( "Guest" );
+    let [ newPassword, setPassword ] = useState( "" );
+
     // useDispatch hook is used to update global state
     const dispatch = useDispatch();
-    let usernameFieldValue = document.getElementById("username");
 
     const newUser = (event) => {
         event.preventDefault();
-        if ((newUsername === "Guest") && (!usernameFieldValue)) {
+
+
+        // creating error message area
+        let errorArea = document.getElementById( "errorArea" );
+        errorArea.innerHTML = "";
+    
+        // If username is guest or username or password are empty string, error messages get generated and displayed as a list, otherwise, global state gets updated with new user info
+        if ((newUsername === "Guest") || (!newUsername) || (!newPassword)) {
+
+            errorArea.innerHTML = "";
+            // Error messages display if username or password fields are left blank upon sign-in/sign-up
+            
+            const newUL = document.createElement( 'UL' );
+            newUL.classList.add( "errorMessages" );           
+
+            // Adds a list item with error message if username is Guest or empty string
+            if (( newUsername = "Guest" ) || ( newUsername === "" )) {
+                const newLI = document.createElement( 'LI' );
+                newLI.textContent = "You need to enter a username.";
+                newUL.appendChild( newLI );
+            }
+            // Adds a list item with error message if password is an empty string
+            if ( newPassword === "" ) {
+                const newLI = document.createElement( 'LI' );
+                newLI.textContent = "You need to enter a password.";
+                newUL.appendChild( newLI );
+            }
+            errorArea.innerHTML = "";
+            errorArea.appendChild( newUL );
         } else {
              // loginReducer global state gets updated with new user
             dispatch(loginAction({ username: newUsername, password: newPassword, isLoggedIn: true })); 
@@ -34,10 +62,14 @@ function SignInForm( ) {
                         <input type="text" id="username" placeholder="Username" onChange={e => { setUsername( e.target.value )}} required />
                         <label htmlFor="password"><i className="fas fa-lock"></i> Password</label>
                         <input type="password" id="password" placeholder="Password" onChange={e => { setPassword( e.target.value )}} required />
+                        
                         <input type="button" id="signin" value="Sign In" onClick={newUser}/>
-
-                        {/* Temporarily changed Sign Up button to log out to test functionality */}
+                        
                         <input type="button" id="signup" value="Sign Up" onClick={newUser}/>
+                   
+                    {/* The area where error messages will display */}
+                    <div id="errorArea"></div>
+
                     </form>
                 </section>
             </main>

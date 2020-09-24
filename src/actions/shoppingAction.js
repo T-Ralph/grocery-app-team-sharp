@@ -14,4 +14,11 @@ const removeAction = id => {
     };
 }
 
-export { addAction, removeAction };
+// Action to remove all ingredients from shopping list
+const removeAllAction = () => {
+    return {
+        type: 'REMOVE_ALL_ACTION'
+    };
+}
+
+export { addAction, removeAction, removeAllAction };
