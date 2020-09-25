@@ -12,7 +12,7 @@ function Home() {
                 <section className="main-section">
                     <h2>
                         <i className="fas fa-home"></i>
-                        Welcome to the world of recipes!
+                        Grocery List Webapp - Powered by Team Sharp
                     </h2>
 
                     {/* <div id= "landing-page"> */}
@@ -69,13 +69,13 @@ function Home() {
 
 
                         <p>
-                            For this project we used the following programming languages:
-                            <ul>
-                                <li>React.js</li>
-                                <li>Redux</li>
-                                <li>React-Router</li>
-                                <li>CSS</li>
-                                <li>HTML</li>
+                            The following frameworks were used for this project:
+                            <ul className='framework-images'>
+                                <li><img src={require('../img/react.png')} alt='react logo'/></li>
+                                <li><img src={require('../img/redux.png')} alt='redux logo'/></li>
+                                <li><img src={require('../img/react-redux.png')} alt='react redux logo' /></li>
+                                <li><img src={require('../img/css.png')} alt='css logo'/></li>
+                                <li><img src={require('../img/html5.png')} alt='html 5 logo' /></li>
                             </ul>
 
 
