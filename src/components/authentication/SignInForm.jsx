@@ -24,9 +24,7 @@ function SignInForm( ) {
     
         // If username is 'Guest', or username or password are an empty string, error messages get generated and displayed as a list. Otherwise, global state gets updated with new user info
         if ((newUsername === "Guest") || (newUsername.length <= 0) || (newPassword.length <= 0) ) {
-            // Ensuring that every time this block runs, the error area will start out empty (previous messages will be removed)
-            errorArea.innerHTML = "";
-            
+                   
             // The below two lines of code add the unordered list that will be populated with the error messages 
             const newUL = document.createElement( 'UL' );
             newUL.classList.add( "errorMessages" );           
@@ -44,8 +42,6 @@ function SignInForm( ) {
                 newLI.textContent = "You need to enter a password.";
                 newUL.appendChild( newLI );                
             }
-            // Ensuring that every time this block runs, the error area will start out empty (previous messages will be removed)
-            errorArea.innerHTML = "";
             // Adds the new error block created (unordered list with list item(s)) to the empty errorArea
             errorArea.appendChild( newUL );
         } else {
