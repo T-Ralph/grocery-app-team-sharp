@@ -1,5 +1,6 @@
-//Import React
+//Import React and useState
 import React from 'react';
+import { useState } from 'react';
 
 // Import useSelector so we can display global state 
 import { useSelector } from 'react-redux';
@@ -14,6 +15,9 @@ function ShoppingList() {
 
     // useDispatch hook is used to update global state
     const dispatch = useDispatch();
+
+    //Declare useState to Toggle AddNewIngredient display
+    const [displayAddNewIngredient, setToggleAddNewIngredient] = useState( false );
 
     const deleteShoppingListItem = (id) => {
         // shoppingReducer global state gets updated with new listitem
@@ -51,11 +55,15 @@ function ShoppingList() {
             </td>
         </tr> );
 
+    const toggleAddNewIngredient = () => {
+        //Ternary Statement to Toggle displayAddNewIngredient between True and False
+        displayAddNewIngredient ? setToggleAddNewIngredient(false) : setToggleAddNewIngredient(true);
+    };
+
     return(
         <>
             <main>
                 <section className="main-section">
-                    <AddNewIngredient />
                     <h2>
                         <i className="fas fa-shopping-cart"></i>
                         Shopping List
@@ -84,15 +92,20 @@ function ShoppingList() {
                         </tfoot>
                     </table>
                     <div className="center">
+                        <button className="user-action-button" title="Add to Shopping List" onClick={toggleAddNewIngredient}>
+                            <i className="fas fa-plus"></i>
+                            <span className="desktop-screen-only">Add</span>
+                        </button>
                         <button className="user-action-button" title="Print Shopping List" onClick={printPDF}>
                             <i className="fas fa-print"></i>
-                            <span className="desktop-screen-only">Print Shopping List</span>
+                            <span className="desktop-screen-only">Print</span>
                         </button>
                         <button className="user-action-button" title="Clear Shopping List" onClick={clearShoppingList}>
                             <i className="fas fa-trash"></i>
-                            <span className="desktop-screen-only">Clear Shopping List</span>
+                            <span className="desktop-screen-only">Clear</span>
                         </button>
                     </div>
+                    {displayAddNewIngredient ? <AddNewIngredient /> : null}
                 </section>
             </main>
         </>
