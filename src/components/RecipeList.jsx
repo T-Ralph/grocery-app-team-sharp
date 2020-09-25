@@ -15,42 +15,63 @@ function RecipeList() {
 
     // API Call for populating main list of random meals
     const fetchRecipes = async () => {
-        // Using cors-anywhere.herokuapp.com to bypass CORS errors in browser. API doesnt like us without it.
         const data = await fetch('https://www.themealdb.com/api/json/v2/9973533/randomselection.php');
         const meals = await data.json();
         setMeals(meals.meals);
     };
 
+    // API Calls for populating FILTERS
+    const fetchChicken = async () => {
+     let filterName = document.getElementById('chickenFilter').innerHTML;
+        const data = await fetch(`https://www.themealdb.com/api/json/v2/9973533/filter.php?c=${filterName}`);
+        const meals = await data.json();
+        setMeals(meals.meals);
+    }
+    const fetchBeef = async () => {
+        let filterName = document.getElementById('beefFilter').innerHTML;
+           const data = await fetch(`https://www.themealdb.com/api/json/v2/9973533/filter.php?c=${filterName}`);
+           const meals = await data.json();
+           setMeals(meals.meals);
+       }
+       const fetchSeafood = async () => {
+        let filterName = document.getElementById('seafoodFilter').innerHTML;
+           const data = await fetch(`https://www.themealdb.com/api/json/v2/9973533/filter.php?c=${filterName}`);
+           const meals = await data.json();
+           setMeals(meals.meals);
+       }
+       const fetchVege = async () => {
+        let filterName = document.getElementById('vegFilter').innerHTML;
+           const data = await fetch(`https://www.themealdb.com/api/json/v2/9973533/filter.php?c=${filterName}`);
+           const meals = await data.json();
+           setMeals(meals.meals);
+       }
+       const fetchVegan = async () => {
+        let filterName = document.getElementById('veganFilter').innerHTML;
+           const data = await fetch(`https://www.themealdb.com/api/json/v2/9973533/filter.php?c=${filterName}`);
+           const meals = await data.json();
+           setMeals(meals.meals);
+       }
 
     return (
         <>
             <main>
                 <section className="main-section">
                     <h2>
-                        <i className="fas fa-utensils"></i>
+                        <i className="fas fa-utensils"></i>                        
                         Recipes
                     </h2>
-                    {/* Commenting out Filters for now. We can add these once the 'base functionality' is completed.
-                        Each filter will require an entire API call dedicated to it
-                        Below are the API calls for reference when we work on them:
-                            https://www.themealdb.com/api/json/v2/9973533/filter.php?c=Chicken
-                            https://www.themealdb.com/api/json/v2/9973533/filter.php?c=Beef
-                            https://www.themealdb.com/api/json/v2/9973533/filter.php?c=Seafood
-                            https://www.themealdb.com/api/json/v2/9973533/filter.php?c=Vegetarian
-                            https://www.themealdb.com/api/json/v2/9973533/filter.php?c=Vegan
-                            https://www.themealdb.com/api/json/v2/9973533/filter.php?c=Desert */}
-                    {/*<form className="form" id="form-filters">
-                        <label htmlFor="filters"><i className="fas fa-filter"></i> Filters</label>
-                        <select id="filters">
-                            <option value="">Select a Filter</option>
-                            <option>Chicken</option>
-                            <option>Beef</option>
-                            <option>Seafood</option>
-                            <option>Vegetarian</option>
-                            <option>Vegan</option>
-                            <option>Desert</option>
-                        </select>
-                     </form>*/}
+                    <h2>
+                        Filters:
+                        <p>
+                            <button id='chickenFilter' className='user-action-button' onClick={fetchChicken}>Chicken</button>
+                            <button id='beefFilter' className='user-action-button' onClick={fetchBeef}>Beef</button>
+                            <button id='seafoodFilter' className='user-action-button' onClick={fetchSeafood}>Seafood</button>
+                            <button id='vegFilter' className='user-action-button' onClick={fetchVege}>Vegetarian</button>
+                            <button id='veganFilter' className='user-action-button' onClick={fetchVegan}>Vegan</button>
+                            <button id='noFilter' className='user-action-button' onClick={fetchRecipes}>10 Random Meals (No Filter)</button>
+                        </p>
+                    </h2>
+
                     <table className="table">
                         <thead>
                             <tr>
