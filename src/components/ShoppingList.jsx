@@ -18,6 +18,11 @@ function ShoppingList() {
 
     //Declare useState to Toggle AddNewIngredient display
     const [displayAddNewIngredient, setToggleAddNewIngredient] = useState( false );
+    const [displayAddNewIngredientButtonText, setToggleAddNewIngredientButtonText] = useState(
+        <>
+            <span className="desktop-screen-only">Add</span>
+        </>
+    );
 
     const deleteShoppingListItem = (id) => {
         // shoppingReducer global state gets updated with new listitem
@@ -56,9 +61,25 @@ function ShoppingList() {
         </tr> );
 
     //Declare Function to Toggle AddNewIngredient Display
-    const toggleAddNewIngredient = () => {
+    const toggleAddNewIngredient = (event) => {
         //Ternary Statement to Toggle displayAddNewIngredient between True and False
         displayAddNewIngredient ? setToggleAddNewIngredient(false) : setToggleAddNewIngredient(true);
+
+        //Button Display Components
+        if (displayAddNewIngredient) {
+            setToggleAddNewIngredientButtonText(
+                <>
+                    <span className="desktop-screen-only">Add</span>
+                </>
+            );
+        }
+        else {
+            setToggleAddNewIngredientButtonText(
+                <>
+                    <span className="desktop-screen-only">Hide</span>
+                </>
+            );
+        }
     };
 
     return(
@@ -94,8 +115,11 @@ function ShoppingList() {
                     </table>
                     <div className="center">
                         <button className="user-action-button" title="Add to Shopping List" onClick={toggleAddNewIngredient}>
-                            <i className="fas fa-plus"></i>
-                            <span className="desktop-screen-only">Add</span>
+                            <span className="fa-stack">
+                                <i className="fas fa-plus fa-stack-1x" data-fa-transform="grow-5 up-7"></i>
+                                <i className="fas fa-minus fa-stack-1x" data-fa-transform="grow-5 down-10"></i>
+                            </span>
+                            {displayAddNewIngredientButtonText}
                         </button>
                         <button className="user-action-button" title="Print Shopping List" onClick={printPDF}>
                             <i className="fas fa-print"></i>
