@@ -51,12 +51,6 @@ function Home() {
                     <p>
                         The shopping list pulls from the global state and displays each ingredient previously added to the cart. Each item shows the amount and name of the ingredient, followed by the title of the meal in brackets, and the trash button that allows the user to easily remove any entry from the list. There are 3 buttons at the bottom: The '+-Add' button expands a hidden section of the page, giving the user the option to add their own items to the list (ingredient, amount, and meal title). This small form doesn't have any mandatory fields, leaving the user completely in charge of what they want to add to their own lists. The 'Reset' button clears the form fields but will not affect the shopping list itself. The second shopping list button allows the user to print their list. When clicked, a print preview dialogue box opens. The third button clears the entire list.
                     </p>
-                    {/* <p> 
-                        This team project is part of <a href="http://www.techcareers.ca/" target="_blank" rel="noopener noreferrer">TECHCareers</a>' Milestone 2. 
-                        Our team decided to build a recipe and shopping list web application. 
-                        As a team, we completed this project within the span of a week. 
-                        This application fetches and displays dynamically recipe data from <a href="https://www.themealdb.com/api.php/" target="_blank" rel="noopener noreferrer">TheMealDB API</a>.
-                    </p> */}
                     <h3>
                         The following technologies were used for this project:
                     </h3>
@@ -67,12 +61,6 @@ function Home() {
                         <li><img src={require('../img/css.png')} alt='css logo' title='CSS'/></li>
                         <li><img src={require('../img/html5.png')} alt='html 5 logo' title='HTML5' /></li>
                     </ul>
-                    {/* <ul>
-                        <li>Clear button – clears the entire list enabling one to start from beginning.</li>
-                        <li>Reset button to ‘Add your own ingredient’ list.</li>
-                        <li>Login feature to save all the recipes and an Avatar will show that the user is logged in.</li>
-                        <li>Print feature has been introduced to print the entire list as a document.</li>
-                    </ul> */}
                 </section>
             </main>
         </>
