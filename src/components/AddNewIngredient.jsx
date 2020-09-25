@@ -11,9 +11,8 @@ function AddNewIngredient( ) {
     const [ newMeal, setNewMeal ] = useState( "" ); 
     // useDispatch hook is used to update global state
     const dispatch = useDispatch();
-    //let usernameFieldValue = document.getElementById("username");
 
-    const newShoppingListItem = (ingredients) => {
+    const newShoppingListItem = () => {
         // shoppingReducer global state gets updated with new listitem
          dispatch(addAction({ ingredient: newIngredient, measure: newMeasure, meal: newMeal })); 
     }
