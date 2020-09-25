@@ -18,11 +18,11 @@ function Home() {
                     {/* <div id= "landing-page"> */}
 
 
-                    <div class="parallax">
+                    <div className="parallax">
 
                     </div>
 
-                    <div class="my-content">
+                    <div className="my-content">
 
 
                         {/* <h2 class="text-center">Welcome to the world of recipes!</h2> */}
@@ -54,7 +54,7 @@ function Home() {
                         </section>
                         
 
-                        <h2 class="text-center">
+                        <h2 className="text-center">
                             <i className="fas fa-scroll"></i>
                         About the Project
                         </h2>
