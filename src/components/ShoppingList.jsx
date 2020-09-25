@@ -55,6 +55,7 @@ function ShoppingList() {
             </td>
         </tr> );
 
+    //Declare Function to Toggle AddNewIngredient Display
     const toggleAddNewIngredient = () => {
         //Ternary Statement to Toggle displayAddNewIngredient between True and False
         displayAddNewIngredient ? setToggleAddNewIngredient(false) : setToggleAddNewIngredient(true);
