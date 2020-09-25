@@ -1,1 +1,0 @@
-TODO: Add functionality explanation for every page in this doc. Text format. No direct link to this doc on page, just have it available for viewing in repo. - lg
