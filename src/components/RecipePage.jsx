@@ -7,11 +7,10 @@ import { Link } from 'react-router-dom';
 //Declare Function
 function RecipePage({ match }) {
 
-    // Calls 'fetchMeal' once component has mounted successfully.
+    // Calls 'fetchMeal' once component has mounted successfully. [] on the end of this useEffect signifies "Once component has mounted"
     useEffect(() => {
         fetchMeal();
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
-    // [] on the end of this useEffect signifies "Once component has mounted"
 
     // Local State
     const [myMeal, setMeal] = useState([]);
@@ -85,6 +84,7 @@ function RecipePage({ match }) {
 
         //Update the State of dietaryRestrictionsArray
         setDietaryRestrictionsArray(dietaryRestrictionsArray);
+
     }
 
     const newShoppingListItem = (event, ingredients) => {
