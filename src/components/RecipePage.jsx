@@ -100,10 +100,10 @@ function RecipePage({ match }) {
     }
 
     const addAllToShoppingList = (event) => {
-        //Loop Through the ingredientsArray
-        for (const ingredient of ingredientsArray) {
-            //Dispatch Each ingredient in ingredientsArray
-            dispatch(addAction({ ingredient: ingredient.ingredient, measure: ingredient.measure, meal: ingredient.meal }));
+        //Loop Through the Buttons on the Table
+        const buttons = document.querySelectorAll("table.table button");
+        for (const button of buttons) {
+            button.click(); //Simulate a click() event
         }
 
         //Switch Icon to Indicate Button has been Clicked
