@@ -89,7 +89,7 @@ function RecipePage({ match }) {
 
     const newShoppingListItem = (event, ingredients) => {
         // shoppingReducer global state gets updated with new listitem
-         dispatch(addAction({ ingredient: ingredients.ingredient, measure: ingredients.measure, meal: ingredients.meal })); 
+        dispatch(addAction({ ingredient: ingredients.ingredient, measure: ingredients.measure, meal: ingredients.meal })); 
 
         //Switch Icon to Indicate Button has been Clicked
         event.currentTarget.firstChild.remove(); //Remove the Current Icon
@@ -97,6 +97,21 @@ function RecipePage({ match }) {
         newIconCheck.classList.add("fas"); //Add Font Awesome Icon Class
         newIconCheck.classList.add("fa-check"); //Add Font Awesome Icon Class
         event.currentTarget.appendChild(newIconCheck); //Append New Icon to Button
+    }
+
+    const addAllToShoppingList = (event) => {
+        //Loop Through the Buttons on the Table
+        const buttons = document.querySelectorAll("table.table button");
+        for (const button of buttons) {
+            button.click(); //Simulate a click() event
+        }
+
+        //Switch Icon to Indicate Button has been Clicked
+        event.currentTarget.firstChild.remove(); //Remove the Current Icon
+        const newIconCheck = document.createElement("I"); //Create New Icon
+        newIconCheck.classList.add("fas"); //Add Font Awesome Icon Class
+        newIconCheck.classList.add("fa-check"); //Add Font Awesome Icon Class
+        event.currentTarget.prepend(newIconCheck); //Append New Icon to Button
     }
 
     return(
@@ -161,12 +176,18 @@ function RecipePage({ match }) {
                             </tr>
                         </tfoot>
                     </table>
-                    <button className="table-button center">
-                        <Link to="/shopping-list">
-                            <i className="fas fa-shopping-cart"></i>
-                            <span className="desktop-screen-only">Shopping List</span>
-                        </Link>
-                    </button>
+                    <div className="center">
+                        <button className="user-action-button" title="Add All Ingredients to Shopping List" onClick={addAllToShoppingList}>
+                            <i className="fas fa-folder-plus"></i>
+                            <span className="desktop-screen-only">Add All</span>
+                        </button>
+                        <button className="user-action-button" title="Go to Shopping List">
+                            <Link to="/shopping-list">
+                                <i className="fas fa-shopping-cart"></i>
+                                <span className="desktop-screen-only">Shopping List</span>
+                            </Link>
+                        </button>
+                    </div>
                     <h3>
                         Instructions
                     </h3>
