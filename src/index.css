@@ -459,6 +459,9 @@ p.footer-p-team {
   text-align: center;
 }
 
+.fa-stack {
+  font-size: 7px;
+}
 
 /*
   Styles - Responsiveness - > 1000px
