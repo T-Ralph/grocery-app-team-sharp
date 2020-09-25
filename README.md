@@ -22,7 +22,6 @@ Our group decided on a Grocery App that will pull random recipes from an API, an
 
 ## Team Members & Roles:
 - Krisztina (Team Lead & Code)
-- Tarun (Trello Startup & Code)
 - Tosin (Wireframes/Design & Code)
 - Lindsey (Github Manager & Code)
 
