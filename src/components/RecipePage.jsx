@@ -10,7 +10,8 @@ function RecipePage({ match }) {
     // Calls 'fetchMeal' once component has mounted successfully.
     useEffect(() => {
         fetchMeal();
-    }, []); // [] on the end of this useEffect signifies "Once component has mounted"
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+    // [] on the end of this useEffect signifies "Once component has mounted"
 
     // Local State
     const [myMeal, setMeal] = useState([]);
