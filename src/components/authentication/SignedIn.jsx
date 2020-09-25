@@ -12,8 +12,10 @@ function SignedIn() {
     const dispatch = useDispatch();
     // Brings in loginReducer global state for use
     const userInfo = useSelector(state => state.loginReducer);
+    // When 'Log out' button is pressed, the below code block runs
     const guestUser = (event) => {
         event.preventDefault();
+        // Global state is updated with new user info (when user is not logged in, it is automatically set to "Guest")
         dispatch(logoutAction({ username: "Guest", password: "", isLoggedIn: false }));
     }
 
@@ -23,6 +25,7 @@ function SignedIn() {
                 <section className="main-section">
                     <h2>
                         <i className="fas fa-user"></i>
+                        {/* Displays logged in user's username */}
                         Welcome {userInfo.username}!
                     </h2>
                 

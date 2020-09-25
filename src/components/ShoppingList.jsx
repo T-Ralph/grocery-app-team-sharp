@@ -10,13 +10,13 @@ import AddNewIngredient from './AddNewIngredient';
 import printJS from 'print-js';
 
 
-//Declare Function
+// Declare Function
 function ShoppingList() {
 
     // useDispatch hook is used to update global state
     const dispatch = useDispatch();
 
-    //Declare useState to Toggle AddNewIngredient display
+    // Declare useState to Toggle AddNewIngredient display
     const [displayAddNewIngredient, setToggleAddNewIngredient] = useState( false );
     const [displayAddNewIngredientButtonText, setToggleAddNewIngredientButtonText] = useState(
         <>
@@ -25,11 +25,11 @@ function ShoppingList() {
     );
 
     const deleteShoppingListItem = (id) => {
-        // shoppingReducer global state gets updated with new listitem
+        // shoppingReducer global state gets updated: item with specific id gets removed
          dispatch(removeAction( id )); 
     }
 
-    //Function to Handle DIspatch to Clear All Items on the Shopping List
+    // Function to Handle DIspatch to Clear All Items on the Shopping List
     const clearShoppingList = () => {
         dispatch(removeAllAction());
     }
