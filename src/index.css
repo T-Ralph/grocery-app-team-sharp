@@ -248,8 +248,7 @@ section.main-section ul {
 
 .team-member-name {
   display: block;
-  font-style: italic;
-  font-weight: bold;
+  font-size: larger;
 }
 
 .team-member {
@@ -272,9 +271,6 @@ section.main-section ul {
 
 .team-member-text {
   width: 100%;
-  font-family: "C540", serif;
-  color: #000000;
-  font-size: larger;
 }
 
 
