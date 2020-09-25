@@ -61,17 +61,17 @@ function RecipeList() {
                         Recipes
                     </h2>
                     <h2>
-                        Filters:
-                        <p>
+                        <i className="fas fa-filter"></i>
+                        Filters
+                        <div className="center">
                             <button id='chickenFilter' className='user-action-button' onClick={fetchChicken}>Chicken</button>
                             <button id='beefFilter' className='user-action-button' onClick={fetchBeef}>Beef</button>
                             <button id='seafoodFilter' className='user-action-button' onClick={fetchSeafood}>Seafood</button>
                             <button id='vegFilter' className='user-action-button' onClick={fetchVege}>Vegetarian</button>
                             <button id='veganFilter' className='user-action-button' onClick={fetchVegan}>Vegan</button>
                             <button id='noFilter' className='user-action-button' onClick={fetchRecipes}>10 Random Meals (No Filter)</button>
-                        </p>
+                        </div>
                     </h2>
-
                     <table className="table">
                         <thead>
                             <tr>
