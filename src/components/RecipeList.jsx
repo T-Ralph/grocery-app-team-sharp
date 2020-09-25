@@ -21,36 +21,11 @@ function RecipeList() {
     };
 
     // API Calls for populating FILTERS
-    const fetchChicken = async () => {
-     let filterName = document.getElementById('chickenFilter').innerHTML;
+    const fetchRecipesByFilter = async (filterName) => {
         const data = await fetch(`https://www.themealdb.com/api/json/v2/9973533/filter.php?c=${filterName}`);
         const meals = await data.json();
         setMeals(meals.meals);
     }
-    const fetchBeef = async () => {
-        let filterName = document.getElementById('beefFilter').innerHTML;
-           const data = await fetch(`https://www.themealdb.com/api/json/v2/9973533/filter.php?c=${filterName}`);
-           const meals = await data.json();
-           setMeals(meals.meals);
-       }
-       const fetchSeafood = async () => {
-        let filterName = document.getElementById('seafoodFilter').innerHTML;
-           const data = await fetch(`https://www.themealdb.com/api/json/v2/9973533/filter.php?c=${filterName}`);
-           const meals = await data.json();
-           setMeals(meals.meals);
-       }
-       const fetchVege = async () => {
-        let filterName = document.getElementById('vegFilter').innerHTML;
-           const data = await fetch(`https://www.themealdb.com/api/json/v2/9973533/filter.php?c=${filterName}`);
-           const meals = await data.json();
-           setMeals(meals.meals);
-       }
-       const fetchVegan = async () => {
-        let filterName = document.getElementById('veganFilter').innerHTML;
-           const data = await fetch(`https://www.themealdb.com/api/json/v2/9973533/filter.php?c=${filterName}`);
-           const meals = await data.json();
-           setMeals(meals.meals);
-       }
 
     return (
         <>
@@ -64,12 +39,12 @@ function RecipeList() {
                         <i className="fas fa-filter"></i>
                         Filters
                         <div className="center">
-                            <button id='chickenFilter' className='user-action-button' onClick={fetchChicken}>Chicken</button>
-                            <button id='beefFilter' className='user-action-button' onClick={fetchBeef}>Beef</button>
-                            <button id='seafoodFilter' className='user-action-button' onClick={fetchSeafood}>Seafood</button>
-                            <button id='vegFilter' className='user-action-button' onClick={fetchVege}>Vegetarian</button>
-                            <button id='veganFilter' className='user-action-button' onClick={fetchVegan}>Vegan</button>
-                            <button id='noFilter' className='user-action-button' onClick={fetchRecipes}>10 Random Meals (No Filter)</button>
+                            <button className='user-action-button' onClick={() => fetchRecipesByFilter("Chicken")}>Chicken</button>
+                            <button className='user-action-button' onClick={() => fetchRecipesByFilter("Beef")}>Beef</button>
+                            <button className='user-action-button' onClick={() => fetchRecipesByFilter("Seafood")}>Seafood</button>
+                            <button className='user-action-button' onClick={() => fetchRecipesByFilter("Vegetarian")}>Vegetarian</button>
+                            <button className='user-action-button' onClick={() => fetchRecipesByFilter("Vegan")}>Vegan</button>
+                            <button className='user-action-button' onClick={fetchRecipes}>10 Random Meals (No Filter)</button>
                         </div>
                     </h2>
                     <table className="table">
