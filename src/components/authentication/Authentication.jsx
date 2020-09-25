@@ -7,8 +7,10 @@ import SignInForm from './SignInForm';
 //Declare Function
 function Authentication( ) {
 
+    // useSelector gives us access to the loginReducer global state
     const userInfo = useSelector(state => state.loginReducer);
 
+    // The below code block renders one of two different components depending on whether isLoggedIn is true or false
     if ( userInfo.isLoggedIn ) {
             return <SignedIn />;
         } else

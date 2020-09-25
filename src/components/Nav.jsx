@@ -7,13 +7,12 @@ import { logoutAction}  from '../actions/loginAction';
 //Declare Function
 function Nav() {
 
-
     // useDispatch hook is used to update global state
     const dispatch = useDispatch();
     // Brings in loginReducer global state for use
     const userInfo = useSelector(state => state.loginReducer);
 
-    // Logout function ready to be connected to logout button
+    // Logout function resets username to Guest, password to empty string, and isLoggedIn to false
     const guestUser = (event) => {
         event.preventDefault();
         dispatch(logoutAction({ username: "Guest", password: "", isLoggedIn: false }));

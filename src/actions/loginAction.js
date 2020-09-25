@@ -6,7 +6,7 @@ const loginAction = loginContent => {
     };
 }
 
-// Action to update login state (changes isLoggedIn to false and changes username to 'Guest'/password to empty string)
+// Action to update login state (changes isLoggedIn to false and changes username to 'Guest', password to an empty string)
 const logoutAction = logoutContent => {
     return {
         type: 'LOG_OUT',
