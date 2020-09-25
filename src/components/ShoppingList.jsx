@@ -83,13 +83,16 @@ function ShoppingList() {
                             </tr>
                         </tfoot>
                     </table>
-                    <button className="table-button center" onClick={printPDF}>
-                        Print Shopping List
-                    </button>
-                    
-                    <button className="table-button center" onClick={clearShoppingList}>
-                        Clear Shopping List
-                    </button>                    
+                    <div className="center">
+                        <button className="user-action-button" title="Print Shopping List" onClick={printPDF}>
+                            <i className="fas fa-print"></i>
+                            <span className="desktop-screen-only">Print Shopping List</span>
+                        </button>
+                        <button className="user-action-button" title="Clear Shopping List" onClick={clearShoppingList}>
+                            <i className="fas fa-trash"></i>
+                            <span className="desktop-screen-only">Clear Shopping List</span>
+                        </button>
+                    </div>
                 </section>
             </main>
         </>
