@@ -7,7 +7,6 @@ function MealPages({ match }) {
     // Calls 'fetchMeal' once component has mounted successfully.
     useEffect(() => {
         fetchMeal();
-        console.log(match);
     }, []); // [] on the end of this useEffect signifies "Once component has mounted"
 
     // Local State
@@ -18,9 +17,7 @@ function MealPages({ match }) {
     const fetchMeal = async () => {
         const fetchMeals = await fetch(`https://www.themealdb.com/api/json/v2/9973533/lookup.php?i=${match.params.meal}`);
         const meal = await fetchMeals.json();
-        console.log(meal.meals[0].strMeal);
         setMeal(meal.meals[0]);
-        console.log(meal.meals[0]);
         // Put the current meal into a variable
         let currentMeal = meal.meals[0];
         

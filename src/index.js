@@ -26,7 +26,7 @@ const store = createStore(
 )
 
 //Ensuring Store Works
-store.subscribe(() => console.log(store.getState()));
+//store.subscribe(() => console.log(store.getState()));
 
 //Render DOM
 ReactDOM.render(
