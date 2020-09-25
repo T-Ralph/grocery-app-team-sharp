@@ -29,7 +29,7 @@ function SignInForm( ) {
             newUL.classList.add( "errorMessages" );           
 
             // Adds a list item with error message if username is Guest or empty string
-            if ( newUsername == "" ) {
+            if ( newUsername === "" ) {
                 const newLI = document.createElement( 'LI' );
                 newLI.textContent = "You need to enter a username.";
                 newUL.appendChild( newLI );                

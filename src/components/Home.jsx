@@ -31,14 +31,14 @@ function Home() {
                         <p>
                             To use this application, follow these simple steps:
                     </p>
-                        <p>
+                        <section className='instructions-home'>
                             <ul>
                                 <li>Step 1: Choose a recipe you like</li>
                                 <li>Step 2: Do not have the ingredients at home? No problem – make your own ingredient/shopping list</li>
                                 <li>Step 3: Have your shopping list ready and organized for your meal preparation.</li>
                                 <li> Step 4: Print the ingredient list for offline usage. </li>
                             </ul>
-                            <p>
+                            <section className='instructions-home'>
                                 Once, the list is populated the user either have a choice to add more custom ingredients and quantity.
                                 This feature is introduced to enable the users to add more ingredients to their list apart from the existing recipe.
 
@@ -48,12 +48,10 @@ function Home() {
                                 	<li>Reset button to ‘Add your own ingredient’ list.</li>
                                 	<li>Login feature to save all the recipes and an Avatar will show that the user is logged in.</li>
                                 	<li>Print feature has been introduced to print the entire list as a document.</li>
+                            </section>
 
 
-                            </p>
-
-
-                        </p>
+                        </section>
                         
 
                         <h2 class="text-center">
@@ -68,7 +66,7 @@ function Home() {
 
 
 
-                        <p>
+                        <section className='frameworks-home'>
                             The following frameworks were used for this project:
                             <ul className='framework-images'>
                                 <li><img src={require('../img/react.png')} alt='react logo'/></li>
@@ -80,7 +78,7 @@ function Home() {
 
 
 
-                        </p>
+                        </section>
                     </div>
 
 
