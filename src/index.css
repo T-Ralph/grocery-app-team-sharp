@@ -211,8 +211,8 @@ section.main-section p {
   text-align: justify;
 }
 
-section.main-section ul {
-  padding: 0px 0px 0px 30px;
+section.main-section ul, section.main-section ol {
+  padding: 0px 25px 0px 40px;
   text-align: justify;
 }
 
