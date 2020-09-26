@@ -17,6 +17,17 @@ function AboutUs() {
                         About the Team
                     </h2>
                     <div className="team-member">
+                        <img className="team-member-img" src={Krisztina} alt="Krisztina Pap" />
+                        <span className="team-member-name"> Krisztina Pap</span>
+                        <p className="team-member-text">
+                            Krisztina is hard-at-work turning her passion for programming into a career. She has a strong background in training, project management, and tech. When she's not writing code, she enjoys reading fantasy novels, jogging, and playing board games with her family.
+                        </p>
+                        <p className="team-member-text">
+                            Krisztina was nominated for the role of Team-Lead for this assignment. She worked primarily on Redux and Bug Solving.
+                        </p>
+                    </div>
+
+                    <div className="team-member">
                         <img className="team-member-img" src={Lindsey} alt="Lindsey Graham" />
                         <span className="team-member-name">Lindsey Graham</span>
                         <p className="team-member-text">
@@ -27,16 +38,7 @@ function AboutUs() {
                             Lindsey assumed the role of GitHub Manager on this project, handling all pull requests, merge conflicts, and primarily worked on React & API content.
                         </p>
                     </div>
-                    <div className="team-member">
-                        <img className="team-member-img" src={Krisztina} alt="Krisztina Pap" />
-                        <span className="team-member-name"> Krisztina Pap</span>
-                        <p className="team-member-text">
-                            Krisztina is hard-at-work turning her passion for programming into a career. She has a strong background in training, project management, and tech. When she's not writing code, she enjoys reading fantasy novels, jogging, and playing board games with her family.
-                        </p>
-                        <p className="team-member-text">
-                            Krisztina was nominated for the role of Team-Lead for this assignment. She worked primarily on Redux and Bug Solving.
-                        </p>
-                    </div>
+
                     <div className="team-member">
                         <img className="team-member-img" src={Tosin} alt="Tosin Olaniyi" />
                         <span className="team-member-name"> Tosin Olaniyi</span>
@@ -47,6 +49,7 @@ function AboutUs() {
                             Tosin took on the big job of CSS for this project. He primarily worked on ensuring the styling of every page was consistent, bug fixes, and React Content.
                         </p>
                     </div>
+
                 </section>
             </main>
         </>
