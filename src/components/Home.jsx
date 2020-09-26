@@ -37,8 +37,16 @@ function Home() {
                         Grocery App was built over the course of a week as part of the TECHCareers program in Edmonton, Alberta. To satisfy the core requirements of the project, which included clearly demonstrating competency in the use of HTML5, CSS, ES6 JavaScript, git, GitHub, React, React-Redux, and React-Router - Team Sharp (as we decided to call ourselves) decided to build a recipe app with a shopping list component. 
                     </p>
                     <p>
-                        The application was built with a mobile-first approach and is fully-responsive. In addition to the home page that describes the application and the project itself, there are also pages for the recipe list (where the user can use filters to randomly pull recipes from an API), the individual recipe (where the user can see details about the meal and has the option to add individual ingredients to their shopping list), the shopping list (where the user can add ingredients to, remove from, preview, or even print their list), the About Us (where the user can "meet" the team members), and a login page (that displays either a login/sign-in form or a page that shows who is logged in and gives them the options to either browse more recipes, visit their shopping list, or sign out). 
+                        The application was built with a mobile-first approach and is fully-responsive. It features six distinct pages:
                     </p>
+                    <ul>
+                        <li>1. The Home page - that describes the application and the project itself</li>
+                        <li>2. The Recipe List - where the user can use filters to randomly pull recipes from an API</li>
+                        <li>3. The Individual Recipe page(s) - where the user can see details about a specific meal and has the option to add its ingredients to their shopping list</li>
+                        <li>4. The Shopping List - where the user can review, print, or further manage their shopping list by adding and removing ingredients</li>
+                        <li>5. About us - where the user can "meet" the members of Team Sharp</li>
+                        <li>6. The Login page - that displays either a login/sign-in form or a logged-in page that shows the currently signed in user, offering them the option to either browse for more recipes, visit their shopping list, or to sign out</li>
+                    </ul>
                     <h3>The Recipe List</h3>
                     <p>
                         This page fetches and dynamically displays recipe data from TheMealDB API. The user can filter for recipes with certain ingredients/dietary restrictions (ie. 'chicken' or 'vegetarian' recipes) or they can ask for '10 Random Meals'. Each list item (recipe) features a thumbnail of the meal, the title of the dish, and a details button. The user can click on any of the elements to open the individual recipe in another window.
@@ -52,7 +60,7 @@ function Home() {
                         The shopping list pulls from the global state and displays each ingredient previously added to the cart. Each item shows the amount and name of the ingredient, followed by the title of the meal in brackets, and the trash button that allows the user to easily remove any entry from the list. There are 3 buttons at the bottom: The '+-Add' button expands a hidden section of the page, giving the user the option to add their own items to the list (ingredient, amount, and meal title). This small form doesn't have any mandatory fields, leaving the user completely in charge of what they want to add to their own lists. The 'Reset' button clears the form fields but will not affect the shopping list itself. The second shopping list button allows the user to print their list. When clicked, a print preview dialogue box opens. The third button clears the entire list.
                     </p>
                     <h3>
-                        The following technologies were used for this project:
+                        Technologies used to build this project:
                     </h3>
                     <ul className='framework-images'>
                         <li><img src={require('../img/react.png')} alt='react logo' title='React' /></li>
