@@ -88,15 +88,18 @@ function RecipePage({ match }) {
     }
 
     const newShoppingListItem = (event, ingredients) => {
-        // shoppingReducer global state gets updated with new listitem
-        dispatch(addAction({ ingredient: ingredients.ingredient, measure: ingredients.measure, meal: ingredients.meal })); 
+        //Check if Button has an Icon as FirstChild and has not been Clicked by Checking for FA Icon Cart-Plus
+        if (event.currentTarget.firstChild.classList && event.currentTarget.firstChild.classList.contains("fa-cart-plus")) {
+            // shoppingReducer global state gets updated with new listitem
+            dispatch(addAction({ ingredient: ingredients.ingredient, measure: ingredients.measure, meal: ingredients.meal })); 
 
-        //Switch Icon to Indicate Button has been Clicked
-        event.currentTarget.firstChild.remove(); //Remove the Current Icon
-        const newIconCheck = document.createElement("I"); //Create New Icon
-        newIconCheck.classList.add("fas"); //Add Font Awesome Icon Class
-        newIconCheck.classList.add("fa-check"); //Add Font Awesome Icon Class
-        event.currentTarget.appendChild(newIconCheck); //Append New Icon to Button
+            //Switch Icon to Indicate Button has been Clicked
+            event.currentTarget.firstChild.remove(); //Remove the Current Icon
+            const newIconCheck = document.createElement("I"); //Create New Icon
+            newIconCheck.classList.add("fas"); //Add Font Awesome Icon Class
+            newIconCheck.classList.add("fa-check"); //Add Font Awesome Icon Class
+            event.currentTarget.appendChild(newIconCheck); //Append New Icon to Button
+        }
     }
 
     const addAllToShoppingList = (event) => {
@@ -111,7 +114,7 @@ function RecipePage({ match }) {
         const newIconCheck = document.createElement("I"); //Create New Icon
         newIconCheck.classList.add("fas"); //Add Font Awesome Icon Class
         newIconCheck.classList.add("fa-check"); //Add Font Awesome Icon Class
-        event.currentTarget.prepend(newIconCheck); //Append New Icon to Button
+        event.currentTarget.prepend(newIconCheck); //Prepend New Icon to Button
     }
 
     return(
