@@ -14,27 +14,27 @@ function Home() {
                     </h2>
 
                     <p>Grocery App was designed to take the stress out of meal planning. Who has the time to browse the Internet or cook books for recipes and make shopping lists by hand these days? Grocery App was developed with the busy, always-on-the-go user in mind to make everyday meal planning as simple as 1-2-3.</p>
-                  
+
                     <ol>
                         <li>Go to the Recipes page and use the fun filters to view random recipes from our large database until you see one that catches your eye. Click on it for details!</li>
                         <li>If you like it, add any of the ingredients to your shopping list by simply pressing the little green shopping cart button on the right.</li>
                         <li>Review and print your shopping list. Voila! Your plan is done and you are ready to go!</li>
-                
+
                     </ol>
                     <p>You can plan a single meal or an entire week's worth! If you add ingredients from several different recipes, the meal titles will always display on your shopping list. Don't worry, we know you may want to add your own items to your list, that's what the Add button is for!
                     </p>
-                    <p>We sincerely hope that our Grocery App makes your meal planning easier and more efficient, therefore leaving you more time for whatever makes you happy! Thank you for using our product and have a wonderful day! 
+                    <p>We sincerely hope that our Grocery App makes your meal planning easier and more efficient, therefore leaving you more time for whatever makes you happy! Thank you for using our product and have a wonderful day!
                     </p>
                     <p>Wishing you all the best,</p>
                     <p>Team Sharp</p>
-                   
+
                     <h2>
                         <i className="fas fa-scroll"></i>
                         About the Project
                     </h2>
                     <h3>Summary</h3>
                     <p>
-                        Grocery App was built over the course of a week as part of the TECHCareers program in Edmonton, Alberta. To satisfy the core requirements of the project, which included clearly demonstrating competency in the use of HTML5, CSS, ES6 JavaScript, git, GitHub, React, React-Redux, and React-Router - Team Sharp (as we decided to call ourselves) decided to build a recipe app with a shopping list component. 
+                        Grocery App was built over the course of a week as part of the TECHCareers program in Edmonton, Alberta. To satisfy the core requirements of the project, which included clearly demonstrating competency in the use of HTML5, CSS, ES6 JavaScript, git, GitHub, React, React-Redux, and React-Router - Team Sharp (as we decided to call ourselves) decided to build a recipe app with a shopping list component.
                     </p>
                     <p>
                         The application was built with a mobile-first approach and is fully-responsive. It features six distinct pages:
@@ -66,30 +66,42 @@ function Home() {
                         <li><img src={require('../img/react.png')} alt='react logo' title='React' /></li>
                         <li><img src={require('../img/redux.png')} alt='redux logo' title='Redux' /></li>
                         <li><img src={require('../img/react-redux.png')} alt='react redux logo' title='React-Redux' /></li>
-                        <li><img src={require('../img/css.png')} alt='css logo' title='CSS'/></li>
+                        <li><img src={require('../img/css.png')} alt='css logo' title='CSS' /></li>
                         <li><img src={require('../img/html5.png')} alt='html 5 logo' title='HTML5' /></li>
                     </ul>
                     <h2>A Real-World Use Case Scenario: Martha's Sunday Dinner</h2>
                     <p>
-                        In this fictitious scenario, Martha receives a phone call that her family will be dropping by for dinner on Sunday. Given that she is a shift-working nurse with a busy social life, Martha knows that she could use a little inspiration to come up with a meal she can be proud of. 
+                        In this fictitious scenario, Martha receives a phone call that her family will be dropping by for dinner on Sunday. Given that she is a shift-working nurse with a busy social life, Martha knows that she could use a little inspiration to come up with a meal she can be proud of.
                     </p>
-                    <ol>
+                    <ol className='real-world'>
                         <li>
+                            <img src={require('../img/scenario-signin.PNG')} alt='screenshot of login screen' title='Login'
+                            />
                             She logs into Grocery App and uses the filters on the Recipes page to find something delicious
-                            <img src={require('../img/scenario-signin.PNG')} alt='screenshot of login screen' title='Login' />
                         </li>
-                        
+                        <div className='home-divider'></div>
                         <li>
-                            She notices 'Beef and Oyster Pie' and clicks on it to see the meal details. 
-                            <img src={require('../img/scenario-beefpie.PNG')} alt='screenshot of recipe list' title='Recipe List' />
-                            There are no special dietary restrictions and the instructions seem easy enough, so she adds the ingredients to her shopping list. 
-                            <img src={require('../img/scenario-addsingredients.PNG')} alt='screenshot of adding individual ingredients' title='Adding Ingredients' />
-                            She adds wine and chips to her list using the 'Add' button.
-                            <img src={require('../img/scenario-addsowningredients.PNG')} alt='screenshot of addint own ingredients' title='Adding Own Ingredients' />
+                            <ul>
+                                <li>
+                                    <img src={require('../img/scenario-beefpie.PNG')} alt='screenshot of recipe list' title='Recipe List' />
+                                    i) She notices 'Beef and Oyster Pie' and clicks on it to see the meal details.
+                                </li>
+                                <div className='home-divider' />
+                                <li>
+                                    <img src={require('../img/scenario-addsingredients.PNG')} alt='screenshot of adding individual ingredients' title='Adding Ingredients' />
+                                    ii) There are no special dietary restrictions and the instructions seem easy enough, so she adds the ingredients to her shopping list.
+                                </li>
+                                <div className='home-divider' />
+                                <li>
+                                    <img src={require('../img/scenario-addsowningredients.PNG')} alt='screenshot of addint own ingredients' title='Adding Own Ingredients' />
+                                    iii) She adds wine and chips to her list using the 'Add' button.
+                                </li>
+                            </ul>
                         </li>
+                        <div className='home-divider' />
                         <li>
-                            Martha prints her list and puts it in her purse. With her Sunday meal planned, she can just set herself a reminder to stop by the grocery store on Saturday, on her way home from work. No last minute scrambling, no stress!
                             <img src={require('../img/scenario-printscreen.PNG')} alt='screenshot of print dialogue box' title='Print Dialogue Box with print Preview' />
+                            Martha prints her list and puts it in her purse. With her Sunday meal planned, she can just set herself a reminder to stop by the grocery store on Saturday, on her way home from work. No last minute scrambling, no stress!
                         </li>
                     </ol>
                 </section>

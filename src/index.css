@@ -77,6 +77,45 @@ ul.framework-images {
   margin-top: 15px;
 }
 
+/*
+ Styles - Home Real World Example
+*/
+ol.real-world{
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  align-items: baseline;
+}
+
+ol.realworld li{
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+ol.real-world li ul{
+  display: flex;
+  flex-direction: column;
+  list-style-type: lower-roman;
+}
+
+ol.real-world li img{
+  float: left;
+  width: 70vw;
+  justify-self: center;
+}
+
+.home-divider{
+  border-bottom-style: inset;
+  border-bottom-width: 2px;
+  width: 25vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  color: green;
+}
+
 
 /*
   Styles - Header Navigation
@@ -468,6 +507,38 @@ p.footer-p-team {
     max-width: 128px;
   }
 
+  /*
+  Styles - Home Real World Example
+  */
+  ol.real-world{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  ol.realworld li{
+    margin-bottom: 100px;
+  }
+
+  ol.real-world li ul{
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  ol.real-world li ul li{
+    display: block;
+  }
+
+  ol.real-world li ul li img{
+    float: left;
+  }
+
+  ol.real-world li img{
+    float: left;
+    max-width: 300px;
+    max-height: 400px;
+  }
 
   /*
     Styles - Main > Section > Table
