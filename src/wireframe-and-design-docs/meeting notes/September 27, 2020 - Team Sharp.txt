@@ -1,0 +1,20 @@
+﻿Team Sharp Meeting
+27 SEPTEMBER 2020 / 2:00 PM / SLACK
+Attendees 
+Lindsey Graham, Tosin Raphael Olaniyi, Krisztina Pap
+Agenda
+Last Meeting Follow-up
+1. Quick follow-up regarding the one-off meetings and Slack discussions that took place since our last group meeting.
+New Business
+1. Final review of the project and presentation prep
+Notes
+* Tosin fixed last minute styling issue with a Home page header
+* Lindsey updated Trello board to reflect current situation
+* Team members discussed presentation order and topics of interest. Decisions have been made on a loose plan that we can adjust as needed:
+   * Krisztina  will start the presentation with a project overview and the Home and About Us pages. She will showcase the Login screen and the reducers.
+   * Lindsey will follow with the Recipes and Individual Recipe pages. He will showcase adding ingredients and the API/filters.
+   * Tosin will conclude the presentation  with the Shopping List page and the styling of the project. 
+Action Items
+1. Krisztina to type up last meeting minutes and add it to the project Meeting Notes folder
+Next Meeting
+This was our last team meeting. Tomorrow morning’s presentation will conclude the project.
