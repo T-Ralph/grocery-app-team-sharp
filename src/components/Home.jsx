@@ -2,6 +2,15 @@
 import React from 'react';
 // import Landing from '../img/landing-page.jpg'
 
+function showHide() {
+    let toggleButton = document.getElementById('example-toggle');
+    if (toggleButton.style.display === "none") {
+        toggleButton.style.display = "block";
+    } else {
+        toggleButton.style.display = "none";
+    }
+}
+
 //Declare Function
 function Home() {
     return (
@@ -59,46 +68,49 @@ function Home() {
                     <p>
                         The shopping list pulls from the global state and displays each ingredient previously added to the cart. Each item shows the amount and name of the ingredient, followed by the title of the meal in brackets, and the trash button that allows the user to easily remove any entry from the list. There are 3 buttons at the bottom: The '+-Add' button expands a hidden section of the page, giving the user the option to add their own items to the list (ingredient, amount, and meal title). This small form doesn't have any mandatory fields, leaving the user completely in charge of what they want to add to their own lists. The 'Reset' button clears the form fields but will not affect the shopping list itself. The second shopping list button allows the user to print their list. When clicked, a print preview dialogue box opens. The third button clears the entire list.
                     </p>
-                    <h3>
-                        Technologies used to build this project:
-                    </h3>
-                    <ul className='framework-images'>
-                        <li><img src={require('../img/react.png')} alt='react logo' title='React' /></li>
-                        <li><img src={require('../img/redux.png')} alt='redux logo' title='Redux' /></li>
-                        <li><img src={require('../img/react-redux.png')} alt='react redux logo' title='React-Redux' /></li>
-                        <li><img src={require('../img/css.png')} alt='css logo' title='CSS' /></li>
-                        <li><img src={require('../img/html5.png')} alt='html 5 logo' title='HTML5' /></li>
-                    </ul>
                     <h2>A Real-World Use Case Scenario: Martha's Sunday Dinner</h2>
-                    <p>
-                        In this fictitious scenario, Martha receives a phone call that her family will be dropping by for dinner on Sunday. Given that she is a shift-working nurse with a busy social life, Martha knows that she could use a little inspiration to come up with a meal she can be proud of.
+                    <button className='user-action-button' onClick={showHide}>Show/Hide Example</button>
+                    <div id='example-toggle'>
+                        <p>
+                            In this fictitious scenario, Martha receives a phone call that her family will be dropping by for dinner on Sunday. Given that she is a shift-working nurse with a busy social life, Martha knows that she could use a little inspiration to come up with a meal she can be proud of.
                     </p>
-                    <div className='home-divider'></div>
-                    <figure>
-                        <figcaption><b>Figure 1</b> She logs into Grocery App and uses the filters on the Recipes page to find something delicious.</figcaption>
-                        <img src={require('../img/scenario-signin.PNG')} alt='screenshot of login screen' title='Login' />
-                    </figure>
-                    <div className='home-divider'></div>
-                    <figure>
-                        <figcaption><b>Figure 2.1</b> She notices 'Beef and Oyster Pie' and clicks on it to see the meal details.</figcaption>
-                        <img src={require('../img/scenario-beefpie.PNG')} alt='screenshot of recipe list' title='Recipe List' />
-                    </figure>
-                    <div className='home-divider'></div>
-                    <figure>
-                        <figcaption><b>Figure 2.2</b> There are no special dietary restrictions and the instructions seem easy enough, so she adds the ingredients to her shopping list.</figcaption>
-                        <img src={require('../img/scenario-addsingredients.PNG')} alt='screenshot of adding individual ingredients' title='Adding Ingredients' />
-                    </figure>
-                    <div className='home-divider'></div>
-                    <figure>
-                        <figcaption><b>Figure 2.3</b> She adds wine and chips to her list using the 'Add' button.</figcaption>
-                        <img src={require('../img/scenario-addsowningredients.PNG')} alt='screenshot of addint own ingredients' title='Adding Own Ingredients' />
-                    </figure>
-                    <div className='home-divider'></div>
-                    <figure>
-                        <figcaption><b>Figure 3</b> Martha prints her list and puts it in her purse. With her Sunday meal planned, she can just set herself a reminder to stop by the grocery store on Saturday, on her way home from work. No last minute scrambling, no stress!</figcaption>
-                        <img src={require('../img/scenario-printscreen.PNG')} alt='screenshot of print dialogue box' title='Print Dialogue Box with Print Preview' />
-                    </figure>
-                    <div className='home-divider'></div>
+                        <div className='home-divider'></div>
+                        <figure>
+                            <figcaption><b>Figure 1</b> She logs into Grocery App and uses the filters on the Recipes page to find something delicious.</figcaption>
+                            <img src={require('../img/scenario-signin.PNG')} alt='screenshot of login screen' title='Login' />
+                        </figure>
+                        <div className='home-divider'></div>
+                        <figure>
+                            <figcaption><b>Figure 2.1</b> She notices 'Beef and Oyster Pie' and clicks on it to see the meal details.</figcaption>
+                            <img src={require('../img/scenario-beefpie.PNG')} alt='screenshot of recipe list' title='Recipe List' />
+                        </figure>
+                        <div className='home-divider'></div>
+                        <figure>
+                            <figcaption><b>Figure 2.2</b> There are no special dietary restrictions and the instructions seem easy enough, so she adds the ingredients to her shopping list.</figcaption>
+                            <img src={require('../img/scenario-addsingredients.PNG')} alt='screenshot of adding individual ingredients' title='Adding Ingredients' />
+                        </figure>
+                        <div className='home-divider'></div>
+                        <figure>
+                            <figcaption><b>Figure 2.3</b> She adds wine and chips to her list using the 'Add' button.</figcaption>
+                            <img src={require('../img/scenario-addsowningredients.PNG')} alt='screenshot of addint own ingredients' title='Adding Own Ingredients' />
+                        </figure>
+                        <div className='home-divider'></div>
+                        <figure>
+                            <figcaption><b>Figure 3</b> Martha prints her list and puts it in her purse. With her Sunday meal planned, she can just set herself a reminder to stop by the grocery store on Saturday, on her way home from work. No last minute scrambling, no stress!</figcaption>
+                            <img src={require('../img/scenario-printscreen.PNG')} alt='screenshot of print dialogue box' title='Print Dialogue Box with Print Preview' />
+                        </figure>
+                        <div className='home-divider'></div>
+                        <h3>
+                            Technologies used to build this project:
+                    </h3>
+                        <ul className='framework-images'>
+                            <li><img src={require('../img/react.png')} alt='react logo' title='React' /></li>
+                            <li><img src={require('../img/redux.png')} alt='redux logo' title='Redux' /></li>
+                            <li><img src={require('../img/react-redux.png')} alt='react redux logo' title='React-Redux' /></li>
+                            <li><img src={require('../img/css.png')} alt='css logo' title='CSS' /></li>
+                            <li><img src={require('../img/html5.png')} alt='html 5 logo' title='HTML5' /></li>
+                        </ul>
+                    </div>
                 </section>
             </main>
         </>
