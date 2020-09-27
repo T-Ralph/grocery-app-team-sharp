@@ -69,7 +69,7 @@ function Home() {
                         The shopping list pulls from the global state and displays each ingredient previously added to the cart. Each item shows the amount and name of the ingredient, followed by the title of the meal in brackets, and the trash button that allows the user to easily remove any entry from the list. There are 3 buttons at the bottom: The '+-Add' button expands a hidden section of the page, giving the user the option to add their own items to the list (ingredient, amount, and meal title). This small form doesn't have any mandatory fields, leaving the user completely in charge of what they want to add to their own lists. The 'Reset' button clears the form fields but will not affect the shopping list itself. The second shopping list button allows the user to print their list. When clicked, a print preview dialogue box opens. The third button clears the entire list.
                     </p>
                     <h2>A Real-World Use Case Scenario: Martha's Sunday Dinner</h2>
-                    <button className='user-action-button' onClick={showHide}>Show/Hide Example</button>
+                    <button className='user-action-button' id='show-hide-example' onClick={showHide}>Show/Hide Example</button>
                     <div id='example-toggle'>
                         <p>
                             In this fictitious scenario, Martha receives a phone call that her family will be dropping by for dinner on Sunday. Given that she is a shift-working nurse with a busy social life, Martha knows that she could use a little inspiration to come up with a meal she can be proud of.
@@ -100,17 +100,17 @@ function Home() {
                             <img src={require('../img/scenario-printscreen.PNG')} alt='screenshot of print dialogue box' title='Print Dialogue Box with Print Preview' />
                         </figure>
                         <div className='home-divider'></div>
-                        <h3>
-                            Technologies used to build this project:
-                    </h3>
-                        <ul className='framework-images'>
-                            <li><img src={require('../img/react.png')} alt='react logo' title='React' /></li>
-                            <li><img src={require('../img/redux.png')} alt='redux logo' title='Redux' /></li>
-                            <li><img src={require('../img/react-redux.png')} alt='react redux logo' title='React-Redux' /></li>
-                            <li><img src={require('../img/css.png')} alt='css logo' title='CSS' /></li>
-                            <li><img src={require('../img/html5.png')} alt='html 5 logo' title='HTML5' /></li>
-                        </ul>
                     </div>
+                    <h3>
+                        Technologies used to build this project:
+                    </h3>
+                    <ul className='framework-images'>
+                        <li><img src={require('../img/react.png')} alt='react logo' title='React' /></li>
+                        <li><img src={require('../img/redux.png')} alt='redux logo' title='Redux' /></li>
+                        <li><img src={require('../img/react-redux.png')} alt='react redux logo' title='React-Redux' /></li>
+                        <li><img src={require('../img/css.png')} alt='css logo' title='CSS' /></li>
+                        <li><img src={require('../img/html5.png')} alt='html 5 logo' title='HTML5' /></li>
+                    </ul>
                 </section>
             </main>
         </>
