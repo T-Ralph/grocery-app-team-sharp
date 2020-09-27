@@ -468,6 +468,15 @@ p.footer-p-team {
   font-size: 7px;
 }
 
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+
 /*
   Styles - Responsiveness - > 1000px
 */
