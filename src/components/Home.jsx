@@ -112,9 +112,9 @@ function Home() {
                         </figure>
                         <div className='home-divider'></div>
                     </div>
-                    <h3>
-                        Technologies used to build this project:
-                    </h3>
+                    <h2>
+                        Technologies Used On this App:
+                    </h2>
                     <ul className='framework-images'>
                         <li><img src={require('../img/react.png')} alt='react logo' title='React' /></li>
                         <li><img src={require('../img/redux.png')} alt='redux logo' title='Redux' /></li>
