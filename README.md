@@ -38,6 +38,9 @@ https://trello.com/b/rnxAM8Nx/milestone2
     - Avatars for 'About-Us' page
 - Github Markdown Guide
     - https://guides.github.com/features/mastering-markdown/
+- W3 Schools
+    - Show/Hide Toggle
+        - https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
 
 
 ## Introduction: 
