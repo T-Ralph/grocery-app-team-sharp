@@ -49,6 +49,7 @@ body * {
   --table-tab-color: var(--header-nav-ul-li-color-a);
   --table-alt-color: #EBFFEB;
   --footer-bg-color: var(--header-nav-ul-li-color);
+  --home-divider: var(--header-nav-ul-li-color);
 }
 
 
@@ -65,7 +66,7 @@ body {
  Styles - Home Framework Images
 */
 
-ul.framework-images li img{
+ul.framework-images li img {
   max-width: 64px;
 }
 
@@ -78,42 +79,35 @@ ul.framework-images {
 }
 
 /*
- Styles - Home Real World Example
+  Styles - Home Real World Example
 */
-ol.real-world{
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
-  align-items: baseline;
-}
 
-ol.realworld li{
-  margin-bottom: 100px;
-  display: flex;
-  flex-direction: column;
-}
-
-ol.real-world li ul{
-  display: flex;
-  flex-direction: column;
-  list-style-type: lower-roman;
-}
-
-ol.real-world li img{
-  float: left;
-  width: 70vw;
-  justify-self: center;
-}
-
-.home-divider{
+.home-divider {
   border-bottom-style: inset;
   border-bottom-width: 2px;
   width: 25vw;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 25px;
-  margin-top: 25px;
-  color: green;
+  margin-bottom: 35px;
+  margin-top: 35px;
+  color: var(--home-divider);
+}
+
+figure {
+  text-align: center;
+}
+
+figure > figcaption {
+  margin: 10px 0px;
+  text-align: justify;
+}
+
+figure > img {
+  width: 100%;
+}
+
+figure > img:hover {
+  transform: scale(1, 1);
 }
 
 
@@ -507,38 +501,21 @@ p.footer-p-team {
     max-width: 128px;
   }
 
+
   /*
-  Styles - Home Real World Example
+    Styles - Home Real World Example
   */
-  ol.real-world{
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    padding-bottom: 50px;
+
+  figure > img {
+    width: 50%;
+    transition: 2s;
   }
 
-  ol.realworld li{
-    margin-bottom: 100px;
+  figure > img:hover {
+    transform: scale(2, 2);
+    transition-timing-function: ease-in-out;
   }
 
-  ol.real-world li ul{
-    margin-top: 25px;
-    margin-bottom: 25px;
-  }
-
-  ol.real-world li ul li{
-    display: block;
-  }
-
-  ol.real-world li ul li img{
-    float: left;
-  }
-
-  ol.real-world li img{
-    float: left;
-    max-width: 300px;
-    max-height: 400px;
-  }
 
   /*
     Styles - Main > Section > Table
