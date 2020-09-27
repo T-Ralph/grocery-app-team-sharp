@@ -1,21 +1,24 @@
 //Import React
 import React from 'react';
-// import Landing from '../img/landing-page.jpg'
-
-
-// Creating function to show/hide Real World Use Case
-// Citation: W3Schools JS Toggle Hide Show
-function showHide() {
-    let toggleButton = document.getElementById('example-toggle');
-    if (toggleButton.style.display === "none") {
-        toggleButton.style.display = "block";
-    } else {
-        toggleButton.style.display = "none";
-    }
-}
 
 //Declare Function
 function Home() {
+
+    //Declare Function for ToggleRealWorldUseCase
+    const ToggleRealWorldUseCase = () => {
+        //Check If ID 'read-more-toggle' Has Class 'show/hide' and Toggle Between Both
+        if (document.getElementById("read-more-toggle-content").classList.contains("hide")) {
+            document.getElementById("read-more-toggle-content").classList.remove("hide");
+            document.getElementById("read-more-toggle-content").classList.add("show");
+            document.getElementById("read-more-toggle-button-text").textContent = "Hide Content";
+        }
+        else {
+            document.getElementById("read-more-toggle-content").classList.remove("show");
+            document.getElementById("read-more-toggle-content").classList.add("hide");
+            document.getElementById("read-more-toggle-button-text").textContent = "Read More";
+        }
+    }
+
     return (
         <>
             <main>
@@ -72,19 +75,16 @@ function Home() {
                         The shopping list pulls from the global state and displays each ingredient previously added to the cart. Each item shows the amount and name of the ingredient, followed by the title of the meal in brackets, and the trash button that allows the user to easily remove any entry from the list. There are 3 buttons at the bottom: The '+-Add' button expands a hidden section of the page, giving the user the option to add their own items to the list (ingredient, amount, and meal title). This small form doesn't have any mandatory fields, leaving the user completely in charge of what they want to add to their own lists. The 'Reset' button clears the form fields but will not affect the shopping list itself. The second shopping list button allows the user to print their list. When clicked, a print preview dialogue box opens. The third button clears the entire list.
                     </p>
                     <h2>A Real-World Use Case Scenario: Martha's Sunday Dinner</h2>
-                    
-                    {/* Button to show/hide the real world example (For page length) */}
-                    <div className="center">
-                        <button className='user-action-button' id='show-hide-example' onClick={showHide}>
-                            <i className="fab fa-readme"></i>
+                    <p>
+                        In this fictitious scenario, Martha receives a phone call that her family will be dropping by for dinner on Sunday. Given that she is a shift-working nurse with a busy social life, Martha knows that she could use a little inspiration to come up with a meal she can be proud of.
+                    </p>
+                    <button className="table-button center" onClick={ToggleRealWorldUseCase}>
+                        <i className="fab fa-readme"></i>
+                        <span id="read-more-toggle-button-text">
                             Read More
-                        </button>
-                    </div>
-                    {/* Div used by the button to show/hide content */}
-                    <div id='example-toggle'>
-                        <p>
-                            In this fictitious scenario, Martha receives a phone call that her family will be dropping by for dinner on Sunday. Given that she is a shift-working nurse with a busy social life, Martha knows that she could use a little inspiration to come up with a meal she can be proud of.
-                        </p>
+                        </span>
+                    </button>
+                    <div className="hide" id="read-more-toggle-content">
                         <div className='home-divider'></div>
                         <figure>
                             <figcaption><b>Figure 1</b> She logs into Grocery App and uses the filters on the Recipes page to find something delicious.</figcaption>
