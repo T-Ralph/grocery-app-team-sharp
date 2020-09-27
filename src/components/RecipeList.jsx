@@ -13,6 +13,7 @@ function RecipeList() {
     const [meals, setMeals] = useState([]);
 
     // API Call for populating main list of random meals
+    // Async is used for this call to ensure fetch has passed before converting the returned promise to json data readable by us
     const fetchRecipes = async () => {
         const data = await fetch('https://www.themealdb.com/api/json/v2/9973533/randomselection.php');
         const meals = await data.json();
@@ -20,6 +21,7 @@ function RecipeList() {
     };
 
     // API Calls for populating FILTERS
+    // Async is used for this call to ensure fetch has passed before converting the returned promise to json data readable by us
     const fetchRecipesByFilter = async (filterName) => {
         const data = await fetch(`https://www.themealdb.com/api/json/v2/9973533/filter.php?c=${filterName}`);
         const meals = await data.json();
