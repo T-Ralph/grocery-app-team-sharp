@@ -74,13 +74,17 @@ function Home() {
                     <h2>A Real-World Use Case Scenario: Martha's Sunday Dinner</h2>
                     
                     {/* Button to show/hide the real world example (For page length) */}
-                    <button className='user-action-button' id='show-hide-example' onClick={showHide}>Show/Hide Example</button>
-                    
+                    <div className="center">
+                        <button className='user-action-button' id='show-hide-example' onClick={showHide}>
+                            <i className="fab fa-readme"></i>
+                            Read More
+                        </button>
+                    </div>
                     {/* Div used by the button to show/hide content */}
                     <div id='example-toggle'>
                         <p>
                             In this fictitious scenario, Martha receives a phone call that her family will be dropping by for dinner on Sunday. Given that she is a shift-working nurse with a busy social life, Martha knows that she could use a little inspiration to come up with a meal she can be proud of.
-                    </p>
+                        </p>
                         <div className='home-divider'></div>
                         <figure>
                             <figcaption><b>Figure 1</b> She logs into Grocery App and uses the filters on the Recipes page to find something delicious.</figcaption>
