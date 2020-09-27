@@ -73,37 +73,32 @@ function Home() {
                     <p>
                         In this fictitious scenario, Martha receives a phone call that her family will be dropping by for dinner on Sunday. Given that she is a shift-working nurse with a busy social life, Martha knows that she could use a little inspiration to come up with a meal she can be proud of.
                     </p>
-                    <ol className='real-world'>
-                        <li>
-                            <img src={require('../img/scenario-signin.PNG')} alt='screenshot of login screen' title='Login'
-                            />
-                            She logs into Grocery App and uses the filters on the Recipes page to find something delicious
-                        </li>
-                        <div className='home-divider'></div>
-                        <li>
-                            <ul>
-                                <li>
-                                    <img src={require('../img/scenario-beefpie.PNG')} alt='screenshot of recipe list' title='Recipe List' />
-                                    i) She notices 'Beef and Oyster Pie' and clicks on it to see the meal details.
-                                </li>
-                                <div className='home-divider' />
-                                <li>
-                                    <img src={require('../img/scenario-addsingredients.PNG')} alt='screenshot of adding individual ingredients' title='Adding Ingredients' />
-                                    ii) There are no special dietary restrictions and the instructions seem easy enough, so she adds the ingredients to her shopping list.
-                                </li>
-                                <div className='home-divider' />
-                                <li>
-                                    <img src={require('../img/scenario-addsowningredients.PNG')} alt='screenshot of addint own ingredients' title='Adding Own Ingredients' />
-                                    iii) She adds wine and chips to her list using the 'Add' button.
-                                </li>
-                            </ul>
-                        </li>
-                        <div className='home-divider' />
-                        <li>
-                            <img src={require('../img/scenario-printscreen.PNG')} alt='screenshot of print dialogue box' title='Print Dialogue Box with print Preview' />
-                            Martha prints her list and puts it in her purse. With her Sunday meal planned, she can just set herself a reminder to stop by the grocery store on Saturday, on her way home from work. No last minute scrambling, no stress!
-                        </li>
-                    </ol>
+                    <div className='home-divider'></div>
+                    <figure>
+                        <figcaption><b>Figure 1</b> She logs into Grocery App and uses the filters on the Recipes page to find something delicious.</figcaption>
+                        <img src={require('../img/scenario-signin.PNG')} alt='screenshot of login screen' title='Login' />
+                    </figure>
+                    <div className='home-divider'></div>
+                    <figure>
+                        <figcaption><b>Figure 2.1</b> She notices 'Beef and Oyster Pie' and clicks on it to see the meal details.</figcaption>
+                        <img src={require('../img/scenario-beefpie.PNG')} alt='screenshot of recipe list' title='Recipe List' />
+                    </figure>
+                    <div className='home-divider'></div>
+                    <figure>
+                        <figcaption><b>Figure 2.2</b> There are no special dietary restrictions and the instructions seem easy enough, so she adds the ingredients to her shopping list.</figcaption>
+                        <img src={require('../img/scenario-addsingredients.PNG')} alt='screenshot of adding individual ingredients' title='Adding Ingredients' />
+                    </figure>
+                    <div className='home-divider'></div>
+                    <figure>
+                        <figcaption><b>Figure 2.3</b> She adds wine and chips to her list using the 'Add' button.</figcaption>
+                        <img src={require('../img/scenario-addsowningredients.PNG')} alt='screenshot of addint own ingredients' title='Adding Own Ingredients' />
+                    </figure>
+                    <div className='home-divider'></div>
+                    <figure>
+                        <figcaption><b>Figure 3</b> Martha prints her list and puts it in her purse. With her Sunday meal planned, she can just set herself a reminder to stop by the grocery store on Saturday, on her way home from work. No last minute scrambling, no stress!</figcaption>
+                        <img src={require('../img/scenario-printscreen.PNG')} alt='screenshot of print dialogue box' title='Print Dialogue Box with Print Preview' />
+                    </figure>
+                    <div className='home-divider'></div>
                 </section>
             </main>
         </>
