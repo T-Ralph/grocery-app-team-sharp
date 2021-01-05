@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/grocery-app-team-sharp/static/css/main.bd68c953.chunk.css",
+    "main.js": "/grocery-app-team-sharp/static/js/main.84129049.chunk.js",
+    "main.js.map": "/grocery-app-team-sharp/static/js/main.84129049.chunk.js.map",
+    "runtime-main.js": "/grocery-app-team-sharp/static/js/runtime-main.44c80491.js",
+    "runtime-main.js.map": "/grocery-app-team-sharp/static/js/runtime-main.44c80491.js.map",
+    "static/js/2.b47548df.chunk.js": "/grocery-app-team-sharp/static/js/2.b47548df.chunk.js",
+    "static/js/2.b47548df.chunk.js.map": "/grocery-app-team-sharp/static/js/2.b47548df.chunk.js.map",
+    "index.html": "/grocery-app-team-sharp/index.html",
+    "static/css/main.bd68c953.chunk.css.map": "/grocery-app-team-sharp/static/css/main.bd68c953.chunk.css.map",
+    "static/js/2.b47548df.chunk.js.LICENSE.txt": "/grocery-app-team-sharp/static/js/2.b47548df.chunk.js.LICENSE.txt",
+    "static/media/Krisztina.c02d9822.png": "/grocery-app-team-sharp/static/media/Krisztina.c02d9822.png",
+    "static/media/Lindsey.1ea6d92b.jpg": "/grocery-app-team-sharp/static/media/Lindsey.1ea6d92b.jpg",
+    "static/media/Tosin.158035d4.JPG": "/grocery-app-team-sharp/static/media/Tosin.158035d4.JPG",
+    "static/media/index.css": "/grocery-app-team-sharp/static/media/landing-page.6b474380.jpg",
+    "static/media/html5.png": "/grocery-app-team-sharp/static/media/html5.9d7930cb.png",
+    "static/media/react-redux.png": "/grocery-app-team-sharp/static/media/react-redux.a05453ce.png",
+    "static/media/react.png": "/grocery-app-team-sharp/static/media/react.20adfb35.png",
+    "static/media/redux.png": "/grocery-app-team-sharp/static/media/redux.010fcccb.png",
+    "static/media/scenario-addsingredients.PNG": "/grocery-app-team-sharp/static/media/scenario-addsingredients.96377d9b.PNG",
+    "static/media/scenario-addsowningredients.PNG": "/grocery-app-team-sharp/static/media/scenario-addsowningredients.e2b26bff.PNG",
+    "static/media/scenario-beefpie.PNG": "/grocery-app-team-sharp/static/media/scenario-beefpie.6e39e4fd.PNG",
+    "static/media/scenario-printscreen.PNG": "/grocery-app-team-sharp/static/media/scenario-printscreen.4ee8b6c1.PNG",
+    "static/media/scenario-signin.PNG": "/grocery-app-team-sharp/static/media/scenario-signin.90a7c814.PNG"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.44c80491.js",
+    "static/js/2.b47548df.chunk.js",
+    "static/css/main.bd68c953.chunk.css",
+    "static/js/main.84129049.chunk.js"
+  ]
+}
