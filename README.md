@@ -73,3 +73,6 @@ https://trello.com/b/rnxAM8Nx/milestone2
 - Demonstrates CARP design principles
 - Demonstrates knowledge of color theory/correct colors are chosen
 - No in-line styles
+
+## GitHub.IO Page:
+https://t-ralph.github.io/grocery-app-team-sharp/
